@@ -1344,7 +1344,7 @@ h3.tittle.reserve {
     -moz-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
-    min-height:300px;
+    min-height:115px;
     position: relative;
 }
 h3.single {
