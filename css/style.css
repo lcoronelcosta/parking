@@ -4,6 +4,12 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+
+.separador{
+clear:both; 
+border-top : 60px solid white;
+}
+
 body a {
   transition: 0.5s all;
   -webkit-transition: 0.5s all;
@@ -1175,18 +1181,18 @@ h3.title,h2.title.review {
 }
 /*--bottom-*/
 .bottom{
-  background: url("../images/bottom.jpg") no-repeat 0px 0px;
+  background: url("../images/banner.jpg") no-repeat 0px 0px;
   padding: 0em 0 0 0;
   background-size: cover;
   -o-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
   -webkit-background-size: cover;
-  min-height:540px;
+  min-height:150px;
 }
 .bottom-top{
   text-align:center;
-  padding-top:8em;
+  padding-top:1em;
 }
 .bottom-top h3 {
     color:#EFA52C;
