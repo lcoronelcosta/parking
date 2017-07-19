@@ -915,7 +915,9 @@ a.hi-icon img {
 }
 .box2 {
     margin-top: 3em;
+    text-align: center;
 }
+
 /*--/review--*/
 #review {
     background: #f7f7f7;
@@ -2031,6 +2033,7 @@ p.copy-right a:hover{
 	.s-1 h3, .s-2 h3, .s-3 h3, .s-1 h3, .s-2 h3, .s-4 h3 {
 		font-size: 1.3em;
 		padding-top: 17em;
+        
 	}
 	.view p {
 		font-size: 0.8em;
