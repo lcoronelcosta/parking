@@ -1275,7 +1275,7 @@ h3.tittle.reserve {
 	color: #EFA52C;
 
 }
-.book-reservation input[type="text"],.book-reservation input[type="date"],.book-reservation input[type="time"] {
+.book-reservation input[type="text"],input[type="button"],.book-reservation input[type="date"],.book-reservation input[type="time"] {
     width: 100%;
     color:#EFA52C;
     outline: none;
@@ -1302,7 +1302,7 @@ h3.tittle.reserve {
     margin: 1em auto 0;
     text-align: center;
 }
-.make input[type=submit] {
+.make input[type=submit],input[type="button"] {
        color: #FFFFFF;
     padding: 1em 2em;
     font-size: 1.2em;
@@ -1312,7 +1312,7 @@ h3.tittle.reserve {
     background:#EFA52C;
     font-family: 'Merriweather Sans', sans-serif;
 }
-.make input[type=submit]:hover {
+.make ,input[type="button"],input[type=submit]:hover {
     background: none;
     transition: 0.5s all ease;
     -webkit-transition: 0.5s all ease;
@@ -1456,7 +1456,7 @@ p.form-submit {
   outline: none;
   border: none;
 }
-#commentform input[type="submit"]:hover{
+#commentform input[type="button"], input[type="submit"]:hover{
     background:#efa52c;
 }
 span.m_14 {
@@ -1756,8 +1756,8 @@ form input[type="submit"]:focus {
 .send {
     margin-top:2em;
 }
-.send input[type="submit"]{
-       border: none;
+.send input[type="submit"],input[type="button"]{
+    border: none;
     background: #EFA52C;
     cursor: pointer;
     border-radius: 0px;
