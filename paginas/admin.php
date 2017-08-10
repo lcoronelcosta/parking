@@ -94,7 +94,7 @@
                         </div>
                         <div>
                             <h3 class='tittle'>Coronel</h3>
-                            <input type='button' value='TABLA1' >
+                            <a href='modelo/usuario/readUsuario.php'><input type='button' value='USUARIOS'></a>
                             <input type='button' value='TABLA2' >
                             <input type='button' value='TABLA3' >	
                         </div>
@@ -103,7 +103,7 @@
     }
     else{
         echo "<h1>SUS PEDIDOS</h1>
-        <a href='modelo/pedido/readPedido.php?rol=$rol'><button>PEDIDOS</button></a>";
+        <a href='modelo/pedido/readPedido.php'><button>PEDIDOS</button></a>";
     }
     ?>
 	
