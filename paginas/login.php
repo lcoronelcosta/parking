@@ -92,11 +92,12 @@
 							<label for="email">Password</label>
 							<span class="ss-icon">check</span>
 					  </div>
-					  
-				      <div class="send wow shake"  data-wow-duration="1s" data-wow-delay=".3s">
-                          <input type="button" value="SALIR" >
-				          <input type="submit" value="INGRESAR" >
-                      </div>
+                                
+                      <div class="start wow flipInX"  data-wow-duration="1s" data-wow-delay=".3s">
+						     <a href="single.html" class="hvr-bounce-to-bottom">Salir</a>
+                             <input type="submit"><a href="single.html" class="hvr-bounce-to-bottom">Ingresar</a></input>
+                             
+				       </div>
 					 
 			  </form>
 
