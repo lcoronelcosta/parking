@@ -41,7 +41,7 @@
 			  <div class="fixed-header">
 			      <!--logo-->
 			       <div class="logo">
-                      <a href="index.html"><h1>P<span>arking Smart</span></h1></a>
+                      <a href="index.php"><h1>P<span>arking Smart</span></h1></a>
 					  <p>seguro confiable</p>
 				   </div>
 					<!--//logo-->
