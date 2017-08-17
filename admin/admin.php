@@ -1,8 +1,8 @@
 <?php
     session_start();
 ?>
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="es">
 <head>
 <title>Parking - Smart | About </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,15 +21,17 @@
 	<link href='//fonts.googleapis.com/css?family=Italianno' rel='stylesheet' type='text/css'>
 	<link href='//fonts.googleapis.com/css?family=Merriweather+Sans:400,300,700' rel='stylesheet' type='text/css'>
 <!--/script-->
-    <script type="text/javascript" src="../js/completo.js"></script>
-
+<script type="text/javascript" src="../js/completo.js"></script>
+<!-- swipe box js -->
+	<script src="../js/jquery.swipebox.min.js"></script> 
+<script type="text/javascript" src="../js/completo2.js"></script>
+<!-- //swipe box js -->
 <!--animate-->
 <link href="../css/animate.css" rel="stylesheet" type="text/css" media="all">
 <script src="../js/wow.min.js"></script>
-    <script type="text/javascript" src="../js/completo3.js"></script>
+<script type="text/javascript" src="../js/completo3.js"></script>
 
 </head>
-	
 <body>
     
     <!--start-home-->
@@ -70,10 +72,10 @@
 
 		 <div class="down"></div>
 	</div>
-        
+    
+    <?php include_once('header.php'); ?>     
     <?php
     if(1){
-        echo "<p class='tittle'>Bienvenido : </p>";
         echo "<div class='service' id='services'>
                 <div class='container'>
                     <h3 class='tittle'>Tablas</h3>

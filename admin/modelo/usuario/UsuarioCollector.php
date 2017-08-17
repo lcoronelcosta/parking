@@ -20,6 +20,17 @@
         
         }
         
+        function updateUsuario($id_usuario, $usuario, $clave, $rol) {
+                $rows = self::$db->updateRow("UPDATE usuario SET usuario='$usuario', password='$clave', rol='$rol' WHERE id_usuario='$id_usuario'",null);
+
+        }
+        
+        function deleteUsuario($id_usuario) {
+                 $rows = self::$db->deleteRow("DELETE FROM usuario WHERE id_usuario=$id_usuario",null);
+
+
+        }
+        
         function validarUsuario($usuario,$clave){
                 $rows = self::$db->getRows("SELECT * FROM usuario WHERE usuario='$usuario' AND clave='$clave'");
                 foreach ($rows as $c){
