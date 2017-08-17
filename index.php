@@ -56,7 +56,7 @@
 							    <li><a data-hover="Reservacion" href="pages/reservation.html">Reservacion</a></li>
 							    <li><a data-hover="Galeria" href="pages/galeria.html">Galeria</a></li>
 								<li><a data-hover="Contacto" href="pages/contact.html">Contacto</a></li>
-                                <li><a data-hover="Login" href="paginas/login.php">Login</a></li>
+                                <li><a data-hover="Login" href="admin/login.php">Login</a></li>
 
 								</ul>
 							</nav>
