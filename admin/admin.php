@@ -82,7 +82,7 @@
                     <div class='arrows-serve'><img src='../images/border.png' alt='border'></div>
                         <div class='inst-grids'>
                             <h3 class='tittle'>Zuñiga</h3>
-                            <input type='button' value='TABLA1' >
+                            <a href='modelo/vehiculo/readVehiculo.php'><input type='button' value='VEHICULO'></a>
                             <input type='button' value='TABLA2' >
                             <input type='button' value='TABLA3' >
                         </div>
