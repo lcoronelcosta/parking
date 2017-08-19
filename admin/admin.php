@@ -83,7 +83,7 @@
                         <div class='inst-grids'>
                             <h3 class='tittle'>Zuñiga</h3>
                             <a href='modelo/vehiculo/readVehiculo.php'><input type='button' value='VEHICULO'></a>
-                            <a href='modelo/parqueadero'><input type='button' value='PARQUEADERO'></a>
+                            <a href='modelo/parqueadero/readParqueadero.php'><input type='button' value='PARQUEADERO'></a>
                             <a href='modelo/propietario'><input type='button' value='PROPIETARIO'></a>
                         </div>
                         <div class='inst-grids'>
