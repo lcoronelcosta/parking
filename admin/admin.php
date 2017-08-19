@@ -83,8 +83,8 @@
                         <div class='inst-grids'>
                             <h3 class='tittle'>Zuñiga</h3>
                             <a href='modelo/vehiculo/readVehiculo.php'><input type='button' value='VEHICULOS'></a>
-                            <input type='button' value='TABLA2' >
-                            <input type='button' value='TABLA3' >
+                            <input type='button' value='TABLA2-fa' >
+                            <input type='button' value='TABLA3-fa' >
                         </div>
                         <div class='inst-grids'>
                             <h3 class='tittle'>Mite</h3>
