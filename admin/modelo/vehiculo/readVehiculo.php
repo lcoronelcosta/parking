@@ -1,7 +1,7 @@
 <?php
     session_start();
-    include_once("UsuarioCollector.php");
-    $usuarioCollectorObj = new UsuarioCollector();
+    include_once("VehiculoCollector.php");
+    $vehiculoCollectorObj = new VehiculoCollector();
 ?>
 
 <html>
@@ -20,31 +20,31 @@
       <div class="panel-heading clearfix">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>USUARIOS</span>
+          <span>VEHICULO</span>
        </strong>
          <a href="../../admin.php" class="btn btn-danger pull-right">ATRAS</a> 
-         <a href="form_AddUsuario.php" class="btn btn-info">AGREGAR USUARIO</a>
+         <a href="form_AddVehiculo.php" class="btn btn-info">AGREGAR VEHICULO</a>
       </div>
      <div class="panel-body">
     <table id="example" class="table table-striped table-bordered" cellspacing="0" width="80%">
         <thead>
             <tr>
                 <th>ID</th>   
-                <th>USUARIO</th>
-                <th>PASSWORD</th>
-                <th>ROL</th>
+                <th>DESCRIPCION</th>
+                <th>PLACA</th>
+                <th>TIPO</th>
                 <th>OPERACIONES</th>
             </tr>
         </thead>
         <?php
-            foreach ($usuarioCollectorObj->showUsuarios() as $c){
+            foreach ($vehiculoCollectorObj->showVehiculo() as $c){
             echo "<tr>";
-            echo "<td>" . $c->get_id_usuario() . "</td>";         
-            echo "<td>" . $c->get_usuario() . "</td>";   
-            echo "<td>" . $c->get_password() . "</td>"; 
-            echo "<td>" . $c->get_rol() . "</td>";    
-            echo "<td><a href='form_EditUsuario.php?id_usuario=". $c->get_id_usuario() ." & usuario=". $c->get_usuario() ." & clave=". $c->get_password() . " & rol=". $c->get_rol() ."' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
-                </a> <a href='deleteUsuario.php?ID=". $c->get_id_usuario() ."' class='btn btn-xs btn-danger' data-toggle='tooltip' title='Eliminar'><i class='glyphicon glyphicon-remove'></i>
+            echo "<td>" . $c->get_id_vehiculo() . "</td>";         
+            echo "<td>" . $c->get_descripcion() . "</td>";   
+            echo "<td>" . $c->get_placa() . "</td>"; 
+            echo "<td>" . $c->get_tipo() . "</td>";    
+            echo "<td><a href='form_EditVehiculo.php?id_vehiculo=". $c->get_id_vehiculo() ." & descrpcion=". $c->get_descripcion() ." & placa=". $c->get_placa() . " & tipo=". $c->get_tipo() ."' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
+                </a> <a href='deleteVehiculo.php?ID=". $c->get_id_vehiculo() ."' class='btn btn-xs btn-danger' data-toggle='tooltip' title='Eliminar'><i class='glyphicon glyphicon-remove'></i>
                 </a></td>"; 
             echo "</tr>"; 
             }

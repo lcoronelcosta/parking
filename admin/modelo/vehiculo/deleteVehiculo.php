@@ -1,8 +1,8 @@
 <?php
     session_start();
-    include_once("UsuarioCollector.php");
-    $id_usuario = $_GET['ID'];
-    $usuarioCollectorObj = new UsuarioCollector();
+    include_once("VehiculoCollector.php");
+    $id_vehiculo = $_GET['ID'];
+    $vehiculoCollectorObj = new VehiculoCollector();
 ?>
 
 
@@ -14,10 +14,10 @@
     </head>
     <body>
         <?php
-        $usuarioCollectorObj->deleteUsuario($id_usuario);
+        $vehiculoCollectorObj->deleteVehiculo($id_vehiculo);
         $mensaje = "EL USUARIO SE ELIMINO EXITOSAMENTE";
         print "<script>alert('$mensaje')</script>";
-        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readUsuario.php'>";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readVehiculo.php'>";
         ?>
     </body>
 </html>

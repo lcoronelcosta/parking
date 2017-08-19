@@ -1,11 +1,11 @@
 <?php
     session_start();
-    include_once("UsuarioCollector.php");
-    $usuarioCollectorObj = new UsuarioCollector();
-    $id_usuario = $_GET['id_usuario'];
-    $usuario = $_GET['usuario'];
-    $clave = $_GET['clave'];
-    $rol = $_GET['rol'];
+    include_once("VehiculoCollector.php");
+    $vehiculoCollectorObj = new VehiculoCollector();
+    $id_vehiculo = $_GET['id_vehiculo'];
+    $descripcion = $_GET['descripcion'];
+    $placa = $_GET['placa'];
+    $tipo = $_GET['tipo'];
 ?>
 
 <html>
@@ -23,34 +23,31 @@
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Editar usuario</span>
+          <span>Editar Vehiculo</span>
        </strong>
       </div>
       <div class="panel-body">
         <div class="col-md-6 col-md-offset-3">
-          <form method="post" action="updateUsuario.php?usuario=<?php $usuario?>">
+          <form method="post" action="updateVehiculo.php?usuario=<?php $placa?>">
             <div class="form-group">
                 <label for="username">ID</label>
-                <input type="text" class="form-control" name="id_usuario" required value=<?php echo "$id_usuario"; ?>>
+                <input type="text" class="form-control" name="id_vehiculo" required value=<?php echo "$id_vehiculo"; ?>>
             </div>  
             <div class="form-group">
-                <label for="username">Usuario</label>
-                <input type="text" class="form-control" name="usuarioModificado" required value=<?php echo "$usuario"; ?>>
+                <label for="username">Descripcion</label>
+                <input type="text" class="form-control" name="vehiculoModificado" required value=<?php echo "$descripcion"; ?>>
             </div>
             <div class="form-group">
-                <label for="password">Contraseña</label>
-                <input type="password" class="form-control" name ="clave" required  value=<?php echo "$clave"; ?>>
+                <label for="username">Placa</label>
+                <input type="text" class="form-control" name="vehiculoModificado" required value=<?php echo "$placa"; ?>>
             </div>
             <div class="form-group">
-              <label for="level">Rol de usuario</label>
-                <select class="form-control" name="rol">
-                  <option>Administrador</option>
-                  <option>Cliente</option>
-                </select>
+                <label for="username">Tipo</label>
+                <input type="text" class="form-control" name="vehiculoModificado" required value=<?php echo "$tipo"; ?>>
             </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>
-              <a href="readUsuario.php" class="btn btn-info pull-right">Salir</a>       
+              <a href="readVehiculo.php" class="btn btn-info pull-right">Salir</a>       
             </div>
         </form>
         </div>

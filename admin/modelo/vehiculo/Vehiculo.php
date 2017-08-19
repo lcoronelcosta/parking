@@ -2,45 +2,45 @@
 
     class Usuario
     {
-        private $id_usuario;
-        private $usuario;
-        private $password;
-        private $rol;
+        private $id_vehiculo;
+        private $descripcion;
+        private $placa;
+        private $tipo;
 
 
-         function __construct($id_usuario, $usuario, $password, $rol) {
-           $this->id_usuario = $id_usuario;
-           $this->usuario = $usuario;
-           $this->password = $password;
-           $this->rol = $rol;
+         function __construct($id_vehiculo, $descripcion, $placa, $tipo) {
+           $this->id_vehiculo = $id_vehiculo;
+           $this->descripcion = $descrpcion;
+           $this->placa = $placa;
+           $this->tipo = $tipo;
          }
 
-         function set_id_usuario($id_usuario){
-           $this->id_usuario = $id_usuario;
+         function set_id_vehiculo($id_vehiculo){
+           $this->id_vehiculo = $id_vehiculo;
          } 
-         function get_id_usuario(){
-           return $this->id_usuario;
+         function get_id_vehiculo(){
+           return $this->id_vehiculo;
          }
 
-         function set_usuario($usuario){
-           $this->usuario = $usuario;
+         function set_descripcion($descripcion){
+           $this->descripcion = $descripcion;
          } 
-         function get_usuario(){
-           return $this->usuario;
+         function get_descripcion(){
+           return $this->descripcion;
          }
 
-         function set_password($password){
-           $this->password = $password;
+         function set_placa($placa){
+           $this->placa = $placa;
          } 
-         function get_password(){
-           return $this->password;
+         function get_placa(){
+           return $this->placa;
          } 
 
-         function set_rol($rol){
-           $this->rol = $rol;
+         function set_tipo($tipo){
+           $this->tipo = $tipo;
          } 
-         function get_rol(){
-           return $this->rol;
+         function get_tipo(){
+           return $this->tipo;
          }
     }
 ?>

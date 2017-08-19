@@ -1,11 +1,11 @@
 <?php
     session_start();
-    include_once("UsuarioCollector.php");
-    include_once("Usuario.php");
-	$usuario = $_POST['usuario'];
-	$clave = $_POST['clave'];
-    $rol = $_POST['rol'];
-    $UsuarioCollectorObj = new UsuarioCollector();
+    include_once("VehiculoCollector.php");
+    include_once("Vehiculo.php");
+	$descripcion = $_POST['descripcion'];
+	$placa = $_POST['placa'];
+    $tipo = $_POST['tipo'];
+    $vehiculoCollectorObj = new VehiculoCollector();
 ?>
 
 <!DOCTYPE html>
@@ -17,16 +17,16 @@
   
         <?php
         $roll = substr ("$rol", 0,1);
-        if($UsuarioCollectorObj->buscarUsuario($usuario)){
+        if($vehiculoCollectorObj->buscarVehiculo($placa)){
             $mensaje = "ERROR EL USUARIO YA SE ENCUENTRA REGISTRADO";
             print "<script>alert('$mensaje')</script>";
-            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_AddUsuario.php'>";
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_AddVehiculo.php'>";
         }
         else{
-        $UsuarioCollectorObj->createUsuario($usuario, $clave, $rol);
+        $vehiculoCollectorObj->createVehiculo($descripcion, $placa, $tipo);
         $mensaje = "EL USUARIO SE CREO EXITOSAMENTE";
         print "<script>alert('$mensaje')</script>";
-        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readUsuario.php'>";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readVehiculo.php'>";
         }
         ?>
   

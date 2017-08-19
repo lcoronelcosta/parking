@@ -1,12 +1,12 @@
 <?php
 session_start();
-include_once("UsuarioCollector.php");
-$id_usuario = $_POST['id_usuario'];
-$usuarioModificado = $_POST['usuarioModificado']; 
-$clave = $_POST['clave'];
-$rol = $_POST['rol'];
-$usuarioActual = $_GET['usuario'];
-$usuarioCollectorObj = new UsuarioCollector();
+include_once("VehiculoCollector.php");
+$id_vehiculo = $_POST['id_vehiculo'];
+$vehiculoModificado = $_POST['vehiculoModificado']; 
+$placa = $_POST['placa'];
+$tipo = $_POST['tipo'];
+$vehiculoActual = $_GET['descripcion'];
+$vehiculoCollectorObj = new VehiculoCollector();
 ?>
 
 <!DOCTYPE html>
@@ -21,23 +21,23 @@ $usuarioCollectorObj = new UsuarioCollector();
     <body>
         <?php
         $roll = substr ("$rol", 0,1);
-        if(trim($usuarioActual) == trim($usuarioModificado)){
-            $usuarioCollectorObj->updateUsuario($id_usuario, $usuarioModificado, $clave, $roll);
-            $mensaje = "EL USUARIO SE MODIFICO EXITOSAMENTE";
+        if(trim($vehiculoActual) == trim($vehiculoModificado)){
+            $vehiculoCollectorObj->updateVehiculo($id_vehiculo, $vehiculoModificado, $placa, $tipo);
+            $mensaje = "EL VEHICULO SE MODIFICO EXITOSAMENTE";
             print "<script>alert('$mensaje')</script>";
-            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readUsuario.php'>";
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readVehiculo.php'>";
         }
         else{
-            if($usuarioCollectorObj->buscarUsuario($usuarioModificado)){
-            $mensaje = "ERROR EL USUARIO YA SE ENCUENTRA REGISTRADO";
+            if($vehiculoCollectorObj->buscarVehiculo($vehiculoModificado)){
+            $mensaje = "ERROR EL VEHICULO YA SE ENCUENTRA REGISTRADO";
             print "<script>alert('$mensaje')</script>";
-            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_EditUsuario.php?id_usuario=$id_usuario & usuario=$usuarioModificado & clave=$clave & rol=$rol'>";
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_EditVehiculo.php?id_vehiculo=$id_vehiculo & descripcion=$vehiculoModificado & placa=$placa & tipo=$tipo'>";
             }
             else{
-                 $usuarioCollectorObj->updateUsuario($id_usuario, $usuarioModificado, $clave, $roll);
-            $mensaje = "EL USUARIO SE MODIFICO EXITOSAMENTE";
+                 $vehiculoCollectorObj->updateVehiculo($id_vehiculo, $vehiculoModificado, $placa, $tipo);
+            $mensaje = "EL VEHICULO SE MODIFICO EXITOSAMENTE";
             print "<script>alert('$mensaje')</script>";
-            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readUsuario.php'>";
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readVehiculo.php'>";
             }
         }
         ?>

@@ -1,49 +1,49 @@
 <?php
 
-    include_once('Usuario.php');
+    include_once('Vehiculo.php');
     include_once('../Collector.php');
 
     class UsuarioCollector extends Collector{
 
-        function showUsuarios() {
-                $rows = self::$db->getRows("SELECT * FROM usuario ");
-                $arrayUsuario= array();        
+        function showVehiculo() {
+                $rows = self::$db->getRows("SELECT * FROM vehiculo ");
+                $arrayVehiculo= array();        
                 foreach ($rows as $c){
-                    $aux = new Usuario($c{'id_usuario'},$c{'usuario'},$c{'password'},$c{'rol'});
-                    array_push($arrayUsuario, $aux);
+                    $aux = new Vehiculo($c{'id_vehiculo'},$c{'descripcion'},$c{'placa'},$c{'tipo'});
+                    array_push($arrayVehiculo, $aux);
                 }
-                return $arrayUsuario;        
+                return $arrayVehiculo;        
         }
         
-        function createUsuario($usuario,$clave,$rol) {
-                $rows = self::$db->insertRow("INSERT INTO usuario (usuario, password, rol) VALUES ('$usuario', '$clave', '$rol')",null);
+        function createVehiculo($descripcion,$placa,$tipo {
+                $rows = self::$db->insertRow("INSERT INTO vehiculo (descripcion, placa, tipo) VALUES ('$descripcion', '$placa', '$tipo')",null);
         
         }
         
-        function updateUsuario($id_usuario, $usuario, $clave, $rol) {
-                $rows = self::$db->updateRow("UPDATE usuario SET usuario='$usuario', password='$clave', rol='$rol' WHERE id_usuario='$id_usuario'",null);
+        function updateVehiculo($id_vehiculo, $descripcion, $placa, $tipo) {
+                $rows = self::$db->updateRow("UPDATE vehiculo SET descripcion='$descripcion', placa='$placa', tipo='$tipo' WHERE id_usuario='$id_usuario'",null);
 
         }
         
-        function deleteUsuario($id_usuario) {
-                 $rows = self::$db->deleteRow("DELETE FROM usuario WHERE id_usuario=$id_usuario",null);
+        function deleteVehiculo($id_vehiculo) {
+                 $rows = self::$db->deleteRow("DELETE FROM vehiculo WHERE id_vehiculo=$id_vehiculo",null);
 
 
         }
         
-        function validarUsuario($usuario,$clave){
-                $rows = self::$db->getRows("SELECT * FROM usuario WHERE usuario='$usuario' AND clave='$clave'");
+        function validarVehiculo($descripcion,$placa){
+                $rows = self::$db->getRows("SELECT * FROM vehiculo WHERE descripcion='$descripcion' AND placa='$placa'");
                 foreach ($rows as $c){
-                  $aux = new Usuario($c{'id_usuario'},$c{'usuario'},$c{'password'},$c{'rol'});
+                  $aux = new Vehiculo($c{'id_vehiculo'},$c{'descripcion'},$c{'placa'},$c{'tipo'});
                   return 1;
                 }
                 return 0;
           }    
         
-          function buscarUsuario($usuario) {
-                $rows = self::$db->getRows("SELECT * FROM usuario WHERE usuario='$usuario'");               
+          function buscarVehiculo($placa) {
+                $rows = self::$db->getRows("SELECT * FROM vehiculo WHERE placa='$placa'");               
                 foreach ($rows as $c){
-                  $aux = new Usuario($c{'id_usuario'},$c{'usuario'},$c{'password'},$c{'rol'});
+                  $aux = new Vehiculo($c{'id_vehiculo'},$c{'descripcion'},$c{'placa'},$c{'tipo'});
                   return 1;
                 }
                 return 0;          
