@@ -95,7 +95,7 @@
                         <div>
                             <h3 class='tittle'>Coronel</h3>
                             <a href='modelo/usuario/readUsuario.php'><input type='button' value='USUARIOS'></a>
-                            <input type='button' value='TABLA2' >
+                            <a href='modelo/cliente/readCliente.php'><input type='button' value='CLIENTE'></a>
                             <input type='button' value='TABLA3' >	
                         </div>
                 </div>

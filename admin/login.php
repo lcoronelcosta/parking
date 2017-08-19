@@ -89,7 +89,7 @@
 					  
 					  <div class="field email-box">
 							<input type="text" id="email" placeholder="Password" name="clave" required=""/>
-							<label for="email">Password</label>
+							<label for="password">Password</label>
 							<span class="ss-icon">check</span>
 					  </div>
                                 
