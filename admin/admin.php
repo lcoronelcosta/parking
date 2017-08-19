@@ -82,9 +82,9 @@
                     <div class='arrows-serve'><img src='../images/border.png' alt='border'></div>
                         <div class='inst-grids'>
                             <h3 class='tittle'>Zuñiga</h3>
-                            <a href='modelo/vehiculo/readVehiculo.php'><input type='button' value='VEHICULOS'></a>
-                            <input type='button' value='TABLA2-fa' >
-                            <input type='button' value='TABLA3-fa' >
+                            <a href='modelo/vehiculo/readVehiculo.php'><input type='button' value='VEHICULO'></a>
+                            <a href='modelo/parqueadero'><input type='button' value='PARQUEADERO'></a>
+                            <a href='modelo/propietario'><input type='button' value='PROPIETARIO'></a>
                         </div>
                         <div class='inst-grids'>
                             <h3 class='tittle'>Mite</h3>

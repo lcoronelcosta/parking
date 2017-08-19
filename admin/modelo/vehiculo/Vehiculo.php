@@ -10,7 +10,7 @@
 
          function __construct($id_vehiculo, $descripcion, $placa, $tipo) {
            $this->id_vehiculo = $id_vehiculo;
-           $this->descripcion = $descrpcion;
+           $this->descripcion = $descripcion;
            $this->placa = $placa;
            $this->tipo = $tipo;
          }

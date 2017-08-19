@@ -15,7 +15,7 @@
                 return $arrayVehiculo;        
         }
         
-        function createVehiculo($descripcion,$placa,$tipo {
+        function createVehiculo($descripcion,$placa,$tipo){
                 $rows = self::$db->insertRow("INSERT INTO vehiculo (descripcion, placa, tipo) VALUES ('$descripcion', '$placa', '$tipo')",null);
         
         }

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once("UsuarioCollector.php");
+    include_once("VehiculoCollector.php");
     $vehiculoCollectorObj = new VehiculoCollector();
 ?>
 
@@ -25,23 +25,20 @@
         <div class="col-md-6 col-md-offset-3">
           <form method="post" action="saveUsuario.php">
             <div class="form-group">
-                <label for="username">Usuario</label>
-                <input type="text" class="form-control" name="usuario" placeholder="Nombre de usuario" required autofocus>
+                <label for="username">Descripcion</label>
+                <input type="text" class="form-control" name="descripcion" placeholder="Marca Modelo Vehiculo" required autofocus>
             </div>
             <div class="form-group">
-                <label for="password">Contraseña</label>
-                <input type="password" class="form-control" name ="clave"  placeholder="Contraseña" required>
+                <label for="username">Placa</label>
+                <input type="text" class="form-control" name ="placa"  placeholder="Placa Vehiculo" required>
             </div>
             <div class="form-group">
-              <label for="level">Rol de usuario</label>
-                <select class="form-control" name="rol">
-                  <option>Administrador</option>
-                  <option>Cliente</option>
-                </select>
+                <label for="username">Tipo</label>
+                <input type="text" class="form-control" name ="tipo"  placeholder="Auto - Camioneta - Moto" required>
             </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>
-              <a href="readUsuario.php" class="btn btn-info pull-right">Salir</a>       
+              <a href="readVehiculo.php" class="btn btn-info pull-right">Salir</a>       
             </div>
         </form>
         </div>
