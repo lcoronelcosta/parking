@@ -23,7 +23,7 @@
       </div>
       <div class="panel-body">
         <div class="col-md-6 col-md-offset-3">
-          <form method="post" action="saveUsuario.php">
+          <form method="post" action="saveVehiculo.php">
             <div class="form-group">
                 <label for="username">Descripcion</label>
                 <input type="text" class="form-control" name="descripcion" placeholder="Marca Modelo Vehiculo" required autofocus>

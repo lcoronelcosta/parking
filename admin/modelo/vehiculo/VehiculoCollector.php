@@ -21,7 +21,7 @@
         }
         
         function updateVehiculo($id_vehiculo, $descripcion, $placa, $tipo) {
-                $rows = self::$db->updateRow("UPDATE vehiculo SET descripcion='$descripcion', placa='$placa', tipo='$tipo' WHERE id_usuario='$id_usuario'",null);
+                $rows = self::$db->updateRow("UPDATE vehiculo SET descripcion='$descripcion', placa='$placa', tipo='$tipo' WHERE id_vehiculo='$id_vehiculo'",null);
 
         }
         

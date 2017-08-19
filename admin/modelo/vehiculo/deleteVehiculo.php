@@ -15,7 +15,7 @@
     <body>
         <?php
         $vehiculoCollectorObj->deleteVehiculo($id_vehiculo);
-        $mensaje = "EL USUARIO SE ELIMINO EXITOSAMENTE";
+        $mensaje = "EL VEHICULO SE ELIMINO EXITOSAMENTE";
         print "<script>alert('$mensaje')</script>";
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readVehiculo.php'>";
         ?>

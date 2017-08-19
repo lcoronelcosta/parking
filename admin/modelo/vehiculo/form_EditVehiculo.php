@@ -28,7 +28,7 @@
       </div>
       <div class="panel-body">
         <div class="col-md-6 col-md-offset-3">
-          <form method="post" action="updateVehiculo.php?usuario=<?php $placa?>">
+          <form method="post" action="updateVehiculo.php?placa=<?php $placa?>">
             <div class="form-group">
                 <label for="username">ID</label>
                 <input type="text" class="form-control" name="id_vehiculo" required value=<?php echo "$id_vehiculo"; ?>>
