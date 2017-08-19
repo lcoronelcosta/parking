@@ -3,7 +3,7 @@
     include_once('Vehiculo.php');
     include_once('../Collector.php');
 
-    class UsuarioCollector extends Collector{
+    class VehiculoCollector extends Collector{
 
         function showVehiculo() {
                 $rows = self::$db->getRows("SELECT * FROM vehiculo ");

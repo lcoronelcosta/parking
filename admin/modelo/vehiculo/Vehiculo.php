@@ -1,6 +1,6 @@
 <?php
 
-    class Usuario
+    class Vehiculo
     {
         private $id_vehiculo;
         private $descripcion;

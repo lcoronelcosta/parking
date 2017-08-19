@@ -4,8 +4,8 @@
     include_once("Vehiculo.php");
 	$descripcion = $_POST['descripcion'];
 	$placa = $_POST['placa'];
-    $tipo = $_POST['tipo'];
-    $vehiculoCollectorObj = new VehiculoCollector();
+        $tipo = $_POST['tipo'];
+        $vehiculoCollectorObj = new VehiculoCollector();
 ?>
 
 <!DOCTYPE html>
