@@ -85,18 +85,21 @@
                             <a href='modelo/vehiculo/readVehiculo.php'><input type='button' value='VEHICULO'></a>
                             <a href='modelo/parqueadero/readParqueadero.php'><input type='button' value='PARQUEADERO'></a>
                             <a href='modelo/propietario/readPropietario.php'><input type='button' value='PROPIETARIO'></a>
+                            <a href='modelo/formapago/'><input type='button' value='FORMA PAGO'></a>
                         </div>
                         <div class='inst-grids'>
                             <h3 class='tittle'>Mite</h3>
                             <input type='button' value='TABLA1' >
                             <input type='button' value='TABLA2' >
-                            <input type='button' value='TABLA3' >	
+                            <input type='button' value='TABLA3' >
+                            <input type='button' value='TABLA4' >	
                         </div>
                         <div>
                             <h3 class='tittle'>Coronel</h3>
                             <a href='modelo/usuario/readUsuario.php'><input type='button' value='USUARIOS'></a>
                             <a href='modelo/cliente/readCliente.php'><input type='button' value='CLIENTE'></a>
-                            <input type='button' value='TABLA3' >	
+                            <input type='button' value='TABLA3' >
+                            <input type='button' value='TABLA4' >	
                         </div>
                 </div>
             </div> ";
