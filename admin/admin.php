@@ -89,17 +89,17 @@
                         </div>
                         <div class='inst-grids'>
                             <h3 class='tittle'>Mite</h3>
-                            <input type='button' value='TABLA1' >
-                            <input type='button' value='TABLA2' >
-                            <input type='button' value='TABLA3' >
-                            <input type='button' value='TABLA4' >	
+                            <a href='#'><input type='button' value='MULTA'></a>
+                            <a href='#'><input type='button' value='MULTA x RESERVAS'></a>
+                            <a href='#'><input type='button' value='ESTACIONAMIENTO'></a>
+                            <a href='#'><input type='button' value='DETALLE FACTURA'></a>
                         </div>
                         <div>
                             <h3 class='tittle'>Coronel</h3>
                             <a href='modelo/usuario/readUsuario.php'><input type='button' value='USUARIOS'></a>
                             <a href='modelo/cliente/readCliente.php'><input type='button' value='CLIENTE'></a>
-                            <input type='button' value='TABLA3' >
-                            <input type='button' value='TABLA4' >	
+                             <a href='modelo/reservas/readReservas.php'><input type='button' value='RESERVAS'></a>
+                            <a href='#'><input type='button' value='FACTURAS'></a>
                         </div>
                 </div>
             </div> ";
