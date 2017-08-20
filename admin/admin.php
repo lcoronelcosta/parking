@@ -85,7 +85,7 @@
                             <a href='modelo/vehiculo/readVehiculo.php'><input type='button' value='VEHICULO'></a>
                             <a href='modelo/parqueadero/readParqueadero.php'><input type='button' value='PARQUEADERO'></a>
                             <a href='modelo/propietario/readPropietario.php'><input type='button' value='PROPIETARIO'></a>
-                            <a href='modelo/formapago/'><input type='button' value='FORMA PAGO'></a>
+                            <a href='modelo/tipopago/readTipopago.php'><input type='button' value='TIPO PAGO'></a>
                         </div>
                         <div class='inst-grids'>
                             <h3 class='tittle'>Mite</h3>
