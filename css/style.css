@@ -5,6 +5,15 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 
+#sidebar{
+	top:52px;
+	width:17%;
+	position:fixed;
+	height:100%;
+	border:1px solid #e7e7e7;
+	background-color:#fff;
+}
+
 .separador{
 clear:both; 
 border-top : 60px solid white;

@@ -36,7 +36,7 @@
               <label for="level">Rol de usuario</label>
                 <select class="form-control" name="rol">
                   <option>Administrador</option>
-                  <option>Cliente</option>
+                  <option>Web</option>
                 </select>
             </div>
             <div class="form-group clearfix">

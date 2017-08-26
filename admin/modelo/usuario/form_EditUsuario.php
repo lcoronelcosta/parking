@@ -44,8 +44,17 @@
             <div class="form-group">
               <label for="level">Rol de usuario</label>
                 <select class="form-control" name="rol">
-                  <option>Administrador</option>
-                  <option>Cliente</option>
+                  <?php 
+                    if ($rol == 'A'){
+                        echo "<option >Administrador</option>";
+                        echo "<option>Web</option>";
+                    }
+                    else{
+                        echo "<option>Web</option>";
+                        echo "<option >Administrador</option>";
+                    }
+                    
+                  ?>    
                 </select>
             </div>
             <div class="form-group clearfix">

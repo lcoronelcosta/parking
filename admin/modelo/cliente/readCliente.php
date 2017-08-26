@@ -20,7 +20,7 @@
       <div class="panel-heading clearfix">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>USUARIOS</span>
+          <span>CLIENTES</span>
        </strong>
          <a href="../../admin.php" class="btn btn-danger pull-right">ATRAS</a> 
          <a href="form_AddCliente.php" class="btn btn-info">AGREGAR CLIENTE</a>
