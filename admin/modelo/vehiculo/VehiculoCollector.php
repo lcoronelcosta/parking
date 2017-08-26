@@ -40,8 +40,8 @@
                 return 0;
           }    
         
-          function buscarVehiculo($placa) {
-                $rows = self::$db->getRows("SELECT * FROM vehiculo WHERE placa='$placa'");               
+          function buscarVehiculo($descripcion) {
+                $rows = self::$db->getRows("SELECT * FROM vehiculo WHERE descripcion='$descripcion'");               
                 foreach ($rows as $c){
                   $aux = new Vehiculo($c{'id_vehiculo'},$c{'descripcion'},$c{'placa'},$c{'tipo'});
                   return 1;

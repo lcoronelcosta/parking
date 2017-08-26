@@ -20,7 +20,7 @@ $vehiculoCollectorObj = new VehiculoCollector();
     </head>
     <body>
         <?php
-        $roll = substr ("$rol", 0,1);
+        //$roll = substr ("$rol", 0,1);
         if(trim($vehiculoActual) == trim($vehiculoModificado)){
             $vehiculoCollectorObj->updateVehiculo($id_vehiculo, $vehiculoModificado, $placa, $tipo);
             $mensaje = "EL VEHICULO SE MODIFICO EXITOSAMENTE";
