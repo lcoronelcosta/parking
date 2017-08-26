@@ -36,6 +36,10 @@
                 <label for="username">Tipo</label>
                 <input type="text" class="form-control" name ="tipo"  placeholder="Auto - Camioneta - Moto" required>
             </div>
+            <div class="form-group">
+                <label for="username">Cliente</label>
+                <input type="text" class="form-control" name ="tipo"  placeholder="Id Cliente" required>
+            </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>
               <a href="readVehiculo.php" class="btn btn-info pull-right">Salir</a>       
