@@ -5,6 +5,7 @@ $id_vehiculo = $_POST['id_vehiculo'];
 $vehiculoModificado = $_POST['vehiculoModificado']; 
 $placa = $_POST['placa'];
 $tipo = $_POST['tipo'];
+$id_cliente = $_POST['id_cliente'];
 $vehiculoActual = $_GET['descripcion'];
 $vehiculoCollectorObj = new VehiculoCollector();
 ?>

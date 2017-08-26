@@ -38,7 +38,7 @@
             </div>
             <div class="form-group">
                 <label for="username">Cliente</label>
-                <input type="text" class="form-control" name ="tipo"  placeholder="Id Cliente" required>
+                <input type="text" class="form-control" name ="id_cliente"  placeholder="Id Cliente" required>
             </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>

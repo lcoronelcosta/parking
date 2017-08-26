@@ -33,6 +33,7 @@
                 <th>DESCRIPCION</th>
                 <th>PLACA</th>
                 <th>TIPO</th>
+                <th>CLIENTE</th>
                 <th>OPERACIONES</th>
             </tr>
         </thead>

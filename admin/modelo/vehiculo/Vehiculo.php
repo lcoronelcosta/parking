@@ -6,7 +6,7 @@
         private $descripcion;
         private $placa;
         private $tipo;
-        private $id_cliente
+        private $id_cliente;
 
 
          function __construct($id_vehiculo, $descripcion, $placa, $tipo,$id_cliente) {
@@ -45,7 +45,7 @@
            return $this->tipo;
          }
 
-         function set_tipo($id_cliente){
+         function set_id_cliente($id_cliente){
            $this->id_cliente = $id_cliente;
          } 
          function get_id_cliente(){

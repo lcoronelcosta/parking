@@ -6,6 +6,7 @@
     $descripcion = $_GET['descripcion'];
     $placa = $_GET['placa'];
     $tipo = $_GET['tipo'];
+    $id_cliente = $_GET['id_cliente'];
 ?>
 
 <html>
