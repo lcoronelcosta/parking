@@ -8,7 +8,6 @@
 <head>
 	<meta charset="utf-8">
 	<title>Reservas</title>
-    <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link href='https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -23,7 +22,7 @@
           <span>RESERVAS</span>
        </strong>
          <a href="../../admin.php" class="btn btn-danger pull-right">ATRAS</a> 
-         <a href="form_AddCliente.php" class="btn btn-info">AGREGAR RESERVA</a>
+         <a href="form_AddReserva.php" class="btn btn-info">AGREGAR RESERVA</a>
       </div>
      <div class="panel-body">
     <table id="example" class="table table-striped table-bordered" cellspacing="0" width="80%">
@@ -67,7 +66,7 @@
     </div>
     </div>
   </div>
-</div>
+</div>  
 </body>
 </html>
 <?php 

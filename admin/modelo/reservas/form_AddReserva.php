@@ -36,10 +36,34 @@
                 <label for="username">ID-PARQUEO</label>
                 <input type="text" class="form-control" name="usuario" placeholder="Nombre de usuario" required autofocus>
             </div>
+            <div class="form-group">
+                <label for="username">FECHA INICIO</label>
+                <input type="date" class="form-control" name="fecha_ini" placeholder="Nombre de usuario" required autofocus>
+            </div>  
+            <div class="form-group">
+                <label for="username">FECHA FIN</label>
+                <input type="date" class="form-control" name="fecha_fin" placeholder="Nombre de usuario" required autofocus>
+            </div> 
+            <div class="form-group">
+                <label for="username">ORIGEN LATITUD</label>
+                <input id="origen_la" type="text" class="form-control" name="origen_la" required autofocus readonly>
+            </div>
+            <div class="form-group">
+                <label for="username">ORIGEN LONGITUD</label>
+                <input id="origen_lo" type="text" class="form-control" name="origen_lo" required autofocus readonly>
+            </div>    
+             <div class="form-group">
+                <label for="username">DESTINO LATITUD</label>
+                <input id="destino_la" type="text" class="form-control" name="destino_la" required autofocus readonly>
+            </div>
+            <div class="form-group">
+                <label for="username">DESTINO LONGITUD</label>
+                <input id="destino_lo" type="text" class="form-control" name="destino_lo" required autofocus readonly>
+            </div>      
               
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>
-              <a href="readUsuario.php" class="btn btn-info pull-right">Salir</a>       
+              <a href="readReserva.php" class="btn btn-info pull-right">Salir</a>       
             </div>
         </form>
         </div>
@@ -48,9 +72,6 @@
 
     </div>
   </div>
+  <?php include_once('map.php'); ?>       
 </body>
 </html>
-<?php 
-
-    include_once("../../modal_exito.php");
-?>
