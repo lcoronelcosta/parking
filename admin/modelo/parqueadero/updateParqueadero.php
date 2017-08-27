@@ -14,7 +14,7 @@ $parqueaderoCollectorObj = new ParqueaderoCollector();
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Login</title>
+        <title>Update Parqueadero</title>
         <link href="../estilo.css" rel="stylesheet">
     	
     
