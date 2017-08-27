@@ -21,7 +21,7 @@
         }
         
         function updateParqueadero($id_parqueadero, $nombre, $direccion, $latitud, $longitud) {
-                $rows = self::$db->updateRow("UPDATE parqueadero SET nombre='$nombre', direccion='$direccion', latitud='$latitud', longittud='$longitud' WHERE id_parqueadero='$id_parqueadero'",null);
+                $rows = self::$db->updateRow("UPDATE parqueadero SET nombre='$nombre', direccion='$direccion', latitud='$latitud', longitud='$longitud' WHERE id_parqueadero='$id_parqueadero'",null);
 
         }
         
