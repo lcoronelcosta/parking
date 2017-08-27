@@ -6,6 +6,7 @@
     $descripcion = $_GET['descripcion'];
     $placa = $_GET['placa'];
     $tipo = $_GET['tipo'];
+    $id_cliente = $_GET['id_cliente'];
 ?>
 
 <html>
@@ -28,7 +29,7 @@
       </div>
       <div class="panel-body">
         <div class="col-md-6 col-md-offset-3">
-          <form method="post" action="updateVehiculo.php?placa=<?php $placa?>">
+          <form method="post" action="updateVehiculo.php?descripcion=<?php $descripcion?>">
             <div class="form-group">
                 <label for="username">ID</label>
                 <input type="text" class="form-control" name="id_vehiculo" required value=<?php echo "$id_vehiculo"; ?>>
@@ -39,11 +40,15 @@
             </div>
             <div class="form-group">
                 <label for="username">Placa</label>
-                <input type="text" class="form-control" name="vehiculoModificado" required value=<?php echo "$placa"; ?>>
+                <input type="text" class="form-control" name="placa" required value=<?php echo "$placa"; ?>>
             </div>
             <div class="form-group">
                 <label for="username">Tipo</label>
-                <input type="text" class="form-control" name="vehiculoModificado" required value=<?php echo "$tipo"; ?>>
+                <input type="text" class="form-control" name="tipo" required value=<?php echo "$tipo"; ?>>
+            </div>
+            <div class="form-group">
+                <label for="username">Cliente</label>
+                <input type="text" class="form-control" name="id_cliente" required value=<?php echo "$id_cliente"; ?>>
             </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>

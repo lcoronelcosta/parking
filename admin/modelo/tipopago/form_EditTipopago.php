@@ -22,7 +22,7 @@
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Editar Vehiculo</span>
+          <span>Editar Tipo Pago</span>
        </strong>
       </div>
       <div class="panel-body">
@@ -34,11 +34,11 @@
             </div>  
             <div class="form-group">
                 <label for="username">Descripcion</label>
-                <input type="text" class="form-control" name="vehiculoModificado" required value=<?php echo "$descripcion"; ?>>
+                <input type="text" class="form-control" name="tipopagoModificado" required value=<?php echo "$descripcion"; ?>>
             </div>
             <div class="form-group">
-                <label for="username">Placa</label>
-                <input type="text" class="form-control" name="vehiculoModificado" required value=<?php echo "$estado"; ?>>
+                <label for="username">Estado</label>
+                <input type="text" class="form-control" name="estado" required value=<?php echo "$estado"; ?>>
             </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>

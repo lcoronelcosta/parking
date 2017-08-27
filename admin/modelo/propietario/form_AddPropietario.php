@@ -1,5 +1,8 @@
 <?php
     session_start();
+    include_once("PropietarioCollector.php");
+    $propietarioCollectorObj = new PropietarioCollector();
+?>
 ?>
 
 <html>

@@ -41,7 +41,7 @@
             echo "<td>" . $c->get_id_pago() . "</td>";         
             echo "<td>" . $c->get_descripcion() . "</td>";   
             echo "<td>" . $c->get_estado() . "</td>";
-            echo "<td><a href='form_EditTipopago.php?id_pago=". $c->get_id_pago() ." & descrpcion=". $c->get_descripcion() ." & estado=". $c->get_estado()."' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
+            echo "<td><a href='form_EditTipopago.php?id_pago=". $c->get_id_pago() ." & descripcion=". $c->get_descripcion() ." & estado=". $c->get_estado()."' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
                 </a> <a href='deleteTipopago.php?ID=". $c->get_id_pago() ."' class='btn btn-xs btn-danger' data-toggle='tooltip' title='Eliminar'><i class='glyphicon glyphicon-remove'></i>
                 </a></td>"; 
             echo "</tr>"; 

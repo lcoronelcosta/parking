@@ -5,6 +5,7 @@ $id_vehiculo = $_POST['id_vehiculo'];
 $vehiculoModificado = $_POST['vehiculoModificado']; 
 $placa = $_POST['placa'];
 $tipo = $_POST['tipo'];
+$id_cliente = $_POST['id_cliente'];
 $vehiculoActual = $_GET['descripcion'];
 $vehiculoCollectorObj = new VehiculoCollector();
 ?>
@@ -20,9 +21,9 @@ $vehiculoCollectorObj = new VehiculoCollector();
     </head>
     <body>
         <?php
-        $roll = substr ("$rol", 0,1);
+        //$roll = substr ("$rol", 0,1);
         if(trim($vehiculoActual) == trim($vehiculoModificado)){
-            $vehiculoCollectorObj->updateVehiculo($id_vehiculo, $vehiculoModificado, $placa, $tipo);
+            $vehiculoCollectorObj->updateVehiculo($id_vehiculo, $vehiculoModificado, $placa, $tipo, $id_cliente);
             $mensaje = "EL VEHICULO SE MODIFICO EXITOSAMENTE";
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readVehiculo.php'>";
@@ -31,10 +32,10 @@ $vehiculoCollectorObj = new VehiculoCollector();
             if($vehiculoCollectorObj->buscarVehiculo($vehiculoModificado)){
             $mensaje = "ERROR EL VEHICULO YA SE ENCUENTRA REGISTRADO";
             print "<script>alert('$mensaje')</script>";
-            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_EditVehiculo.php?id_vehiculo=$id_vehiculo & descripcion=$vehiculoModificado & placa=$placa & tipo=$tipo'>";
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_EditVehiculo.php?id_vehiculo=$id_vehiculo & descripcion=$vehiculoModificado & placa=$placa & tipo=$tipo & id_cliente=$id_cliente'>";
             }
             else{
-                 $vehiculoCollectorObj->updateVehiculo($id_vehiculo, $vehiculoModificado, $placa, $tipo);
+                 $vehiculoCollectorObj->updateVehiculo($id_vehiculo, $vehiculoModificado, $placa, $tipo, $id_cliente);
             $mensaje = "EL VEHICULO SE MODIFICO EXITOSAMENTE";
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readVehiculo.php'>";

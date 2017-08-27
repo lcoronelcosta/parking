@@ -3,7 +3,6 @@
     class Propietario
     {
         private $id_propietario;
-        private $id_parqueo;
         private $nombre;
         private $apellido;
         private $ruc;
@@ -11,9 +10,8 @@
         private $estado;
 
 
-        function __construct($id_propietario, $id_parqueo, $nombre, $apellido, $ruc, $numerocuenta, $estado) {
+        function __construct($id_propietario, $nombre, $apellido, $ruc, $numerocuenta, $estado) {
            $this->id_propietario = $id_propietario;
-           $this->id_parqueo = $id_parqueo;
            $this->nombre = $nombre;
            $this->apellido = $apellido;
            $this->ruc = $ruc;
@@ -26,13 +24,6 @@
          } 
          function get_id_propietario(){
            return $this->id_propietario;
-         }
-
-         function set_id_parqueo($id_parqueo){
-           $this->id_parqueo = $id_parqueo;
-         } 
-         function get_id_parqueo(){
-           return $this->id_parqueo;
          }
 
          function set_nombre($nombre){

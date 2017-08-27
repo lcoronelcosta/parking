@@ -1,13 +1,13 @@
 <?php
     session_start();
-    include_once("ClienteCollector.php");
-    include_once("Cliente.php");
+    include_once("PropietarioCollector.php");
+    include_once("Propietario.php");
     $nombre = $_POST['nombre'];
 	$apellido = $_POST['apellido'];
-	$usuario = $_POST['usuario'];
-	$clave = $_POST['clave'];
-    $rol = $_POST['rol'];
-    $ClienteCollectorObj = new ClienteCollector();
+	$ruc = $_POST['ruc'];
+	$numerocuenta = $_POST['numerocuenta'];
+    $estado = $_POST['estado'];
+    $propietarioCollectorObj = new PropietarioCollector();
 ?>
 
 <!DOCTYPE html>
@@ -18,17 +18,17 @@
     <body>
   
         <?php
-        $roll = substr ("$rol", 0,1);
-        if($ClienteCollectorObj->buscarUsuario($usuario)){
-            $mensaje = "ERROR EL USUARIO YA SE ENCUENTRA REGISTRADO";
+        //$roll = substr ("$rol", 0,1);
+        if($propietarioCollectorObj->buscarPropietario($nombre)){
+            $mensaje = "ERROR EL PROPIETARIO YA SE ENCUENTRA REGISTRADO";
             print "<script>alert('$mensaje')</script>";
-            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_AddCliente.php'>";
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_AddPropietario.php'>";
         }
         else{
-        $ClienteCollectorObj->createCliente($nombre, $apellido, $usuario, $clave, $rol);
-        $mensaje = "EL CLIENTE SE CREO EXITOSAMENTE";
+        $propietarioCollectorObj->createPropietario($nombre, $apellido, $ruc, $numerocuenta, $estado);
+        $mensaje = "EL PROPIETARIO SE CREO EXITOSAMENTE";
         print "<script>alert('$mensaje')</script>";
-        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readCliente.php'>";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readPropietario.php'>";
         }
         ?>
   
