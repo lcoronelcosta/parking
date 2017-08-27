@@ -100,8 +100,8 @@
 
     </div>
   </div>
-  <?php include_once('modal_clientes.php'); ?>  
-  <?php include_once('modal_vehiculo.php'); ?>          
-  <?php include_once('map.php'); ?>       
-</body>
+<?php include_once('modal_clientes.php');?>
+<?php include_once('modal_vehiculo.php');?>       
+<?php include_once('map.php');?>
+   </body>
 </html>

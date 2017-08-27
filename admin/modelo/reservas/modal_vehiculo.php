@@ -15,7 +15,7 @@
             <div class="modal-header">
                 <h2 class="modal-title">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <strong>CLIENTES</strong>
+                    <strong>VEHICULOS</strong>
                  </h2>
             </div>
             <div class="modal-body alert-success">
@@ -53,7 +53,7 @@
                 });
             </script>        
                     
-        <?php       
+        <?php    
             $con++;    
             }
         ?>

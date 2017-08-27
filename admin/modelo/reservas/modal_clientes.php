@@ -50,7 +50,7 @@
                 });
             </script>        
                     
-        <?php       
+        <?php
             $con++;    
             }
         ?>
