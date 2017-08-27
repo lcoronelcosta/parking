@@ -10,11 +10,9 @@
         private $fecha_fin;
         private $origen_latitud;
         private $origen_longitud;
-        private $destino_latitud;
-        private $destino_longitud;
         private $estado;
         
-        function __construct($id_reserva, $id_cliente, $id_vehiculo, $id_parqueo, $fecha_inicio, $fecha_fin, $origen_latitud, $origen_longitud, $destino_latitud, $destino_longitud, $estado) {
+        function __construct($id_reserva, $id_cliente, $id_vehiculo, $id_parqueo, $fecha_inicio, $fecha_fin, $origen_latitud, $origen_longitud, $estado) {
            
            $this->id_reserva = $id_reserva;
            $this->id_cliente = $id_cliente;
@@ -23,9 +21,7 @@
            $this->fecha_inicio = $fecha_inicio;
            $this->fecha_fin = $fecha_fin;
            $this->origen_latitud = $origen_latitud;
-           $this->origen_longitud = $origen_longitud;  
-           $this->destino_latitud = $destino_latitud;
-           $this->destino_longitud = $destino_longitud;
+           $this->origen_longitud = $origen_longitud;
            $this->estado = $estado;         
             
          }
@@ -84,20 +80,6 @@
          } 
          function get_origen_longitud(){
            return $this->origen_longitud;
-         }
-        
-         function set_destino_latitud($destino_latitud){
-           $this->destino_latitud = $destino_latitud;
-         } 
-         function get_destino_latitud(){
-           return $this->destino_latitud;
-         }
-        
-         function set_destino_longitud($destino_longitud){
-           $this->destino_longitud = $destino_longitud;
-         } 
-         function get_destino_longitud(){
-           return $this->destino_longitud;
          }
         
          function set_estado($estado){

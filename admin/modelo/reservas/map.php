@@ -74,6 +74,8 @@
                 gIW.open(gMapa, gMarker);
                 document.getElementById('destino_la').value = lat;
                 document.getElementById('destino_lo').value = lon;
+                document.getElementById('id_p').value = '<?php echo "".$c->get_id_parqueadero().""; ?>';
+                document.getElementById('d_p').value = '<?php echo "".$c->get_nombre().""; ?>';
             })
             
             <?php } ?>

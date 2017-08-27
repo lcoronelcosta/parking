@@ -15,6 +15,16 @@
                 return $arrayVehiculo;        
         }
         
+        function showVehiculoByCliente($id_cliente) {
+                $rows = self::$db->getRows("SELECT * FROM vehiculo WHERE id_cliente='$id_cliente'");
+                $arrayVehiculo= array();        
+                foreach ($rows as $c){
+                    $aux = new Vehiculo($c{'id_vehiculo'},$c{'descripcion'},$c{'placa'},$c{'tipo'},$c{'id_cliente'});
+                    array_push($arrayVehiculo, $aux);
+                }
+                return $arrayVehiculo;        
+        }
+        
         function createVehiculo($descripcion,$placa,$tipo,$id_cliente){
                 $rows = self::$db->insertRow("INSERT INTO vehiculo (descripcion, placa, tipo, id_cliente) VALUES ('$descripcion', '$placa', '$tipo', '$id_cliente')",null);
         
