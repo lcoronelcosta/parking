@@ -16,7 +16,7 @@
          }
         
         function set_id_cliente($id_cliente){
-           $this->id_ = $id_usuario;
+           $this->id_cliente = id_cliente;
          } 
          function get_id_cliente(){
            return $this->id_cliente;
