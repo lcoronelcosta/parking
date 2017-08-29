@@ -5,7 +5,7 @@
 
     class VehiculoCollector extends Collector{
 
-        function showVehiculo() {
+        function showVehiculos() {
                 $rows = self::$db->getRows("SELECT * FROM vehiculo ");
                 $arrayVehiculo= array();        
                 foreach ($rows as $c){
@@ -13,6 +13,12 @@
                     array_push($arrayVehiculo, $aux);
                 }
                 return $arrayVehiculo;        
+        }
+        
+        function showVehiculo($id_vehiculo) {
+                $row = self::$db->getRows("SELECT * FROM vehiculo WHERE id_vehiculo='$id_vehiculo'");
+                $aux = new Vehiculo($row[0]{'id_vehiculo'},$row[0]{'descripcion'},$row[0]{'placa'},$row[0]{'tipo'},$row[0]{'id_cliente'});
+                return $aux;        
         }
         
         function showVehiculoByCliente($id_cliente) {

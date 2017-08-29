@@ -33,7 +33,7 @@
          
                      
         <?php      
-           foreach ($vehiculoCollectorObj->showVehiculo() as $c){
+           foreach ($vehiculoCollectorObj->showVehiculos() as $c){
             echo "<tr>";
             echo "<td>" . $c->get_id_vehiculo() . "</td>";         
             echo "<td>" . $c->get_descripcion() . "</td>";   
