@@ -12,7 +12,7 @@
         private $origen_longitud;
         private $estado;
         
-        function __construct($id_reserva, $id_cliente, $id_vehiculo, $id_parqueo, $fecha_inicio, $fecha_fin, $origen_latitud, $origen_longitud, $estado) {
+        function __construct($id_reserva, $id_cliente, $id_vehiculo, $id_parqueo, $fecha_inicio, $fecha_fin, $origen_latitud, $origen_longitud) {
            
            $this->id_reserva = $id_reserva;
            $this->id_cliente = $id_cliente;
@@ -21,8 +21,7 @@
            $this->fecha_inicio = $fecha_inicio;
            $this->fecha_fin = $fecha_fin;
            $this->origen_latitud = $origen_latitud;
-           $this->origen_longitud = $origen_longitud;
-           $this->estado = $estado;         
+           $this->origen_longitud = $origen_longitud;      
             
          }
 

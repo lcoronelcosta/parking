@@ -29,13 +29,13 @@
                 <label for="password">CLIENTE <a class="btn btn-info" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-search"></i></a></label>
                 
                 <div class="col-md-3">
-                    <input readonly type="text" class="form-control" id="id_c" placeholder="ID">
+                    <input readonly type="text" class="form-control" required name="id_c" id="id_c" placeholder="ID">
                 </div>
                 <div class="col-md-3">
-                    <input readonly type="text" class="form-control" id="n_c" placeholder="NOMBRE">
+                    <input readonly type="text" class="form-control" name="n_c" id="n_c" placeholder="NOMBRE">
                 </div>
                 <div class="col-md-3">
-                    <input readonly type="text" class="form-control" id="a_c" placeholder="APELLIDO">
+                    <input readonly type="text" class="form-control" name="a_c" id="a_c" placeholder="APELLIDO">
                 </div>
                 
             </div>    
@@ -44,22 +44,22 @@
                  <label for="password">VEHICULO <a class="btn btn-info" disabled data-toggle="modal" data-target="#myModalVehiculo" ><i class="glyphicon glyphicon-search"></i></a></label>
                 
                 <div class="col-md-3">
-                    <input readonly type="text" class="form-control" id="id_v" placeholder="ID">
+                    <input readonly type="text" class="form-control" required name="id_v" id="id_v" placeholder="ID">
                 </div>
                 <div class="col-md-3">
-                    <input readonly type="text" class="form-control" id="d_v" placeholder="DESCRIPCION">
+                    <input readonly type="text" class="form-control" name="d_v" id="d_v" placeholder="DESCRIPCION">
                 </div>
                 <div class="col-md-3">
-                    <input readonly type="text" class="form-control" id="p_v" placeholder="PLACA">
+                    <input readonly type="text" class="form-control" name="p_v" id="p_v" placeholder="PLACA">
                 </div>
             </div>
             <div class="form-group">
                 <label for="username">FECHA INICIO</label>
-                <input type="date" class="form-control" name="fecha_ini" placeholder="Nombre de usuario" required autofocus>
+                <input type="datetime-local" class="form-control" name="fecha_ini" placeholder="Nombre de usuario" required autofocus>
             </div>
             <div class="form-group">
                 <label for="username">FECHA FIN</label>
-                <input type="date" class="form-control" name="fecha_fin" placeholder="Nombre de usuario" required autofocus>
+                <input type="datetime-local" class="form-control" name="fecha_fin" placeholder="Nombre de usuario" required autofocus>
             </div> 
             <div class="form-group">
                 <label for="username">ORIGEN LATITUD</label>
@@ -81,10 +81,10 @@
             <div class="form-group">
                 <label for="username">PARQUEO</label>
                 <div class="col-md-4">
-                    <input readonly type="text" class="form-control" id="id_p" placeholder="ID">
+                    <input readonly type="text" class="form-control" name="id_p" id="id_p" required placeholder="ID">
                 </div>
                 <div class="col-md-4">
-                    <input readonly type="text" class="form-control" id="d_p" placeholder="DESCRIPCION">
+                    <input readonly type="text" class="form-control" required name="d_p" id="d_p" placeholder="DESCRIPCION">
                 </div>
             </div>    
               
