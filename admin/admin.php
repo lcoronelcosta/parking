@@ -99,7 +99,7 @@
                             <a href='modelo/usuario/readUsuario.php'><input type='button' value='USUARIOS'></a>
                             <a href='modelo/cliente/readCliente.php'><input type='button' value='CLIENTE'></a>
                              <a href='modelo/reservas/readReserva.php'><input type='button' value='RESERVAS'></a>
-                            <a href='#'><input type='button' value='FACTURAS'></a>
+                            <a href='modelo/factura/readFactura.php'><input type='button' value='FACTURAS'></a>
                         </div>
                 </div>
             </div> ";

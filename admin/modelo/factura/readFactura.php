@@ -22,7 +22,7 @@
           <span>FACTURAS</span>
        </strong>
          <a href="../../admin.php" class="btn btn-danger pull-right">ATRAS</a> 
-         <a href="#" class="btn btn-info">AGREGAR FACTURA</a>
+         <a href="form_AddFactura.php" class="btn btn-info">AGREGAR FACTURA</a>
       </div>
      <div class="panel-body">
     <table id="example" class="table table-striped table-bordered" cellspacing="0" width="80%">
@@ -45,7 +45,7 @@
             echo "<td>" . $c->get_id_reserva() . "</td>";   
             echo "<td>" . $c->get_descuento() . "</td>"; 
             echo "<td>" . $c->get_total_multa() . "</td>";
-            echo "<td>" . $c->get_$total_pagar() . "</td>";         
+            echo "<td>" . $c->get_total_pagar() . "</td>";         
             echo "<td>" . $c->get_id_pago() . "</td>";   
             echo "<td>" . $c->get_estado() . "</td>";    
             echo "<td><a href='#' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>

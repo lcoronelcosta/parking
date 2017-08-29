@@ -9,7 +9,7 @@
                 $rows = self::$db->getRows("SELECT * FROM factura ");
                 $arrayFactura= array();        
                 foreach ($rows as $c){
-                    $aux = new Factura($c{'id_factura'},$c{'id_reserva'},$c{'descuento'},$c{'total_multa'},$c{'total_pagar',$c{'estado'},$c{'id_pago'}});
+                    $aux = new Factura($c{'id_factura'},$c{'id_reserva'},$c{'descuento'},$c{'total_multa'},$c{'total_pagar'},$c{'estado'},$c{'id_pago'});
                     array_push($arrayFactura, $aux);
                 }
                 return $arrayFactura;        

@@ -51,7 +51,7 @@
          function set_total_pagar($total_pagar){
            $this->total_pagar = $total_pagar;
          } 
-         function get_$total_pagar(){
+         function get_total_pagar(){
            return $this->total_pagar;
          } 
         
