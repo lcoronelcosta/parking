@@ -3,7 +3,7 @@ session_start();
 include_once("MultaCollector.php");
 $id_multa = $_POST['id_multa'];
 $descipcion = $_POST['descipcion']; 
-$valor = $_GET['valor'];
+$valor = $_POST['valor'];
 $multaCollectorObj = new MultaCollector();
 ?>
 
@@ -29,7 +29,7 @@ $multaCollectorObj = new MultaCollector();
             if($multaCollectorObj->buscarMulta($descipcion, $valor)){
             $mensaje = "ERROR LA MULTA YA SE ENCUENTRA REGISTRADO";
             print "<script>alert('$mensaje')</script>";
-            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_EditMulta.php?id_multa=$id_multa & descripcion=$descipcion & valor=$valor'>";
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_EditMulta.php?id_multa=$id_multa & descipcion=$descipcion & valor=$valor'>";
             }
             else{
                  $multaCollectorObj->updateMulta($id_multa, $descipcion, $valor);
