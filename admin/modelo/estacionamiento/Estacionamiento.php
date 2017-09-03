@@ -1,6 +1,6 @@
 <?php
 
-    class Propietario
+    class Estacionamiento
     {
         private $id_estacionamiento;
         private $numero;
