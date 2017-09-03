@@ -5,7 +5,7 @@
 
     class ParqueaderoCollector extends Collector{
 
-        function showParqueadero() {
+        function showParqueaderos() {
                 $rows = self::$db->getRows("SELECT * FROM parqueadero ");
                 $arrayParqueadero= array();        
                 foreach ($rows as $c){
@@ -15,13 +15,19 @@
                 return $arrayParqueadero;        
         }
         
+        function showParqueadero($id_parqueadero) {
+                $row = self::$db->getRows("SELECT * FROM parqueadero WHERE id_parqueadero='$id_parqueadero'");
+                    $aux = new Parqueadero($row[0]{'id_parqueadero'},$row[0]{'nombre'},$row[0]{'direccion'},$row[0]{'latitud'},$row[0]{'longitud'});
+                return $aux;        
+        }
+        
         function createParqueadero($nombre,$direccion,$latitud,$longitud){
                 $rows = self::$db->insertRow("INSERT INTO parqueadero (nombre, direccion, latitud, longitud) VALUES ('$nombre', '$direccion', '$latitud', '$longitud')",null);
         
         }
         
         function updateParqueadero($id_parqueadero, $nombre, $direccion, $latitud, $longitud) {
-                $rows = self::$db->updateRow("UPDATE parqueadero SET nombre='$nombre', direccion='$direccion', latitud='$latitud', longittud='$longitud' WHERE id_parqueadero='$id_parqueadero'",null);
+                $rows = self::$db->updateRow("UPDATE parqueadero SET nombre='$nombre', direccion='$direccion', latitud='$latitud', longitud='$longitud' WHERE id_parqueadero='$id_parqueadero'",null);
 
         }
         

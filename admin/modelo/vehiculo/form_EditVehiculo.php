@@ -6,6 +6,7 @@
     $descripcion = $_GET['descripcion'];
     $placa = $_GET['placa'];
     $tipo = $_GET['tipo'];
+    $id_cliente = $_GET['id_cliente'];
 ?>
 
 <html>
@@ -45,6 +46,10 @@
                 <label for="username">Tipo</label>
                 <input type="text" class="form-control" name="tipo" required value=<?php echo "$tipo"; ?>>
             </div>
+            <div class="form-group">
+                <label for="username">Cliente</label>
+                <input type="text" class="form-control" name="id_cliente" required value=<?php echo "$id_cliente"; ?>>
+            </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>
               <a href="readVehiculo.php" class="btn btn-info pull-right">Salir</a>       
@@ -58,7 +63,3 @@
   </div>
 </body>
 </html>
-<?php 
-
-    include_once("../../modal_exito.php");
-?>

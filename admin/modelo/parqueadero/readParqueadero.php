@@ -38,7 +38,7 @@
             </tr>
         </thead>
         <?php
-            foreach ($parqueaderoCollectorObj->showParqueadero() as $c){
+            foreach ($parqueaderoCollectorObj->showParqueaderos() as $c){
             echo "<tr>";
             echo "<td>" . $c->get_id_parqueadero() . "</td>";         
             echo "<td>" . $c->get_nombre() . "</td>";   
@@ -58,7 +58,3 @@
 </div>
 </body>
 </html>
-<?php 
-
-    include_once("../../modal_exito.php");
-?>

@@ -33,17 +33,19 @@
                 <th>DESCRIPCION</th>
                 <th>PLACA</th>
                 <th>TIPO</th>
+                <th>CLIENTE</th>
                 <th>OPERACIONES</th>
             </tr>
         </thead>
         <?php
-            foreach ($vehiculoCollectorObj->showVehiculo() as $c){
+            foreach ($vehiculoCollectorObj->showVehiculos() as $c){
             echo "<tr>";
             echo "<td>" . $c->get_id_vehiculo() . "</td>";         
             echo "<td>" . $c->get_descripcion() . "</td>";   
             echo "<td>" . $c->get_placa() . "</td>"; 
-            echo "<td>" . $c->get_tipo() . "</td>";    
-            echo "<td><a href='form_EditVehiculo.php?id_vehiculo=". $c->get_id_vehiculo() ." & descripcion=". $c->get_descripcion() ." & placa=". $c->get_placa() . " & tipo=". $c->get_tipo() ."' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
+            echo "<td>" . $c->get_tipo() . "</td>"; 
+            echo "<td>" . $c->get_id_cliente() . "</td>";   
+            echo "<td><a href='form_EditVehiculo.php?id_vehiculo=". $c->get_id_vehiculo() ." & descripcion=". $c->get_descripcion() ." & placa=". $c->get_placa() . " & tipo=". $c->get_tipo() . " & id_cliente=". $c->get_id_cliente() ."' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
                 </a> <a href='deleteVehiculo.php?ID=". $c->get_id_vehiculo() ."' class='btn btn-xs btn-danger' data-toggle='tooltip' title='Eliminar'><i class='glyphicon glyphicon-remove'></i>
                 </a></td>"; 
             echo "</tr>"; 
@@ -56,7 +58,3 @@
 </div>
 </body>
 </html>
-<?php 
-
-    include_once("../../modal_exito.php");
-?>
