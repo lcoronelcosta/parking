@@ -2,9 +2,8 @@
 session_start();
 include_once("MultaCollector.php");
 $id_multa = $_POST['id_multa'];
-$multaModificado = $_POST['multaModificado']; 
-
-$multaActual = $_GET['descripcion'];
+$descipcion = $_POST['descipcion']; 
+$valor = $_GET['valor'];
 $multaCollectorObj = new MultaCollector();
 ?>
 
@@ -21,19 +20,19 @@ $multaCollectorObj = new MultaCollector();
         <?php
         //$roll = substr ("$rol", 0,1);
         if(trim($multaActual) == trim($multaModificado)){
-            $multaCollectorObj->updateMulta($id_multa, $multaModificado);
+            $multaCollectorObj->updateMulta($id_multa, $descipcion, $valor);
             $mensaje = "LA MULTA SE MODIFICO EXITOSAMENTE";
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readMulta.php'>";
         }
         else{
-            if($multaCollectorObj->buscarMulta($multaModificado)){
+            if($multaCollectorObj->buscarMulta($descipcion, $valor)){
             $mensaje = "ERROR LA MULTA YA SE ENCUENTRA REGISTRADO";
             print "<script>alert('$mensaje')</script>";
-            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_EditMulta.php?id_multa=$id_multa & descripcion=$multaModificado'>";
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_EditMulta.php?id_multa=$id_multa & descripcion=$descipcion & valor=$valor'>";
             }
             else{
-                 $multaCollectorObj->updateMulta($id_multa, $multaModificado);
+                 $multaCollectorObj->updateMulta($id_multa, $descipcion, $valor);
             $mensaje = "LA MULTA SE MODIFICO EXITOSAMENTE";
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readMulta.php'>";

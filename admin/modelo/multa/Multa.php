@@ -3,12 +3,13 @@
     class Multa
     {
         private $id_multa;
-        private $descripcion;
+        private $descipcion;
 
 
-        function __construct($id_multa, $descripcion) {
+        function __construct($id_multa, $$descipcion, $valor) {
            $this->id_multa = $id_multa;
-           $this->descripcion = $descripcion;
+           $this->descipcion = $descipcion;
+           $this->valor = $valor;
          }
         
         function set_id_multa($id_multa){
@@ -18,11 +19,17 @@
            return $this->id_multa;
          }
 
-         function set_descripcion($descripcion){
-           $this->descripcion = $descripcion;
+         function set_descipcion($descipcion){
+           $this->descipcion = $descipcion;
          } 
-         function get_descricion(){
-           return $this->descripcion;
+         function get_descipcion(){
+           return $this->descipcion;
+         } 
+         function set_valor($valor){
+           $this->valor = $valor;
+         } 
+         function get_valor(){
+           return $this->valor;
          } 
     }
 ?>

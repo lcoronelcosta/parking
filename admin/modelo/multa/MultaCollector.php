@@ -9,19 +9,19 @@
                 $rows = self::$db->getRows("SELECT * FROM multa ");
                 $arrayMulta= array();        
                 foreach ($rows as $c){
-                    $aux = new Multa($c{'id_multa'},$c{'descripcion'});
+                    $aux = new Multa($c{'id_multa'},$c{'descipcion'},$c{'valor'});
                     array_push($arrayMulta, $aux);
                 }
                 return $arrayMulta;        
         }
         
-        function createMulta($descripcion){
-                $rows = self::$db->insertRow("INSERT INTO multa (descripcion) VALUES ('$descripcion')",null);
+        function createMulta($descipcion,$valor){
+                $rows = self::$db->insertRow("INSERT INTO multa (descipcion, valor) VALUES ('$descipcion','$valor')",null);
         
         }
         
-        function updateMulta($id_multa, $descripcion) {
-                $rows = self::$db->updateRow("UPDATE multa SET descripcion='$descripcion' WHERE id_multa='$id_multa'",null);
+        function updateMulta($id_multa, $descipcion, $valor) {
+                $rows = self::$db->updateRow("UPDATE multa SET descipcion='$descipcion', multa='$multa'WHERE id_multa='$id_multa'",null);
 
         }
         
@@ -32,18 +32,18 @@
         }
         
         function validarMulta($descripcion){
-                $rows = self::$db->getRows("SELECT * FROM multa WHERE descripcion='$descripcion'");
+                $rows = self::$db->getRows("SELECT * FROM multa WHERE descipcion='$descipcion'AND multa='$multa'");
                 foreach ($rows as $c){
-                  $aux = new Multa($c{'id_multa'},$c{'descripcion'});
+                  $aux = new Multa($c{'id_multa'},$c{'descipcion'},$c{'multa'});
                   return 1;
                 }
                 return 0;
           }    
         
           function buscarMulta($descripcion) {
-                $rows = self::$db->getRows("SELECT * FROM multa WHERE descripcion='$descripcion'");               
+                $rows = self::$db->getRows("SELECT * FROM multa WHERE descipcion='$descipcion'AND multa='$multa'");               
                 foreach ($rows as $c){
-                  $aux = new Multa($c{'id_multa'},$c{'descripcion'});
+                  $aux = new Multa($c{'id_multa'},$c{'descripcion'},$c{'multa'});
                   return 1;
                 }
                 return 0;          

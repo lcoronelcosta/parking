@@ -31,14 +31,16 @@
             <tr> 
                 <th>ID</th>
                 <th>DESCRIPCION</th>
+                <th>VALOR</th>
             </tr>
         </thead>
         <?php
             foreach ($multaCollectorObj->showMulta() as $c){
             echo "<tr>";
             echo "<td>" . $c->get_id_multa() . "</td>";         
-            echo "<td>" . $c->get_descripcion() . "</td>";    
-            echo "<td><a href='form_EditMulta.php?id_multa=". $c->get_id_multa() ." & descripcion=". $c->get_descripcion() . "' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
+            echo "<td>" . $c->get_descipcion() . "</td>";
+            echo "<td>" . $c->get_valor() . "</td>";     
+            echo "<td><a href='form_EditMulta.php?id_multa=". $c->get_id_multa() ." & descipcion=". $c->get_descipcion() . " & valor=". $c->get_valor() ."' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
                 </a> <a href='deleteMulta.php?ID=". $c->get_id_multa() ."' class='btn btn-xs btn-danger' data-toggle='tooltip' title='Eliminar'><i class='glyphicon glyphicon-remove'></i>
                 </a></td>"; 
             echo "</tr>"; 
