@@ -31,7 +31,7 @@
 
         }
         
-        function validarMulta($descripcion){
+        function validarMulta($descipcion){
                 $rows = self::$db->getRows("SELECT * FROM multa WHERE descipcion='$descipcion'AND multa='$multa'");
                 foreach ($rows as $c){
                   $aux = new Multa($c{'id_multa'},$c{'descipcion'},$c{'multa'});
@@ -40,10 +40,10 @@
                 return 0;
           }    
         
-          function buscarMulta($descripcion) {
+          function buscarMulta($descipcion) {
                 $rows = self::$db->getRows("SELECT * FROM multa WHERE descipcion='$descipcion'AND multa='$multa'");               
                 foreach ($rows as $c){
-                  $aux = new Multa($c{'id_multa'},$c{'descripcion'},$c{'multa'});
+                  $aux = new Multa($c{'id_multa'},$c{'descipcion'},$c{'multa'});
                   return 1;
                 }
                 return 0;          

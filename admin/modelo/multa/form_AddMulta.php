@@ -26,9 +26,12 @@
           <form method="post" action="saveMulta.php">
             <div class="form-group">
                 <label for="username">Descripcion</label>
-                <input type="text" class="form-control" name="descripcion" placeholder="motivos" required autofocus>
+                <input type="text" class="form-control" name="descipcion" placeholder="motivos" required autofocus>
             </div>
-           
+                <div class="form-group">
+                <label for="username">Valor</label>
+                <input type="text" class="form-control" name="valor" placeholder="valor" required autofocus>
+            </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>
               <a href="readMulta.php" class="btn btn-info pull-right">Salir</a>       

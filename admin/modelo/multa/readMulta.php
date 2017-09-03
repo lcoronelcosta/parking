@@ -7,7 +7,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Multas</title>
+	<title>Multa</title>
     <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link href='https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css' rel='stylesheet' type='text/css'>
 </head>
@@ -20,7 +20,7 @@
       <div class="panel-heading clearfix">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>MULTAS</span>
+          <span>MULTA</span>
        </strong>
          <a href="../../admin.php" class="btn btn-danger pull-right">ATRAS</a> 
          <a href="form_AddMulta.php" class="btn btn-info">AGREGAR MULTA</a>
