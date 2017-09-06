@@ -1,54 +1,54 @@
 <?php
 
-    include_once('Cliente.php');
-    include_once('../usuario/Usuario.php');
-    include_once("../usuario/UsuarioCollector.php");
+    include_once('Estacionamiento.php');
+    include_once('../parqueadero/Parqueadero.php');
+    include_once("../parqueadero/ParqueaderoCollector.php");
     include_once('../Collector.php');
     
 
-    class ClienteCollector extends Collector{
+    class EstacionamientoCollector extends Collector{
 
-        function showClientes() {
-                $rows = self::$db->getRows("SELECT * FROM cliente ");
-                $arrayCliente= array();        
+        function showEstacionamientos() {
+                $rows = self::$db->getRows("SELECT * FROM estacionamiento ");
+                $arrayEstacionamiento= array();        
                 foreach ($rows as $c){
-                    $aux = new Cliente($c{'id_cliente'},$c{'id_usuario'},$c{'nombre'},$c{'apellido'});
-                    array_push($arrayCliente, $aux);
+                    $aux = new Estacionamiento($c{'id_estacionamiento'},$c{'id_parqueadero'},$c{'numero'},$c{'estado'});
+                    array_push($arrayEstacionamiento, $aux);
                 }
-                return $arrayCliente;        
+                return $arrayEstacionamiento;        
         }
         
-        function showCliente($id_cliente) {
-                $row = self::$db->getRows("SELECT * FROM cliente WHERE id_cliente='$id_cliente'");
-                $aux = new Cliente($row[0]{'id_cliente'},$row[0]{'id_usuario'},$row[0]{'nombre'},$row[0]{'apellido'});
+        function showEstacionamiento($id_estacionamiento) {
+                $row = self::$db->getRows("SELECT * FROM estacionamiento WHERE id_estacionamiento='$id_estacionamiento'");
+                $aux = new Estacionamiento($row[0]{'id_estacionamiento'},$row[0]{'id_parqueadero'},$row[0]{'numero'},$row[0]{'estado'});
                 return $aux;        
         }
         
-        function createCliente($nombre, $apellido, $usuario, $clave, $rol) {
-            $rol = 'C';
-            $UsuarioCollectorObj = new UsuarioCollector();
-            $UsuarioCollectorObj->createUsuario($usuario, $clave, $rol);
-            $row = self::$db->getRows("SELECT * FROM usuario ORDER BY id_usuario DESC limit 1",null);
-            $usuario = array_pop($row);
-            $ID = $usuario{'id_usuario'};
-            $rows = self::$db->insertRow("INSERT INTO cliente (id_usuario, nombre, apellido) VALUES ('$ID','$nombre','$apellido')",null);
+        function createEstacionamiento($nombre, $direccion, $latitud, $longitud, $numero, $estado) {
+ 
+            $ParqueaderoCollectorObj = new ParqueaderoCollector();
+            $ParqueaderoCollectorObj->createParqueadero($nombre, $direccion, $latitud, $longitud);
+            $row = self::$db->getRows("SELECT * FROM parqueadero ORDER BY id_parqueadero DESC limit 1",null);
+            $parqueadero = array_pop($row);
+            $ID = $parqueadero{'id_parqueadero'};
+            $rows = self::$db->insertRow("INSERT INTO estacionamiento (id_parqueadero, numero, estado) VALUES ('$ID','$numero','$estado')",null);
         
         }
         
-        function updateCliente($id_cliente, $nombre, $apellido) {
-                $rows = self::$db->updateRow("UPDATE cliente SET nombre='$nombre', apellido='$apellido' WHERE id_cliente='$id_cliente'",null);
+        function updateEstacionamiento($id_estacionamiento, $numero, $estado) {
+                $rows = self::$db->updateRow("UPDATE estacionamiento SET numero='$numero', estado='$estado' WHERE id_estacionamiento='$id_estacionamiento'",null);
 
         }
         
-        function deleteCliente($id_cliente, $id_usuario) {
-                $rows = self::$db->deleteRow("DELETE FROM usuario WHERE id_usuario=$id_usuario",null);
-                $rows = self::$db->deleteRow("DELETE FROM cliente WHERE id_cliente=$id_cliente",null);
+        function deleteEstacionamiento($id_estacionamiento, $id_parqueadero) {
+                $rows = self::$db->deleteRow("DELETE FROM parqueadero WHERE id_parqueadero=$id_parqueadero",null);
+                $rows = self::$db->deleteRow("DELETE FROM estacionamiento WHERE id_estacionamiento=$id_estacionamiento",null);
         }
         
-        function buscarUsuario($usuario) {
-                $rows = self::$db->getRows("SELECT * FROM usuario WHERE usuario='$usuario'");               
+        function buscarParqueadero($nombre) {
+                $rows = self::$db->getRows("SELECT * FROM parqueadero WHERE nombre='$nombre'");               
                 foreach ($rows as $c){
-                  $aux = new Usuario($c{'id_usuario'},$c{'usuario'},$c{'password'},$c{'rol'});
+                  $aux = new Parqueadero($c{'id_parqueadero'},$c{'nombre'},$c{'direccion'},$c{'latitud'},$c{'longitud'});
                   return 1;
                 }
                 return 0;          
