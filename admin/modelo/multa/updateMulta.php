@@ -2,8 +2,9 @@
 session_start();
 include_once("MultaCollector.php");
 $id_multa = $_POST['id_multa'];
-$descipcion = $_POST['descipcion']; 
+$multaModificado = $_POST['multaModificado']; 
 $valor = $_POST['valor'];
+$multaActual = $_GET['descipcion'];
 $multaCollectorObj = new MultaCollector();
 ?>
 
