@@ -1,6 +1,7 @@
 <?php
     session_start();
     include_once("MultaCollector.php");
+    include_once("Multa.php");
     $multaCollectorObj = new MultaCollector();
     $id_multa = $_GET['id_multa'];
     $descipcion = $_GET['descipcion'];

@@ -21,7 +21,7 @@
         }
         
         function updateMulta($id_multa, $descipcion, $valor) {
-                $rows = self::$db->updateRow("UPDATE multa SET descipcion='$descipcion', multa='$multa'WHERE id_multa='$id_multa'",null);
+                $rows = self::$db->updateRow("UPDATE multa SET descipcion='$descipcion', valor='$valor'WHERE id_multa='$id_multa'",null);
 
         }
         
