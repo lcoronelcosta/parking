@@ -1,46 +1,25 @@
 <?php
 session_start();
-include_once("PropietarioCollector.php");
-$id_propietario = $_POST['id_propietario'];
-$nombreModificado = $_POST['nombreModificado']; 
-$apellido = $_POST['apellido'];
-$ruc = $_POST['ruc'];
-$numerocuenta = $_POST['numerocuenta'];
+include_once("EstacionamientoCollector.php");
+$id_estacionamiento = $_POST['id_estacionamiento'];
+$numero = $_POST['numero']; 
 $estado = $_POST['estado'];
-$nombreActual = $_GET['nombre'];
-$propietarioCollectorObj = new PropietarioCollector();
+$estacionamientoCollectorObj = new EstacionamientoCollector();
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Update Propietario</title>
+        <title>Update Estacionamiento</title>
     </head>
-   
     <body>
-            <?php
-            //$roll = substr ("$rol", 0,1);
-            if(trim($nombreActual) == trim($nombreModificado)){
-                $propietarioCollectorObj->updatePropietario($id_propietario, $nombreModificado, $apellido, $ruc, $numerocuenta, $estado);
-                $mensaje = "EL PROPIETARIO SE MODIFICO EXITOSAMENTE";
-                print "<script>alert('$mensaje')</script>";
-                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readPropietario.php'>";
-            }
-            else{
-                if($propietarioCollectorObj->buscarPropietario($nombreModificado)){
-                $mensaje = "ERROR EL PROPIETARIO YA SE ENCUENTRA REGISTRADO";
-                print "<script>alert('$mensaje')</script>";
-                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_EditPropietario.php?id_propietario=$id_propietario & nombre=$nombreModificado & ruc=$ruc & numerocuenta=$numerocuenta & estado=$estado'>";
-                }
-                else{
-                     $propietarioCollectorObj->updatePropietario($id_propietario, $nombreModificado, $apellido, $ruc, $numerocuenta, $estado);
-                $mensaje = "EL PROPIETARIO SE MODIFICO EXITOSAMENTE";
-                print "<script>alert('$mensaje')</script>";
-                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readPropietario.php'>";
-                }
-            }
-            ?>
+        <?php
+       
+            $estacionamientoCollectorObj->updateEstacionamiento($id_estacioanamiento,$numero, $estado);
+            $mensaje = "EL ESTACIONAMIENTO SE MODIFICO EXITOSAMENTE";
+            print "<script>alert('$mensaje')</script>";
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readEstacionamiento.php'>";
+        ?>
     </body>
-
 </html>

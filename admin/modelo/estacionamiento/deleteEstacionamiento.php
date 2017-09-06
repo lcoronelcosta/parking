@@ -2,6 +2,7 @@
     session_start();
     include_once("EstacionamientoCollector.php");
     $id_estacionamiento = $_GET['ID'];
+    $id_parqueadero = $_GET['ID_PARQUEADERO'];
     $estacionamientoCollectorObj = new EstacionamientoCollector();
 ?>
 
@@ -14,7 +15,7 @@
     </head>
     <body>
         <?php
-        $estacionamientoCollectorObj->deleteEstacionamiento($id_estacionamiento);
+        $estacionamientoCollectorObj->deleteEstacionamiento($id_estacionamiento, $id_parqueadero);
         $mensaje = "EL ESTACIONAMIENTO SE ELIMINO EXITOSAMENTE";
         print "<script>alert('$mensaje')</script>";
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readEstacionamiento.php'>";

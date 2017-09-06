@@ -1,7 +1,5 @@
 <?php
     session_start();
-    include_once("EstacionamientoCollector.php");
-    $estacionamientoCollectorObj = new EstacionamientoCollector();
 ?>
 
 <html>
@@ -25,16 +23,29 @@
         <div class="col-md-6 col-md-offset-3">
           <form method="post" action="saveEstacionamiento.php">
             <div class="form-group">
-                <label for="username">Numero</label>
-                <input type="text" class="form-control" name="numero" placeholder="Numero Estacionamiento" required autofocus>
+                <label for="username">Nombre</label>
+                <input type="text" class="form-control" name="nombre" placeholder="Nombre" required autofocus>
             </div>
-          
+            <div class="form-group">
+                <label for="username">Direccion</label>
+                <input type="text" class="form-control" name="direccion" placeholder="Direccion" required autofocus>
+            </div>
+            <div class="form-group">
+                <label for="username">Latitud</label>
+                <input type="text" class="form-control" name="latitud" placeholder="Latitud" required autofocus>
+            </div>  
+            <div class="form-group">
+                <label for="username">Longitud</label>
+                <input type="text" class="form-control" name="longitud" placeholder="Longitud" required autofocus>
+            </div>
+            <div class="form-group">
+                <label for="username">Numero</label>
+                <input type="text" class="form-control" name="numero" placeholder="Numero" required autofocus>
+            </div>          
             <div class="form-group">
                 <label for="username">Estado</label>
                 <input type="text" class="form-control" name="estado" placeholder="Estado" required autofocus>
-            </div>  
-            
-            
+            </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>
               <a href="readEstacionamiento.php" class="btn btn-info pull-right">Salir</a>       
@@ -48,7 +59,3 @@
   </div>
 </body>
 </html>
-<?php 
-
-    include_once("../../modal_exito.php");
-?>
