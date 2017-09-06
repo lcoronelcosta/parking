@@ -34,7 +34,7 @@
             </div>  
             <div class="form-group">
                 <label for="username">DESCRIPCION</label>
-                <input type="text" class="form-control" name="multamodificado" required value=<?php echo "$descipcion"; ?>>
+                <input type="text" class="form-control" name="multaModificado" required value=<?php echo "$descipcion"; ?>>
             </div>
             <div class="form-group">
                 <label for="username">VALOR</label>
