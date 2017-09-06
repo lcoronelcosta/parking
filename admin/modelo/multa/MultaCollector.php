@@ -27,7 +27,7 @@
         }
         
         function updateMulta($id_multa, $descipcion, $valor) {
-                $rows = self::$db->updateRow("UPDATE multa SET descipcion='$descipcion', valor='$valor'WHERE id_multa='$id_multa'",null);
+                $rows = self::$db->updateRow("UPDATE multa SET descipcion='$descipcion', valor='$valor' WHERE id_multa='$id_multa'",null);
 
         }
         
@@ -37,19 +37,19 @@
 
         }
         
-        function validarMulta($descipcion){
-                $rows = self::$db->getRows("SELECT * FROM multa WHERE descipcion='$descipcion'AND multa='$multa'");
+        function validarMulta($descipcion, $valor){
+                $rows = self::$db->getRows("SELECT * FROM multa WHERE descipcion='$descipcion'AND valor='$valor'");
                 foreach ($rows as $c){
-                  $aux = new Multa($c{'id_multa'},$c{'descipcion'},$c{'multa'});
+                  $aux = new Multa($c{'id_multa'},$c{'descipcion'},$c{'valor'});
                   return 1;
                 }
                 return 0;
           }    
         
           function buscarMulta($descipcion) {
-                $rows = self::$db->getRows("SELECT * FROM multa WHERE descipcion='$descipcion'AND multa='$multa'");               
+                $rows = self::$db->getRows("SELECT * FROM multa WHERE descipcion='$descipcion'");               
                 foreach ($rows as $c){
-                  $aux = new Multa($c{'id_multa'},$c{'descipcion'},$c{'multa'});
+                  $aux = new Multa($c{'id_multa'},$c{'descipcion'},$c{'valor'});
                   return 1;
                 }
                 return 0;          
