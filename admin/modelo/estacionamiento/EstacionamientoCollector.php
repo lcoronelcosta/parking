@@ -24,34 +24,6 @@
                 return $aux;        
         }
         
-        function createEstacionamiento($nombre, $direccion, $latitud, $longitud, $numero, $estado) {
- 
-            $ParqueaderoCollectorObj = new ParqueaderoCollector();
-            $ParqueaderoCollectorObj->createParqueadero($nombre, $direccion, $latitud, $longitud);
-            $row = self::$db->getRows("SELECT * FROM parqueadero ORDER BY id_parqueadero DESC limit 1",null);
-            $parqueadero = array_pop($row);
-            $ID = $parqueadero{'id_parqueadero'};
-            $rows = self::$db->insertRow("INSERT INTO estacionamiento (id_parqueadero, numero, estado) VALUES ('$ID','$numero','$estado')",null);
-        
-        }
-        
-        function updateEstacionamiento($id_estacionamiento, $id_parqueadero, $numero, $estado) {
-                $rows = self::$db->updateRow("UPDATE estacionamiento SET id_parqueadero='$id_parqueadero', numero='$numero', estado='$estado' WHERE id_estacionamiento='$id_estacionamiento'",null);
 
-        }
-        
-        function deleteEstacionamiento($id_estacionamiento, $id_parqueadero) {
-                $rows = self::$db->deleteRow("DELETE FROM parqueadero WHERE id_parqueadero=$id_parqueadero",null);
-                $rows = self::$db->deleteRow("DELETE FROM estacionamiento WHERE id_estacionamiento=$id_estacionamiento",null);
-        }
-        
-        function buscarParqueadero($nombre) {
-                $rows = self::$db->getRows("SELECT * FROM parqueadero WHERE nombre='$nombre'");               
-                foreach ($rows as $c){
-                  $aux = new Parqueadero($c{'id_parqueadero'},$c{'nombre'},$c{'direccion'},$c{'latitud'},$c{'longitud'});
-                  return 1;
-                }
-                return 0;          
-        }
     }
 ?>
