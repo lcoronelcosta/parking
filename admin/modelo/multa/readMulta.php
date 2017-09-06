@@ -35,7 +35,7 @@
             </tr>
         </thead>
         <?php
-            foreach ($multaCollectorObj->showMulta() as $c){
+            foreach ($multaCollectorObj->showMultas() as $c){
             echo "<tr>";
             echo "<td>" . $c->get_id_multa() . "</td>";         
             echo "<td>" . $c->get_descipcion() . "</td>";

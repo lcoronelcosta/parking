@@ -5,7 +5,7 @@
 
     class MultaCollector extends Collector{
 
-        function showMulta() {
+        function showMultas() {
                 $rows = self::$db->getRows("SELECT * FROM multa ");
                 $arrayMulta= array();        
                 foreach ($rows as $c){
@@ -13,6 +13,12 @@
                     array_push($arrayMulta, $aux);
                 }
                 return $arrayMulta;        
+        }
+
+        function showMulta($id_multa) {
+                $row = self::$db->getRows("SELECT * FROM multa WHERE id_multa='$id_multa'");
+                $aux = new Multa($row[0]{'id_multa'},$row[0]{'descipcion'},$row[0]{'valor'});
+                return $aux;        
         }
         
         function createMulta($descipcion,$valor){
