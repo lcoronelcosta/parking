@@ -10,12 +10,12 @@
 
         function showEstacionamientos() {
                 $rows = self::$db->getRows("SELECT * FROM estacionamiento ");
-                $arrayEstacionamiento= array();        
+                $arrayEstacionamientos= array();        
                 foreach ($rows as $c){
                     $aux = new Estacionamiento($c{'id_estacionamiento'},$c{'id_parqueadero'},$c{'numero'},$c{'estado'});
-                    array_push($arrayEstacionamiento, $aux);
+                    array_push($arrayEstacionamientos, $aux);
                 }
-                return $arrayEstacionamiento;        
+                return $arrayEstacionamientos;        
         }
         
         function showEstacionamiento($id_estacionamiento) {
@@ -35,8 +35,8 @@
         
         }
         
-        function updateEstacionamiento($id_estacionamiento, $numero, $estado) {
-                $rows = self::$db->updateRow("UPDATE estacionamiento SET numero='$numero', estado='$estado' WHERE id_estacionamiento='$id_estacionamiento'",null);
+        function updateEstacionamiento($id_estacionamiento, $id_parqueadero, $numero, $estado) {
+                $rows = self::$db->updateRow("UPDATE estacionamiento SET id_parqueadero='$id_parqueadero', numero='$numero', estado='$estado' WHERE id_estacionamiento='$id_estacionamiento'",null);
 
         }
         
