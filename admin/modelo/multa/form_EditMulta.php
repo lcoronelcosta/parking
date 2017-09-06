@@ -1,7 +1,6 @@
 <?php
     session_start();
     include_once("MultaCollector.php");
-    include_once("Multa.php");
     $multaCollectorObj = new MultaCollector();
     $id_multa = $_GET['id_multa'];
     $descipcion = $_GET['descipcion'];
@@ -35,7 +34,7 @@
             </div>  
             <div class="form-group">
                 <label for="username">DESCRIPCION</label>
-                <input type="text" class="form-control" name="descipcion" required value=<?php echo "$descipcion"; ?>>
+                <input type="text" class="form-control" name="multamodificado" required value=<?php echo "$descipcion"; ?>>
             </div>
             <div class="form-group">
                 <label for="username">VALOR</label>
