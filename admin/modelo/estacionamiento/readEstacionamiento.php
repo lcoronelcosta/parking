@@ -36,7 +36,7 @@
             </tr>
         </thead>
         <?php
-            foreach ($estacionamientoCollectorObj->showEstacionamiento() as $c){
+            foreach ($estacionamientoCollectorObj->showEstacionamientos() as $c){
             echo "<tr>";
             echo "<td>" . $c->get_id_estacionamiento() . "</td>";         
             echo "<td>" . $c->get_id_parqueadero() . "</td>";   
