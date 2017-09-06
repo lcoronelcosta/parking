@@ -21,19 +21,19 @@ $multaCollectorObj = new MultaCollector();
         <?php
         //$roll = substr ("$rol", 0,1);
         if(trim($multaActual) == trim($multaModificado)){
-            $multaCollectorObj->updateMulta($id_multa, $descipcion, $valor);
+            $multaCollectorObj->updateMulta($id_multa, $multaModificado, $valor);
             $mensaje = "LA MULTA SE MODIFICO EXITOSAMENTE";
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readMulta.php'>";
         }
         else{
-            if($multaCollectorObj->buscarMulta($descipcion, $valor)){
+            if($multaCollectorObj->buscarMulta($multaModificado)){
             $mensaje = "ERROR LA MULTA YA SE ENCUENTRA REGISTRADO";
             print "<script>alert('$mensaje')</script>";
-            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_EditMulta.php?id_multa=$id_multa & descipcion=$descipcion & valor=$valor'>";
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_EditMulta.php?id_multa=$id_multa & descipcion=$multaModificado & valor=$valor'>";
             }
             else{
-                 $multaCollectorObj->updateMulta($id_multa, $descipcion, $valor);
+                 $multaCollectorObj->updateMulta($id_multa, $multaModificado, $valor);
             $mensaje = "LA MULTA SE MODIFICO EXITOSAMENTE";
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readMulta.php'>";
