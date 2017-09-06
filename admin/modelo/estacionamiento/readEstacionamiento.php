@@ -43,7 +43,7 @@
             echo "<td>" . $c->get_numero() . "</td>"; 
             echo "<td>" . $c->get_estado() . "</td>";    
             echo "<td><a href='form_EditEstacionamiento.php?id_estacionamiento=". $c->get_id_estacionamiento() ." & id_parqueadero=". $c->get_id_parqueadero() ." & numero=". $c->get_numero() ." & estado=". $c->get_estado() . "' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
-                </a> <a href='deleteDetFactura.php?ID=". $c->get_id_detalle_facura() ." & ID_FACTURA=". $c->get_id_factura() ."' class='btn btn-xs btn-danger' data-toggle='tooltip' title='Eliminar'><i class='glyphicon glyphicon-remove'></i>
+                </a> <a href='deleteEstacionamiento.php?ID=". $c->get_id_estacionamiento() ." & ID_PARQUEADERO=". $c->get_id_parqueadero() ."' class='btn btn-xs btn-danger' data-toggle='tooltip' title='Eliminar'><i class='glyphicon glyphicon-remove'></i>
                 </a></td>"; 
             echo "</tr>"; 
             }
