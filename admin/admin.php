@@ -90,9 +90,9 @@
                         <div class='inst-grids'>
                             <h3 class='tittle'>Mite</h3>
                             <a href='modelo/multa/readMulta.php'><input type='button' value='MULTA'></a>
-                            <a href='#'><input type='button' value='MULTA x RESERVAS'></a>
+                            <a href='modelo/multaReserva/readMultaReserva.php'><input type='button' value='MULTA x RESERVAS'></a>
                             <a href='modelo/estacionamiento/readEstacionamiento.php'><input type='button' value='ESTACIONAMIENTO'></a>
-                            <a href='#'><input type='button' value='DETALLE FACTURA'></a>
+                            <a href='modelo/detalleFactura/readDetalleFactura.php'><input type='button' value='DETALLE FACTURA'></a>
                         </div>
                         <div>
                             <h3 class='tittle'>Coronel</h3>
