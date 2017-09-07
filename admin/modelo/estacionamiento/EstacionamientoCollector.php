@@ -6,7 +6,7 @@
     class EstacionamientoCollector extends Collector{
 
         function showEstacionamientos() {
-                $rows = self::$db->getRows("SELECT * FROM multa ");
+                $rows = self::$db->getRows("SELECT * FROM estacionamiento ");
                 $arrayEstacionamiento= array();        
                 foreach ($rows as $c){
                     $aux = new Estacionamiento($c{'id_estacionamiento'},$c{'id_parqueadero'},$c{'numero'},$c{'estado'});
