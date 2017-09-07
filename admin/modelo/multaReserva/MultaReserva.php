@@ -1,6 +1,6 @@
 <?php
 
-    class Cliente
+    class MultaReserva
     {
         private $id_multa_x_factura;
         private $id_multa;
