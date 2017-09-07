@@ -23,12 +23,12 @@
         
         
         function createMultaReserva($id_multa,$id_reserva,$valor){
-                $rows = self::$db->insertRow("INSERT INTO vehiculo (id_multa, id_reserva, valor) VALUES ('$id_multa', '$id_reserva', '$valor')",null);
+                $rows = self::$db->insertRow("INSERT INTO multaReserva (id_multa, id_reserva, valor) VALUES ('$id_multa', '$id_reserva', '$valor')",null);
         
         }
         
         function updateMultaReserva($id_multa_x_factura, $id_multa, $id_reserva, $valor) {
-                $rows = self::$db->updateRow("UPDATE multaReserva SET id_multa='$id_multa', id_reserva='$id_reserva', valor='$valor' WHERE id_id_multa_x_factura='$id_multa_x_factura'",null);
+                $rows = self::$db->updateRow("UPDATE multaReserva SET id_multa='$id_multa', id_reserva='$id_reserva', valor='$valor' WHERE id_multa_x_factura='$id_multa_x_factura'",null);
 
         }
         

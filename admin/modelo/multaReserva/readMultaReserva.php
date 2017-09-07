@@ -31,7 +31,7 @@
             <tr>
                 <th>ID</th>   
                 <th>ID-MULTA</th>
-                <th>ID RESERVA</th>
+                <th>ID-RESERVA</th>
                 <th>VALOR</th>
             </tr>
         </thead>
@@ -42,7 +42,7 @@
             echo "<td>" . $c->get_id_multa() . "</td>";   
             echo "<td>" . $c->get_id_reserva() . "</td>"; 
             echo "<td>" . $c->get_valor() . "</td>";    
-            echo "<td><a href='form_EditMultaReserva.php?id_multa_x_factura=". $c->get_id_multa_x_factura() ." & id_multa=". $c->get_id_multa() ." & id_reserva=". $c->get_reserva() ." & valor=". $c->get_valor() . "' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
+            echo "<td><a href='form_EditMultaReserva.php?id_multa_x_factura=". $c->get_id_multa_x_factura() ." & id_multa=". $c->get_id_multa() ." & id_reserva=". $c->get_id_reserva() ." & valor=". $c->get_valor() . "' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
                </a> <a href='deleteMultaReserva.php?ID=". $c->get_id_multa_x_factura() ."' class='btn btn-xs btn-danger' data-toggle='tooltip' title='Eliminar'><i class='glyphicon glyphicon-remove'></i>
             echo "</tr>"; 
             }
