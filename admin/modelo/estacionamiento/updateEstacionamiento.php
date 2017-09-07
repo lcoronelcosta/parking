@@ -5,7 +5,7 @@ $id_estacionamiento = $_POST['id_estacionamiento'];
 $id_parqueadero = $_POST['id_parqueadero'];
 $estacionamientoModificado = $_POST['estacionamientoModificado']; 
 $estacionamientoActual = $_GET['numero'];
-$estado = $_GET['estado'];
+$estado = $_POST['estado'];
 $estacionamientoCollectorObj = new EstacionamientoCollector();
 ?>
 
