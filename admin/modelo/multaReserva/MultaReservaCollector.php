@@ -16,7 +16,7 @@
         }
         
         function showMultaReserva($id_multa_x_factura) {
-                $row = self::$db->getRows("SELECT * FROM multaReserva WHERE id_multa_x_factura='$iid_multa_x_factura'");
+                $row = self::$db->getRows("SELECT * FROM multaReserva WHERE id_multa_x_factura='$id_multa_x_factura'");
                 $aux = new MultaReserva($row[0]{'id_multa_x_factura'},$row[0]{'id_multa'},$row[0]{'id_reserva'},$row[0]{'valor'});
                 return $aux;        
         }
