@@ -2,8 +2,10 @@
 session_start();
 include_once("EstacionamientoCollector.php");
 $id_estacionamiento = $_POST['id_estacionamiento'];
-$numero = $_POST['numero']; 
-$estado = $_POST['estado'];
+$id_parqueadero = $_POST['id_parqueadero'];
+$estacionamientoModificado = $_POST['estacionamientoModificado']; 
+$estacionamientoActual = $_GET['numero'];
+$estado = $_GET['estado'];
 $estacionamientoCollectorObj = new EstacionamientoCollector();
 ?>
 
@@ -11,15 +13,33 @@ $estacionamientoCollectorObj = new EstacionamientoCollector();
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Update Estacionamiento</title>
+        <title>Login</title>
+        <link href="../estilo.css" rel="stylesheet">
+    	
+    
     </head>
     <body>
         <?php
-       
-            $estacionamientoCollectorObj->updateEstacionamiento($id_estacioanamiento,$numero, $estado);
+        //$roll = substr ("$rol", 0,1);
+        if(trim($estacionamientoActual) == trim($estacionamientoModificado)){
+            $estacionamientoCollectorObj->updateEstacionamiento($id_estacionamiento, $id_parqueadero, $estacionamientoModificado, $estado);
             $mensaje = "EL ESTACIONAMIENTO SE MODIFICO EXITOSAMENTE";
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readEstacionamiento.php'>";
+        }
+        else{
+            if($estacionamientoCollectorObj->buscarEstacionamiento($estacionamientoModificado)){
+            $mensaje = "ERROR EL ESTACIONAMIENTO YA SE ENCUENTRA REGISTRADO";
+            print "<script>alert('$mensaje')</script>";
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_EditEstacionamiento.php?id_estacionamiento=$id_estacionamiento & id_parqueadero=$id_parqueadero & numero=$estacionamientoModificado & estado=$estado'>";
+            }
+            else{
+                 $estacionamientoCollectorObj->updateEstacionamiento($id_estacionamiento, $id_parqueadero, $estacionamientoModificado, $estado);
+            $mensaje = "EL ESTACIONAMIENTO SE MODIFICO EXITOSAMENTE";
+            print "<script>alert('$mensaje')</script>";
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readEstacionamiento.php'>";
+            }
+        }
         ?>
     </body>
 </html>

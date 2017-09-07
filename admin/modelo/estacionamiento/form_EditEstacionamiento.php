@@ -1,10 +1,11 @@
 <?php
     session_start();
     include_once("EstacionamientoCollector.php");
-    include_once("Estacionamiento.php");
     $estacionamientoCollectorObj = new EstacionamientoCollector();
     $id_estacionamiento = $_GET['id_estacionamiento'];
-    $estacionamiento = $estacionamientoCollectorObj->showEstacionamiento($id_estacionamiento);
+    $id_parqueadero = $_GET['id_parqueadero'];
+    $numero = $_GET['numero'];
+    $estado = $_GET['estado'];
 ?>
 
 <html>
@@ -22,27 +23,27 @@
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Editar Parqueadero</span>
+          <span>Editar Estacionamiento</span>
        </strong>
       </div>
       <div class="panel-body">
         <div class="col-md-6 col-md-offset-3">
-          <form method="post" action="updateEstacionamiento.php?nombre=<?php $nombre?>">
+          <form method="post" action="updateEstacionamiento.php?numero=<?php $numero?>">
             <div class="form-group">
                 <label for="username">ID</label>
-                <input type="text" class="form-control" name="id_estacionamiento" readonly='readonly' required value=<?php echo $estacionamiento->get_id_estacionamiento(); ?>>
-            </div>  
+                <input type="text" class="form-control" name="id_estacionamiento" required value=<?php echo "$id_estacionamiento"; ?>>
+            </div>
             <div class="form-group">
                 <label for="username">PARQUEADERO</label>
-                <input type="text" class="form-control" name="id_parqueadero" readonly='readonly' required value=<?php echo $parqueadero->get_id_parqueadero(); ?>>
+                <input type="text" class="form-control" name="id_parqueadero" required value=<?php echo "$id_parqueadero"; ?>>
+            </div>    
+            <div class="form-group">
+                <label for="username">NUMERO</label>
+                <input type="text" class="form-control" name="estacionamientoModificado" required value=<?php echo "$numero"; ?>>
             </div>
             <div class="form-group">
-                <label for="username">Numero</label>
-                <input type="text" class="form-control" name ="numero" required  value=<?php echo $estacionamiento->get_numero(); ?>>
-            </div>
-            <div class="form-group">
-                <label for="username">Estado</label>
-                <input type="text" class="form-control" name ="estado" required  value=<?php echo $estacionamiento->get_estado(); ?>>
+                <label for="username">ESTADO</label>
+                <input type="text" class="form-control" name="estado" required value=<?php echo "$estado"; ?>>
             </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>
@@ -57,3 +58,7 @@
   </div>
 </body>
 </html>
+<?php 
+
+    include_once("../../modal_exito.php");
+?>
