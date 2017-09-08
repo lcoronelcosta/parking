@@ -28,22 +28,22 @@
       </div>
       <div class="panel-body">
         <div class="col-md-6 col-md-offset-3">
-          <form method="post" action="updateMultaReserva.php">
+          <form method="post" action="updateMultaReserva.php?valor=<?php $valor?>">
             <div class="form-group">
                 <label for="username">ID</label>
-                <input type="text" class="form-control" name="id_multa_x_factura" readonly='readonly' required value=<?php echo $id_multa_x_factura->get_id_multa_x_factura(); ?>>
+                <input type="text" class="form-control" name="id_multa_x_factura" required value=<?php echo "$id_multa_x_factura"; ?>>
             </div>  
             <div class="form-group">
                 <label for="username">ID-MULTA</label>
-                <input type="text" class="form-control" name="id_multa" readonly='readonly' required value=<?php echo $id_multa->get_id_multa(); ?>>
+                <input type="text" class="form-control" name="id_multa" required value=<?php echo "$id_multa"; ?>>
             </div>
             <div class="form-group">
                 <label for="username">ID-RESERVA</label>
-                <input type="text" class="form-control" name ="id_reserva" required  value=<?php echo $id_reserva->get_id_reserva(); ?>>
+                <input type="text" class="form-control" name ="id_reserva" required  value=<?php echo "$id_reserva"; ?>>
             </div>
             <div class="form-group">
                 <label for="username">VALOR</label>
-                <input type="text" class="form-control" name ="valor" required  value=<?php echo $valor->get_valor(); ?>>
+                <input type="text" class="form-control" name ="valor" required  value=<?php echo "$valor"; ?>>
             </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>
