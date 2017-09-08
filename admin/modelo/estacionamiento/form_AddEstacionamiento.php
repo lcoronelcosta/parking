@@ -26,7 +26,7 @@
           <form method="post" action="saveEstacionamiento.php">
             <div class="form-group">
                 <label for="username">Parqueadero</label>
-                <input type="text" class="form-control" name="id_cliente" placeholder="Id Cliente" required autofocus>
+                <input type="text" class="form-control" name="id_parqueadero" placeholder="Id Parqueadero" required autofocus>
             </div>
             <div class="form-group">
                 <label for="username">Numero</label>
