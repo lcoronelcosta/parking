@@ -30,7 +30,7 @@
         <thead>
             <tr> 
                 <th>ID</th>
-                <th>PARQUEADERO</th>
+                <th>ID-PARQUEADERO</th>
                 <th>NUMERO</th>
                 <th>ESTADO</th>
             </tr>
