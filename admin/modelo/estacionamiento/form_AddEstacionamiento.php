@@ -26,7 +26,7 @@
           <form method="post" action="saveEstacionamiento.php">
             <div class="form-group">
                 <label for="username">Parqueadero</label>
-                <input type="text" class="form-control" name="id_parqueadero" placeholder="Id Parqueadero" required autofocus>
+                <input type="text" class="form-control" name="id_parqueadero" placeholder="id parqueadero" required autofocus>
             </div>
             <div class="form-group">
                 <label for="username">Numero</label>
@@ -36,6 +36,7 @@
                 <label for="username">Estado</label>
                 <input type="text" class="form-control" name="estado" placeholder="estado" required autofocus>
             </div>
+
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>
               <a href="readEstacionamiento.php" class="btn btn-info pull-right">Salir</a>       
@@ -49,7 +50,3 @@
   </div>
 </body>
 </html>
-<?php 
-
-    include_once("../../modal_exito.php");
-?>
