@@ -17,7 +17,7 @@ $multaReservaCollectorObj = new MultaReservaCollector();
     <body>
         <?php
        
-            $multaReservaCollectorObj->updateMultaReserva($id_multa,$id_reserva, $valor);
+            $multaReservaCollectorObj->updateMultaReserva($id_multa_x_factura,$id_multa,$id_reserva, $valor);
             $mensaje = "LA MULTA POR RESERVA SE MODIFICO EXITOSAMENTE";
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readMultaReserva.php'>";
