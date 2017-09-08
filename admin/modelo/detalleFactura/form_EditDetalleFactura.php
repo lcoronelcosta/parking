@@ -1,10 +1,11 @@
 <?php
     session_start();
-    include_once("DetFacturaCollector.php");
-    include_once("DetFactura.php");
-    $detFacturaCollectorObj = new detFacturaCollector();
-    $$id_detalle_facura = $_GET['id_detalle_facura'];
-    $detFactura = $detFacturaCollectorObj->showCliente($id_detalle_facura);
+    include_once("DetalleFacturaCollector.php");
+    $detalleFacturaCollectorObj = new DetalleFacturaCollector();
+    $id_detalle_facura = $_GET['id_detalle_facura'];
+    $tiempo = $_GET['tiempo'];
+    $total = $_GET['toal'];
+    $id_factura = $_GET['id_factura'];
 ?>
 
 <html>
@@ -22,31 +23,31 @@
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Editar Factura</span>
+          <span>Editar Detalle Factura</span>
        </strong>
       </div>
       <div class="panel-body">
         <div class="col-md-6 col-md-offset-3">
-          <form method="post" action="updateDetFactura.php?usuario=<?php $usuario?>">
+          <form method="post" action="updateDetalleFactura.php?tiempo=<?php $tiempo?>">
             <div class="form-group">
                 <label for="username">ID</label>
-                <input type="text" class="form-control" name="id_detalle_facura" readonly='readonly' required value=<?php echo $cliente->get_id_detalle_facura(); ?>>
+                <input type="text" class="form-control" name="id_detalle_facura" required value=<?php echo "$id_detalle_facura"; ?>>
             </div>  
             <div class="form-group">
-                <label for="username">Factura</label>
-                <input type="text" class="form-control" name="id_factura" readonly='readonly' required value=<?php echo $cliente->get_id_factura(); ?>>
+                <label for="username">TIEMPO</label>
+                <input type="text" class="form-control" name="tiempo" required value=<?php echo "$tiempo"; ?>>
             </div>
             <div class="form-group">
-                <label for="username">Tiempo</label>
-                <input type="text" class="form-control" name ="tiempo" required  value=<?php echo $cliente->get_tiempo(); ?>>
+                <label for="username">TOTAL</label>
+                <input type="text" class="form-control" name ="total" required  value=<?php echo "$total"; ?>>
             </div>
             <div class="form-group">
-                <label for="username">Total</label>
-                <input type="text" class="form-control" name ="total" required  value=<?php echo $cliente->get_total(); ?>>
+                <label for="username">ID-FACTURA</label>
+                <input type="text" class="form-control" name ="id_factura" required  value=<?php echo "$id_factura"; ?>>
             </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>
-              <a href="readDetFactura.php" class="btn btn-info pull-right">Salir</a>       
+              <a href="readDetalleFactura.php" class="btn btn-info pull-right">Salir</a>       
             </div>
         </form>
         </div>

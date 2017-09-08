@@ -33,7 +33,7 @@
         }
         
         function deleteMultaReserva($id_multa_x_factura) {
-                 $rows = self::$db->deleteRow("DELETE FROM multa_x_reservaa WHERE id_multa_x_factura=$id_multa_x_factura",null);
+                 $rows = self::$db->deleteRow("DELETE FROM multa_x_reserva WHERE id_multa_x_factura=$id_multa_x_factura",null);
 
 
         }

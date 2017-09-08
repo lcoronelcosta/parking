@@ -1,18 +1,18 @@
 <?php
 
-    class Cliente
+    class DetalleFactura
     {
         private $id_detalle_facura;
-        private $id_factura;
         private $tiempo;
         private $total;
+        private $id_factura;
 
 
-        function __construct($id_detalle_facura, $id_factura, $tiempo, $total) {
+        function __construct($id_detalle_facura, $tiempo, $total, $id_factura) {
            $this->id_detalle_facura = $id_detalle_facura;
-           $this->id_factura = $id_factura;
            $this->tiempo = $tiempo;
            $this->total = $total;
+           $this->id_factura = $id_factura;
          }
         
         function set_id_detalle_facura($id_detalle_facura){
@@ -20,13 +20,6 @@
          } 
          function get_id_detalle_facura(){
            return $this->id_detalle_facura;
-         }
-
-         function set_id_factura($id_factura){
-           $this->id_factura = $id_factura;
-         } 
-         function get_id_factura(){
-           return $this->id_factura;
          }
 
          function set_tiempo($tiempo){
@@ -42,5 +35,12 @@
          function get_total(){
            return $this->total;
          } 
+
+         function set_id_factura($id_factura){
+           $this->id_factura = $id_factura;
+         } 
+         function get_id_factura(){
+           return $this->id_factura;
+         }
     }
 ?>
