@@ -1,6 +1,6 @@
 <?php
 
-    class Cliente
+    class Estacionamiento
     {
         private $id_estacionamiento;
         private $id_parqueadero;
