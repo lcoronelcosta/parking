@@ -38,7 +38,7 @@
 
         }
         
-        function validarMultaReserva($valor){
+        function validarMultaReserva($id_multa_x_factura){
                 $rows = self::$db->getRows("SELECT * FROM multa_x_reserva WHERE valor='$valor'");
                 foreach ($rows as $c){
                   $aux = new MultaReserva($c{'id_multa_x_factura'},$c{'id_multa'},$c{'id_reserva'},$c{'valor'});
@@ -47,7 +47,7 @@
                 return 0;
           }    
         
-          function buscarMultaReserva($valor) {
+          function buscarMultaReserva($id_multa_x_factura) {
                 $rows = self::$db->getRows("SELECT * FROM multa_x_reserva WHERE valor='$valor'");               
                 foreach ($rows as $c){
                   $aux = new MultaReserva($c{'id_multa_x_factura'},$c{'id_multa'},$c{'id_reserva'},$c{'valor'});
