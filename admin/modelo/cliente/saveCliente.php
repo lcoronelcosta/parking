@@ -1,7 +1,7 @@
 <?php
     session_start();
-    include_once("DetFacturaCollector.php");
-    include_once("DetFactura.php");
+    include_once("ClienteCollector.php");
+    include_once("Cliente.php");
     $nombre = $_POST['nombre'];
 	$apellido = $_POST['apellido'];
 	$usuario = $_POST['usuario'];

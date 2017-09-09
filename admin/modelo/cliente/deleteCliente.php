@@ -1,9 +1,9 @@
 <?php
     session_start();
-    include_once("DetFacturaCollector.php");
-    $id_detalle_facura = $_GET['ID'];
-    $id_factura = $_GET['ID_FACTURA'];
-    $detFacturaCollectorObj = new DetFacturaCollector();
+    include_once("ClienteCollector.php");
+    $id_cliente = $_GET['ID'];
+    $id_user = $_GET['ID_user'];
+    $clienteCollectorObj = new ClienteCollector();
 ?>
 
 
@@ -11,14 +11,14 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Delete Detalle</title>
+        <title>Borrar Cliente</title>
     </head>
     <body>
         <?php
-        $detFacturaCollectorObj->deleteDetFactura($id_detalle_facura, $id_factura);
+        $clienteCollectorObj->deleteCliente($id_cliente, $id_user);
         $mensaje = "EL CLIENTE SE ELIMINO EXITOSAMENTE";
         print "<script>alert('$mensaje')</script>";
-        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readDetFactura.php'>";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readCliente.php'>";
         ?>
     </body>
 </html>
