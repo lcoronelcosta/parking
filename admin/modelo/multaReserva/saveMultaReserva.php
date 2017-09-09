@@ -16,18 +16,12 @@
     <body>
   
         <?php
-        //$roll = substr ("$rol", 0,1);
-        if($multaReservaCollectorObj->buscarMultaReserva($valor)){
-            $mensaje = "ERROR LA MULTA POR RESERVA YA SE ENCUENTRA REGISTRADO";
-            print "<script>alert('$mensaje')</script>";
-            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_AddMultaReserva.php'>";
-        }
-        else{
+
         $multaReservaCollectorObj->createMultaReserva($id_multa, $id_reserva, $valor);
         $mensaje = "LA MULTA POR RESERVA SE CREO EXITOSAMENTE";
         print "<script>alert('$mensaje')</script>";
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readMultaReserva.php'>";
-        }
+        
         ?>
   
     </body>

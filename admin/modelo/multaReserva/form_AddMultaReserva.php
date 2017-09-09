@@ -10,7 +10,6 @@
 	<title>Multa por Reserva</title>
     <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
     <link href='https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css' rel='stylesheet' type='text/css'>
-    <link href='../../modal.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
    <div class="row ">
@@ -24,17 +23,24 @@
       <div class="panel-body">
         <div class="col-md-6 col-md-offset-3">
           <form method="post" action="saveMultaReserva.php">
-            <div class="form-group">
-                <label for="username">Multa</label>
-                <input type="text" class="form-control" name="id_multa" placeholder="id multa" required autofocus>
+             <div class="form-group">
+                 <label for="password">RESERVAS <a class="btn btn-info" data-toggle="modal" data-target="#myModalReservas" ><i class="glyphicon glyphicon-search"></i></a></label>
+                
+                <div class="col-md-9">
+                    <input readonly type="text" class="form-control" required name="id_reserva" id="id_reserva" placeholder="ID">
+                </div>
             </div>
-            <div class="form-group">
-                <label for="username">Reserva</label>
-                <input type="text" class="form-control" name ="id_reserva"  placeholder="id reserva" required>
+           <div class="form-group">
+                 <label for="password">MULTAS <a class="btn btn-info" data-toggle="modal" data-target="#myModalMultas" ><i class="glyphicon glyphicon-search"></i></a></label>
+                
+                <div class="col-md-9">
+                    <input readonly type="text" class="form-control" required name="id_multa" id="id_multa" placeholder="ID">
+                </div>
             </div>
+          
             <div class="form-group">
                 <label for="username">Valor</label>
-                <input type="text" class="form-control" name ="valor"  placeholder="valor" required>
+                <input type="text" class="form-control" readonly name ="valor"  id="valor" placeholder="valor" required>
             </div>
 
               <div class="form-group clearfix">
@@ -49,4 +55,6 @@
     </div>
   </div>
 </body>
+<?php include_once('modal_reserva.php');?>
+<?php include_once('modal_multa.php');?>
 </html>

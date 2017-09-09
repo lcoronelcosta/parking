@@ -29,23 +29,31 @@
       <div class="panel-body">
         <div class="col-md-6 col-md-offset-3">
           <form method="post" action="updateMultaReserva.php?valor=<?php $valor?>">
-            <div class="form-group">
+           <div class="form-group">
                 <label for="username">ID</label>
-                <input type="text" class="form-control" name="id_multa_x_factura" required value=<?php echo "$id_multa_x_factura"; ?>>
+                <input type="text" class="form-control" readonly name="id_multa_x_factura" required value=<?php echo "$id_multa_x_factura"; ?>>
             </div>  
-            <div class="form-group">
-                <label for="username">ID-MULTA</label>
-                <input type="text" class="form-control" name="id_multa" required value=<?php echo "$id_multa"; ?>>
+           <div class="form-group">
+                 <label for="password">RESERVAS <a class="btn btn-info" data-toggle="modal" data-target="#myModalReservas" ><i class="glyphicon glyphicon-search"></i></a></label>
+                
+                <div class="col-md-9">
+                    <input readonly type="text" class="form-control" required name="id_reserva" id="id_reserva" placeholder="ID" value=<?php echo "$id_reserva"; ?>>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="username">ID-RESERVA</label>
-                <input type="text" class="form-control" name ="id_reserva" required  value=<?php echo "$id_reserva"; ?>>
+           <div class="form-group">
+                 <label for="password">MULTAS <a class="btn btn-info" data-toggle="modal" data-target="#myModalMultas" ><i class="glyphicon glyphicon-search"></i></a></label>
+                
+                <div class="col-md-9">
+                    <input readonly type="text" class="form-control" required name="id_multa" id="id_multa" placeholder="ID" value=<?php echo "$id_multa"; ?>>
+                </div>
             </div>
+          
             <div class="form-group">
-                <label for="username">VALOR</label>
-                <input type="text" class="form-control" name ="valor" required  value=<?php echo "$valor"; ?>>
+                <label for="username">Valor</label>
+                <input type="text" class="form-control" readonly name ="valor"  id="valor" placeholder="valor" required value=<?php echo "$valor"; ?>>
             </div>
-            <div class="form-group clearfix">
+
+              <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>
               <a href="readMultaReserva.php" class="btn btn-info pull-right">Salir</a>       
             </div>
@@ -57,4 +65,6 @@
     </div>
   </div>
 </body>
+<?php include_once('modal_reserva.php');?>
+<?php include_once('modal_multa.php');?>
 </html>

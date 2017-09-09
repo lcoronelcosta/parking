@@ -14,7 +14,7 @@
     </head>
     <body>
         <?php
-        $multaCollectorObj->deleteMultaReserva($id_multa_x_factura);
+        $multaReservaCollectorObj->deleteMultaReserva($id_multa_x_factura);
         $mensaje = "LA MULTA POR RESERVA SE ELIMINO EXITOSAMENTE";
         print "<script>alert('$mensaje')</script>";
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readMultaReserva.php'>";
