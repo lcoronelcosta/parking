@@ -28,7 +28,7 @@
       </div>
       <div class="panel-body">
         <div class="col-md-6 col-md-offset-3">
-          <form method="post" action="updateEstacionamiento.php?numero=<?php $numero?>">
+          <form method="post" action="updateEstacionamiento.php?numero="<?php $numero?>"">
             <div class="form-group">
                 <label for="username">ID</label>
                 <input type="text" class="form-control" name="id_estacionamiento" required value=<?php echo "$id_estacionamiento"; ?>>
@@ -39,11 +39,23 @@
             </div>    
             <div class="form-group">
                 <label for="username">NUMERO</label>
-                <input type="text" class="form-control" name="estacionamientoModificado" required value=<?php echo "$numero"; ?>>
+                <input type="text" class="form-control" name="numeroModificado" required value=<?php echo "$numero"; ?>>
             </div>
-            <div class="form-group">
-                <label for="username">ESTADO</label>
-                <input type="text" class="form-control" name="estado" required value=<?php echo "$estado"; ?>>
+             <div class="form-group">
+              <label for="level">Estado</label>
+                <select class="form-control" name="estado">
+                  <?php 
+                    if ($estado == 'A'){
+                        echo "<option >Activo</option>";
+                        echo "<option>Inactivo</option>";
+                    }
+                    else{
+                        echo "<option>Inactivo</option>";
+                        echo "<option >Activo</option>";
+                    }
+                    
+                  ?>    
+                </select>
             </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>

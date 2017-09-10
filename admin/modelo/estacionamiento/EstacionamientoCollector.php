@@ -46,8 +46,8 @@
                 return 0;
           }    
         
-          function buscarEstacionamiento($numero) {
-                $rows = self::$db->getRows("SELECT * FROM estacionamiento WHERE numero='$numero'");               
+          function buscarEstacionamiento($id_parqueo, $numero) {
+                $rows = self::$db->getRows("SELECT * FROM estacionamiento WHERE numero='$numero' and id_parqueadero='$id_parqueo'");               
                 foreach ($rows as $c){
                   $aux = new Estacionamiento($c{'id_estacionamiento'},$c{'id_parqueadero'},$c{'numero'},$c{'estado'});
                   return 1;

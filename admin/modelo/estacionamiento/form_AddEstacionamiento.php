@@ -10,7 +10,6 @@
 	<title>Estacionamiento</title>
     <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
     <link href='https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css' rel='stylesheet' type='text/css'>
-    <link href='../../modal.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
    <div class="row ">
@@ -24,17 +23,27 @@
       <div class="panel-body">
         <div class="col-md-6 col-md-offset-3">
           <form method="post" action="saveEstacionamiento.php">
-            <div class="form-group">
-                <label for="username">Parqueadero</label>
-                <input type="text" class="form-control" name="id_parqueadero" placeholder="id parqueadero" required autofocus>
-            </div>
+           <div class="form-group">
+                <label for="password">PARQUEADERO <a class="btn btn-info" data-toggle="modal" data-target="#myModalParqueos"><i class="glyphicon glyphicon-search"></i></a></label>
+                
+                <div class="col-md-4">
+                    <input readonly type="text" class="form-control" required name="id_parqueadero" id="id_parqueo" placeholder="ID">
+                </div>
+                <div class="col-md-4">
+                    <input readonly type="text" class="form-control" name="nombre_parqueo" id="nombre_parqueo" placeholder="NOMBRE">
+                </div>
+                
+            </div> 
             <div class="form-group">
                 <label for="username">Numero</label>
                 <input type="text" class="form-control" name="numero" placeholder="numero" required autofocus>
             </div>
             <div class="form-group">
-                <label for="username">Estado</label>
-                <input type="text" class="form-control" name="estado" placeholder="estado" required autofocus>
+              <label for="level">Estado</label>
+                <select class="form-control" name="estado">
+                  <option>Activo</option>
+                  <option>Inactivo</option>
+                </select>
             </div>
 
             <div class="form-group clearfix">
@@ -49,4 +58,5 @@
     </div>
   </div>
 </body>
+<?php include_once('modal_parqueos.php');?>
 </html>
