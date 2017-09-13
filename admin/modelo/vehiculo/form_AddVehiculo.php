@@ -28,7 +28,7 @@
                 <label for="password">CLIENTE <a class="btn btn-info" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-search"></i></a></label>
                 
                 <div class="col-md-3">
-                    <input disabled type="text" class="form-control" name="id_c" id="id_c" placeholder="ID" required>
+                    <input readonly type="text" class="form-control" name="id_c" id="id_c" placeholder="ID" required>
                 </div>
                 <div class="col-md-3">
                     <input readonly type="text" class="form-control" required name="n_c" id="n_c" placeholder="NOMBRE">
