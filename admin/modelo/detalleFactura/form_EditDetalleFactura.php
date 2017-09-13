@@ -5,6 +5,7 @@
     $id_detalle_facura = $_GET['id_detalle_facura'];
     $tiempo = $_GET['tiempo'];
     $total = $_GET['toal'];
+    $hora_facturacion = $_GET['hora_facturacion'];
     $id_factura = $_GET['id_factura'];
 ?>
 
@@ -40,6 +41,10 @@
             <div class="form-group">
                 <label for="username">TOTAL</label>
                 <input type="text" class="form-control" name ="total" required  value=<?php echo "$total"; ?>>
+            </div>
+            <div class="form-group">
+                <label for="username">HORA FACTURACION</label>
+                <input type="text" class="form-control" name ="hora_facturacion" required  value=<?php echo "$hora_facturacion"; ?>>
             </div>
             <div class="form-group">
                 <label for="username">ID-FACTURA</label>

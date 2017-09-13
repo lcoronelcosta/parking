@@ -33,6 +33,10 @@
                 <input type="text" class="form-control" name ="total"  placeholder="total" required>
             </div>
             <div class="form-group">
+                <label for="username">Hora Facturacion</label>
+                <input type="text" class="form-control" name ="hora_facturacion"  placeholder="hora facturacion" required>
+            </div>
+            <div class="form-group">
                 <label for="username">Id Factura</label>
                 <input type="text" class="form-control" name ="id_factura"  placeholder="id factura" required>
             </div>
