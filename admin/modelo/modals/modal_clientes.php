@@ -29,7 +29,7 @@
             </tr>
         </thead>
         <?php
-            $con = 1;        
+            $con = 1000;        
             foreach ($clienteCollectorObj->showClientes() as $c){
             echo "<tr>";
             echo "<td>" . $c->get_id_cliente() . "</td>";         

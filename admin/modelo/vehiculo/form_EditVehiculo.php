@@ -38,7 +38,7 @@
           <form method="post" action="updateVehiculo.php?descripcion=<?php $descripcion?>">
             <div class="form-group">
                 <label for="username">ID</label>
-                <input type="text" class="form-control" readonly name="id_vehiculo" required value=<?php echo "$id_vehiculo"; ?>>
+                <input type="text" class="form-control" readonly name="id_vehiculo" value=<?php echo "$id_vehiculo"; ?> required>
             </div>  
             <div class="form-group">
                 <label for="password">CLIENTE <a class="btn btn-info" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-search"></i></a></label>
@@ -47,10 +47,10 @@
                     <input readonly type="text" class="form-control" required name="id_c" id="id_c" placeholder="ID" value=<?php echo $clienteObj->get_id_cliente(); ?>>
                 </div>
                 <div class="col-md-3">
-                    <input readonly type="text" class="form-control" name="n_c" id="n_c" placeholder="NOMBRE" value=<?php echo $clienteObj->get_nombre(); ?>>
+                    <input readonly type="text" class="form-control" required name="n_c" id="n_c" placeholder="NOMBRE" value=<?php echo $clienteObj->get_nombre(); ?>>
                 </div>
                 <div class="col-md-3">
-                    <input readonly type="text" class="form-control" name="a_c" id="a_c" placeholder="APELLIDO" value=<?php echo $clienteObj->get_apellido(); ?>>
+                    <input readonly type="text" class="form-control" required name="a_c" id="a_c" placeholder="APELLIDO" value=<?php echo $clienteObj->get_apellido(); ?>>
                 </div>
                 
             </div>    
@@ -81,7 +81,7 @@
                         echo "<option>Moto</option>";
                         echo "<option >Auto</option>";
                     }
-                  ?>    
+		           ?>
                 </select>
             </div>
             <div class="form-group clearfix">

@@ -1,4 +1,4 @@
-<?php 
+<?php
     include_once("../parqueadero/ParqueaderoCollector.php");
     $parqueaderoCollectorObj = new ParqueaderoCollector();
 ?>
@@ -79,9 +79,9 @@
                 document.getElementById('d_p').value = '<?php echo "".$c->get_nombre().""; ?>';
             })
             
-            <?php 
+            <?php
                 $i++;
-            } ?>
+            }?>
             
         }
     </script>

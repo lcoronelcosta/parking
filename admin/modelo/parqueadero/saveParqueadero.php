@@ -24,7 +24,7 @@
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_AddParqueadero.php'>";
         }
         else{
-        $parqueaderoCollectorObj->createParqueadero($id_propietario, $id_propietario, $nombre, $direccion, $latitud, $longitud);
+        $parqueaderoCollectorObj->createParqueadero($id_propietario, $nombre, $direccion, $latitud, $longitud);
         $mensaje = "EL PARQUEADERO SE CREO EXITOSAMENTE";
         print "<script>alert('$mensaje')</script>";
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readParqueadero.php'>";

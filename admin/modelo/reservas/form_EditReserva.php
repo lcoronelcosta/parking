@@ -134,7 +134,8 @@
     </div>
   </div>
 <?php include_once('../modals/modal_clientes.php');?>
-<?php include_once('../modals/modal_vehiculo.php');?>       
+<?php include_once('../modals/modal_vehiculo.php');?>
+<?php include_once('../modals/modal_estacionamiento.php');?>      
 <?php include_once('map.php');?>
    </body>
 </html>
