@@ -7,6 +7,12 @@
     $direccion = $_GET['direccion'];
     $latitud = $_GET['latitud'];
     $longitud = $_GET['longitud'];
+    $id_propietario = $_GET['id_propietario'];
+
+    include_once("../propietario/PropietarioCollector.php");
+    $propietarioCollectorObj = new PropietarioCollector();
+    $propietarioObj = $propietarioCollectorObj->showPropietario($id_propietario);
+
 ?>
 
 <html>
@@ -29,10 +35,24 @@
       </div>
       <div class="panel-body">
         <div class="col-md-6 col-md-offset-3">
-          <form method="post" action="updateParqueadero.php?nombre=<?php $nombre?>">
+          <form method="post" action="updateParqueadero.php">
             <div class="form-group">
                 <label for="username">ID</label>
-                <input type="text" class="form-control" name="id_parqueadero" required value=<?php echo "$id_parqueadero"; ?>>
+                <input type="text" class="form-control" readonly name="id_parqueadero" required value=<?php echo "$id_parqueadero"; ?>>
+            </div>
+            <div class="form-group">
+                <label for="password">PROPIETARIO <a class="btn btn-info" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-search"></i></a></label>
+                
+                <div class="col-md-3">
+                    <input readonly type="text" class="form-control" required name="id_pr" id="id_pr" placeholder="ID" value=<?php echo $propietarioObj->get_id_propietario(); ?>>
+                </div>
+                <div class="col-md-3">
+                    <input readonly type="text" class="form-control" name="n_pr" id="n_pr" value=<?php echo $propietarioObj->get_nombre(); ?>>
+                </div>
+                <div class="col-md-3">
+                    <input readonly type="text" class="form-control" name="a_pr" id="a_pr" value=<?php echo $propietarioObj->get_apellido(); ?>>
+                </div>
+                
             </div>  
             <div class="form-group">
                 <label for="username">Descripcion</label>
@@ -62,4 +82,5 @@
     </div>
   </div>
 </body>
+<?php include_once('../modals/modal_propietario.php');?>
 </html>

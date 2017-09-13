@@ -3,8 +3,6 @@
     include_once("PropietarioCollector.php");
     $propietarioCollectorObj = new PropietarioCollector();
 ?>
-?>
-
 <html>
 <head>
 	<meta charset="utf-8">
@@ -42,9 +40,12 @@
                 <input type="text" class="form-control" name="numerocuenta" placeholder="Cuenta Propietario" required autofocus>
             </div> 
             <div class="form-group">
-                <label for="username">Estado</label>
-                <input type="text" class="form-control" name="estado" placeholder="Estado" required autofocus>
-            </div>  
+              <label for="level">Estado</label>
+                <select class="form-control" name="estado">
+                  <option>Activo</option>
+                  <option>Inactivo</option>
+                </select>
+            </div> 
             
             
             <div class="form-group clearfix">

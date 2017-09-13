@@ -33,6 +33,7 @@
                 <th>ID-PARQUEADERO</th>
                 <th>NUMERO</th>
                 <th>ESTADO</th>
+                <th>OPERACIONES</th>
             </tr>
         </thead>
         <?php

@@ -19,26 +19,11 @@ $tipopagoCollectorObj = new TipopagoCollector();
     </head>
     <body>
         <?php
-        //$roll = substr ("$rol", 0,1);
-        if(trim($tipopagoActual) == trim($tipopagoModificado)){
-            $tipopagoCollectorObj->updateTipopago($id_pago, $tipopagoModificado, $estado);
+            $estadoAux = substr ("$estado", 0,1);
+            $tipopagoCollectorObj->updateTipopago($id_pago, $tipopagoModificado, $estadoAux);
             $mensaje = "EL TIPO DE PAGO SE MODIFICO EXITOSAMENTE";
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readTipopago.php'>";
-        }
-        else{
-            if($tipopagoCollectorObj->buscarTipopago($tipopagoModificado)){
-            $mensaje = "ERROR EL TIPO DE PAGO YA SE ENCUENTRA REGISTRADO";
-            print "<script>alert('$mensaje')</script>";
-            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_EditTipopago.php?id_pago=$id_pago & descripcion=$tipopagoModificado & estado=$estado'>";
-            }
-            else{
-                 $tipopagoCollectorObj->updateTipopago($id_pago, $tipopagoModificado, $estado);
-            $mensaje = "EL TIPO DE PAGO SE MODIFICO EXITOSAMENTE";
-            print "<script>alert('$mensaje')</script>";
-            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readTipopago.php'>";
-            }
-        }
         ?>
     </body>
 </html>

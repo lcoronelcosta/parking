@@ -24,10 +24,10 @@
         <div class="col-md-6 col-md-offset-3">
           <form method="post" action="saveMultaReserva.php">
              <div class="form-group">
-                 <label for="password">RESERVAS <a class="btn btn-info" data-toggle="modal" data-target="#myModalReservas" ><i class="glyphicon glyphicon-search"></i></a></label>
+                 <label for="password">RESERVAS <a class="btn btn-info" data-toggle="modal" data-target="#myModalReserva" ><i class="glyphicon glyphicon-search"></i></a></label>
                 
                 <div class="col-md-9">
-                    <input readonly type="text" class="form-control" required name="id_reserva" id="id_reserva" placeholder="ID">
+                    <input readonly type="text" class="form-control" required name="id_reserva" id="id_r" placeholder="ID">
                 </div>
             </div>
            <div class="form-group">
@@ -55,6 +55,6 @@
     </div>
   </div>
 </body>
-<?php include_once('modal_reserva.php');?>
-<?php include_once('modal_multa.php');?>
+<?php include_once('../modals/modal_reserva.php');?>
+<?php include_once('../modals/modal_multa.php');?>
 </html>

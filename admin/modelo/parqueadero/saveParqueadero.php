@@ -6,6 +6,7 @@
 	$direccion = $_POST['direccion'];
     $latitud = $_POST['latitud'];
     $longitud = $_POST['longitud'];
+    $id_propietario = $_POST['id_pr'];
     $parqueaderoCollectorObj = new ParqueaderoCollector();
 ?>
 
@@ -23,7 +24,7 @@
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_AddParqueadero.php'>";
         }
         else{
-        $parqueaderoCollectorObj->createParqueadero($nombre, $direccion, $latitud, $longitud);
+        $parqueaderoCollectorObj->createParqueadero($id_propietario, $id_propietario, $nombre, $direccion, $latitud, $longitud);
         $mensaje = "EL PARQUEADERO SE CREO EXITOSAMENTE";
         print "<script>alert('$mensaje')</script>";
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readParqueadero.php'>";

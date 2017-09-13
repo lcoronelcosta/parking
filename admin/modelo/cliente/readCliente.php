@@ -33,6 +33,7 @@
                 <th>ID-USUARIO</th>
                 <th>NOMBRE</th>
                 <th>APELLIDO</th>
+                <th>OPERACIONES</th>
             </tr>
         </thead>
         <?php

@@ -18,18 +18,11 @@
     <body>
   
         <?php
-        //$roll = substr ("$rol", 0,1);
-        if($propietarioCollectorObj->buscarPropietario($nombre)){
-            $mensaje = "ERROR EL PROPIETARIO YA SE ENCUENTRA REGISTRADO";
-            print "<script>alert('$mensaje')</script>";
-            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_AddPropietario.php'>";
-        }
-        else{
-        $propietarioCollectorObj->createPropietario($nombre, $apellido, $ruc, $numerocuenta, $estado);
+        $estadoAux = substr ("$estado", 0,1);
+        $propietarioCollectorObj->createPropietario($nombre, $apellido, $ruc, $numerocuenta, $estadoAux);
         $mensaje = "EL PROPIETARIO SE CREO EXITOSAMENTE";
         print "<script>alert('$mensaje')</script>";
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readPropietario.php'>";
-        }
         ?>
   
     </body>

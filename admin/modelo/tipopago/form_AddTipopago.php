@@ -29,9 +29,12 @@
                 <input type="text" class="form-control" name="descripcion" placeholder="Efectivo-Credito-Debito" required autofocus>
             </div>
             <div class="form-group">
-                <label for="username">Estado</label>
-                <input type="text" class="form-control" name ="estado"  placeholder="A - I" required>
-            </div>
+              <label for="level">Estado</label>
+                <select class="form-control" name="estado">
+                  <option>Activo</option>
+                  <option>Inactivo</option>
+                </select>
+            </div> 
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>
               <a href="readTipopago.php" class="btn btn-info pull-right">Salir</a>       

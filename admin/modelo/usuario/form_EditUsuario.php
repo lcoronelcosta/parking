@@ -31,7 +31,7 @@
           <form method="post" action="updateUsuario.php?usuario=<?php $usuario?>">
             <div class="form-group">
                 <label for="username">ID</label>
-                <input type="text" class="form-control" name="id_usuario" required value=<?php echo "$id_usuario"; ?>>
+                <input type="text" readonly class="form-control" name="id_usuario" required value=<?php echo "$id_usuario"; ?>>
             </div>  
             <div class="form-group">
                 <label for="username">Usuario</label>

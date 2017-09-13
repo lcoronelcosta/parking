@@ -9,6 +9,7 @@
 	$fecha_fin = $_POST['fecha_fin'];
     $o_latitud = $_POST['origen_la'];
     $o_longitud = $_POST['origen_lo'];
+    $id_estacionamiento = $_POST['id_e'];
     $reservaCollectorObj = new ReservaCollector();
 ?>
 
@@ -20,7 +21,7 @@
     <body>
   
         <?php
-        $reservaCollectorObj->createReserva($id_cliente, $id_vehiculo, $id_parqueo, $fecha_inicio, $fecha_fin, $o_latitud, $o_longitud);
+        $reservaCollectorObj->createReserva($id_cliente, $id_vehiculo, $id_parqueo, $fecha_inicio, $fecha_fin, $o_latitud, $o_longitud, $id_estacionamiento);
         $mensaje = "LA RESERVA SE CREO EXITOSAMENTE";
         print "<script>alert('$mensaje')</script>";
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readReserva.php'>";

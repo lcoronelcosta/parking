@@ -6,18 +6,20 @@
         private $id_cliente;
         private $id_vehiculo;
         private $id_parqueo;
+        private $id_estacionamiento;
         private $fecha_inicio;
         private $fecha_fin;
         private $origen_latitud;
         private $origen_longitud;
         private $estado;
         
-        function __construct($id_reserva, $id_cliente, $id_vehiculo, $id_parqueo, $fecha_inicio, $fecha_fin, $origen_latitud, $origen_longitud) {
+        function __construct($id_reserva, $id_cliente, $id_vehiculo, $id_parqueo, $id_estacionamiento, $fecha_inicio, $fecha_fin, $origen_latitud, $origen_longitud) {
            
            $this->id_reserva = $id_reserva;
            $this->id_cliente = $id_cliente;
            $this->id_vehiculo = $id_vehiculo;
-           $this->id_parqueo = $id_parqueo;  
+           $this->id_parqueo = $id_parqueo; 
+           $this->id_estacionamiento = $id_estacionamiento; 
            $this->fecha_inicio = $fecha_inicio;
            $this->fecha_fin = $fecha_fin;
            $this->origen_latitud = $origen_latitud;
@@ -51,6 +53,13 @@
          } 
          function get_id_parqueo(){
            return $this->id_parqueo;
+         }
+
+         function set_id_estacionamiento($id_estacionamiento){
+           $this->id_estacionamiento = $id_estacionamiento;
+         } 
+         function get_id_estacionamiento(){
+           return $this->id_estacionamiento;
          }
          
          function set_fecha_inicio($fecha_inicio){

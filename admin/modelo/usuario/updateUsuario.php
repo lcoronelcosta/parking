@@ -20,13 +20,13 @@ $usuarioCollectorObj = new UsuarioCollector();
     </head>
     <body>
         <?php
-        $roll = substr ("$rol", 0,1);
-        if(trim($usuarioActual) == trim($usuarioModificado)){
-            $usuarioCollectorObj->updateUsuario($id_usuario, $usuarioModificado, $clave, $roll);
+        $rolAux = substr ("$rol", 0,1);
+        //if(trim($usuarioActual) == trim($usuarioModificado)){
+            $usuarioCollectorObj->updateUsuario($id_usuario, $usuarioModificado, $clave, $rolAux);
             $mensaje = "EL USUARIO SE MODIFICO EXITOSAMENTE";
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readUsuario.php'>";
-        }
+        /*}
         else{
             if($usuarioCollectorObj->buscarUsuario($usuarioModificado)){
             $mensaje = "ERROR EL USUARIO YA SE ENCUENTRA REGISTRADO";
@@ -39,7 +39,7 @@ $usuarioCollectorObj = new UsuarioCollector();
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readUsuario.php'>";
             }
-        }
+        }*/
         ?>
     </body>
 </html>

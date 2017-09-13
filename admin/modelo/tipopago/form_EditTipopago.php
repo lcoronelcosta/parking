@@ -36,9 +36,21 @@
                 <label for="username">Descripcion</label>
                 <input type="text" class="form-control" name="tipopagoModificado" required value=<?php echo "$descripcion"; ?>>
             </div>
-            <div class="form-group">
-                <label for="username">Estado</label>
-                <input type="text" class="form-control" name="estado" required value=<?php echo "$estado"; ?>>
+             <div class="form-group">
+              <label for="level">Rol de usuario</label>
+                <select class="form-control" name="estado">
+                  <?php 
+                    if ($estado == 'A'){
+                        echo "<option >Activo</option>";
+                        echo "<option>Inactivo</option>";
+                    }
+                    else{
+                        echo "<option>Inactivo</option>";
+                        echo "<option >Activo</option>";
+                    }
+                    
+                  ?>    
+                </select>
             </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>

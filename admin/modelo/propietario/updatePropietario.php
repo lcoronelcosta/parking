@@ -20,26 +20,11 @@ $propietarioCollectorObj = new PropietarioCollector();
    
     <body>
             <?php
-            //$roll = substr ("$rol", 0,1);
-            if(trim($nombreActual) == trim($nombreModificado)){
-                $propietarioCollectorObj->updatePropietario($id_propietario, $nombreModificado, $apellido, $ruc, $numerocuenta, $estado);
+                $estadoAux = substr ("$estado", 0,1);
+                $propietarioCollectorObj->updatePropietario($id_propietario, $nombreModificado, $apellido, $ruc, $numerocuenta, $estadoAux);
                 $mensaje = "EL PROPIETARIO SE MODIFICO EXITOSAMENTE";
                 print "<script>alert('$mensaje')</script>";
                 echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readPropietario.php'>";
-            }
-            else{
-                if($propietarioCollectorObj->buscarPropietario($nombreModificado)){
-                $mensaje = "ERROR EL PROPIETARIO YA SE ENCUENTRA REGISTRADO";
-                print "<script>alert('$mensaje')</script>";
-                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_EditPropietario.php?id_propietario=$id_propietario & nombre=$nombreModificado & ruc=$ruc & numerocuenta=$numerocuenta & estado=$estado'>";
-                }
-                else{
-                     $propietarioCollectorObj->updatePropietario($id_propietario, $nombreModificado, $apellido, $ruc, $numerocuenta, $estado);
-                $mensaje = "EL PROPIETARIO SE MODIFICO EXITOSAMENTE";
-                print "<script>alert('$mensaje')</script>";
-                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readPropietario.php'>";
-                }
-            }
             ?>
     </body>
 

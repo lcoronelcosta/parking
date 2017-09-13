@@ -24,6 +24,20 @@
       <div class="panel-body">
         <div class="col-md-6 col-md-offset-3">
           <form method="post" action="saveParqueadero.php">
+          <div class="form-group">
+                <label for="password">PROPIETARIO <a class="btn btn-info" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-search"></i></a></label>
+                
+                <div class="col-md-3">
+                    <input readonly type="text" class="form-control" required name="id_pr" id="id_pr" placeholder="ID">
+                </div>
+                <div class="col-md-3">
+                    <input readonly type="text" class="form-control" name="n_pr" id="n_pr" placeholder="NOMBRE">
+                </div>
+                <div class="col-md-3">
+                    <input readonly type="text" class="form-control" name="a_pr" id="a_pr" placeholder="APELLIDO">
+                </div>
+                
+            </div>
             <div class="form-group">
                 <label for="username">Descripcion</label>
                 <input type="text" class="form-control" name="nombre" placeholder="Nombre Parqueadero" required autofocus>
@@ -52,4 +66,5 @@
     </div>
   </div>
 </body>
+<?php include_once('../modals/modal_propietario.php');?>
 </html>

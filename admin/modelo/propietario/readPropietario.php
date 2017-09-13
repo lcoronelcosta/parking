@@ -39,7 +39,7 @@
             </tr>
         </thead>
         <?php
-            foreach ($propietarioCollectorObj->showPropietario() as $c){
+            foreach ($propietarioCollectorObj->showPropietarios() as $c){
             echo "<tr>";
             echo "<td>" . $c->get_id_propietario() . "</td>";         
             echo "<td>" . $c->get_nombre() . "</td>"; 

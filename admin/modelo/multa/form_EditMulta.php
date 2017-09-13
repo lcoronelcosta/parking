@@ -30,7 +30,7 @@
           <form method="post" action="updateMulta.php?descipcion=<?php $descipcion?>">
             <div class="form-group">
                 <label for="username">ID</label>
-                <input type="text" class="form-control" name="id_multa" required value=<?php echo "$id_multa"; ?>>
+                <input type="text" class="form-control" name="id_multa" readonly required value=<?php echo "$id_multa"; ?>>
             </div>  
             <div class="form-group">
                 <label for="username">DESCRIPCION</label>

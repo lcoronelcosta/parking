@@ -58,5 +58,5 @@
     </div>
   </div>
 </body>
-<?php include_once('modal_parqueos.php');?>
+<?php include_once('../modals/modal_parqueos.php');?>
 </html>

@@ -1,12 +1,18 @@
 <?php
     session_start();
     include_once("VehiculoCollector.php");
+    include_once("../cliente/ClienteCollector.php");
     $vehiculoCollectorObj = new VehiculoCollector();
+
     $id_vehiculo = $_GET['id_vehiculo'];
     $descripcion = $_GET['descripcion'];
     $placa = $_GET['placa'];
     $tipo = $_GET['tipo'];
     $id_cliente = $_GET['id_cliente'];
+
+    $clienteCollectorObj = new ClienteCollector();
+        $clienteObj = $clienteCollectorObj->showCliente($id_cliente);
+
 ?>
 
 <html>
@@ -32,8 +38,22 @@
           <form method="post" action="updateVehiculo.php?descripcion=<?php $descripcion?>">
             <div class="form-group">
                 <label for="username">ID</label>
-                <input type="text" class="form-control" name="id_vehiculo" required value=<?php echo "$id_vehiculo"; ?>>
+                <input type="text" class="form-control" readonly name="id_vehiculo" required value=<?php echo "$id_vehiculo"; ?>>
             </div>  
+            <div class="form-group">
+                <label for="password">CLIENTE <a class="btn btn-info" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-search"></i></a></label>
+                
+                <div class="col-md-3">
+                    <input readonly type="text" class="form-control" required name="id_c" id="id_c" placeholder="ID" value=<?php echo $clienteObj->get_id_cliente(); ?>>
+                </div>
+                <div class="col-md-3">
+                    <input readonly type="text" class="form-control" name="n_c" id="n_c" placeholder="NOMBRE" value=<?php echo $clienteObj->get_nombre(); ?>>
+                </div>
+                <div class="col-md-3">
+                    <input readonly type="text" class="form-control" name="a_c" id="a_c" placeholder="APELLIDO" value=<?php echo $clienteObj->get_apellido(); ?>>
+                </div>
+                
+            </div>    
             <div class="form-group">
                 <label for="username">Descripcion</label>
                 <input type="text" class="form-control" name="vehiculoModificado" required value=<?php echo "$descripcion"; ?>>
@@ -43,12 +63,26 @@
                 <input type="text" class="form-control" name="placa" required value=<?php echo "$placa"; ?>>
             </div>
             <div class="form-group">
-                <label for="username">Tipo</label>
-                <input type="text" class="form-control" name="tipo" required value=<?php echo "$tipo"; ?>>
-            </div>
-            <div class="form-group">
-                <label for="username">Cliente</label>
-                <input type="text" class="form-control" name="id_cliente" required value=<?php echo "$id_cliente"; ?>>
+              <label for="level">Tipo</label>
+                <select class="form-control" name="tipo">
+                  <?php 
+                    if ($tipo == 'A'){
+                        echo "<option >Auto</option>";
+                        echo "<option>Moto</option>";
+                        echo "<option>Camioneta</option>";
+                    }
+                    if ($tipo == 'M'){
+                        echo "<option>Moto</option>";
+                        echo "<option >Auto</option>";
+                        echo "<option>Camioneta</option>";
+                    }
+                    else {
+                        echo "<option>Camioneta</option>";
+                        echo "<option>Moto</option>";
+                        echo "<option >Auto</option>";
+                    }
+                  ?>    
+                </select>
             </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>
@@ -62,4 +96,5 @@
     </div>
   </div>
 </body>
+<?php include_once('../modals/modal_clientes.php');?>
 </html>

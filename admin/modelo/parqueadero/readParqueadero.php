@@ -29,7 +29,8 @@
     <table id="example" class="table table-striped table-bordered" cellspacing="0" width="80%">
         <thead>
             <tr>
-                <th>ID</th>   
+                <th>ID</th> 
+                <th>ID-PROPIETARIO</th>   
                 <th>DESCRIPCION</th>
                 <th>DIRECCION</th>
                 <th>LATITUD</th>
@@ -40,12 +41,13 @@
         <?php
             foreach ($parqueaderoCollectorObj->showParqueaderos() as $c){
             echo "<tr>";
-            echo "<td>" . $c->get_id_parqueadero() . "</td>";         
+            echo "<td>" . $c->get_id_parqueadero() . "</td>"; 
+            echo "<td>" . $c->get_id_propietario() . "</td>";         
             echo "<td>" . $c->get_nombre() . "</td>";   
             echo "<td>" . $c->get_direccion() . "</td>"; 
             echo "<td>" . $c->get_latitud() . "</td>";  
             echo "<td>" . $c->get_longitud() . "</td>";  
-            echo "<td><a href='form_EditParqueadero.php?id_parqueadero=". $c->get_id_parqueadero() ." & nombre=". $c->get_nombre() ." & direccion=". $c->get_direccion() . " & latitud=". $c->get_latitud() ." & longitud=". $c->get_longitud() ."' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
+            echo "<td><a href='form_EditParqueadero.php?id_parqueadero=". $c->get_id_parqueadero() ." & id_propietario=". $c->get_id_propietario() . " & nombre=". $c->get_nombre() ." & direccion=". $c->get_direccion() . " & latitud=". $c->get_latitud() ." & longitud=". $c->get_longitud() ."' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
                 </a> <a href='deleteParqueadero.php?ID=". $c->get_id_parqueadero() ."' class='btn btn-xs btn-danger' data-toggle='tooltip' title='Eliminar'><i class='glyphicon glyphicon-remove'></i>
                 </a></td>"; 
             echo "</tr>"; 

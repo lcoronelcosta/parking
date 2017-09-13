@@ -4,7 +4,7 @@
     include_once("Propietario.php");
     $propietarioCollectorObj = new PropietarioCollector();
     $id_propietario = $_GET['id_propietario'];
-    $nombre = $propietarioCollectorObj->showPropietario($id_propietario);
+    $propietarioObj = $propietarioCollectorObj->showPropietario($id_propietario);
 ?>
 
 <html>
@@ -30,27 +30,39 @@
           <form method="post" action="updatePropietario.php?nombre=<?php $nombre?>">
             <div class="form-group">
                 <label for="username">ID</label>
-                <input type="text" class="form-control" name="id_propietario" required value=<?php echo $id_propietario->get_id_propietario(); ?>>
+                <input type="text" class="form-control" name="id_propietario" readonly required value=<?php echo $propietarioObj->get_id_propietario(); ?>>
             </div>  
             <div class="form-group">
                 <label for="username">Nombre</label>
-                <input type="text" class="form-control" name="nombreModificado" required value=<?php echo $nombre->get_nombre(); ?>>
+                <input type="text" class="form-control" name="nombreModificado" required value=<?php echo $propietarioObj->get_nombre(); ?>>
             </div>
             <div class="form-group">
                 <label for="username">Apellido</label>
-                <input type="text" class="form-control" name ="apellido" required  value=<?php echo $cliente->get_apellido(); ?>>
+                <input type="text" class="form-control" name ="apellido" required  value=<?php echo $propietarioObj->get_apellido(); ?>>
             </div>
             <div class="form-group">
                 <label for="username">RUC</label>
-                <input type="text" class="form-control" name ="ruc" required  value=<?php echo $ruc->get_ruc(); ?>>
+                <input type="text" class="form-control" name ="ruc" required  value=<?php echo $propietarioObj->get_ruc(); ?>>
             </div>
             <div class="form-group">
                 <label for="username">NUMERO CUENTA</label>
-                <input type="text" class="form-control" name ="numerocuenta" required  value=<?php echo $numerocuenta->get_numerocuenta(); ?>>
+                <input type="text" class="form-control" name ="numerocuenta" required  value=<?php echo $propietarioObj->get_numerocuenta(); ?>>
             </div>
-            <div class="form-group">
-                <label for="username">ESTADO</label>
-                <input type="text" class="form-control" name ="estado" required  value=<?php echo $estado->get_estado(); ?>>
+             <div class="form-group">
+              <label for="level">Rol de usuario</label>
+                <select class="form-control" name="estado">
+                  <?php 
+                    if ($propietarioObj->get_estado() == 'A'){
+                        echo "<option >Activo</option>";
+                        echo "<option>Inactivo</option>";
+                    }
+                    else{
+                        echo "<option>Inactivo</option>";
+                        echo "<option >Activo</option>";
+                    }
+                    
+                  ?>    
+                </select>
             </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>

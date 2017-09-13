@@ -32,6 +32,7 @@
                 <th>ID</th>
                 <th>DESCRIPCION</th>
                 <th>VALOR</th>
+                <th>OPERACIONES</th>
             </tr>
         </thead>
         <?php

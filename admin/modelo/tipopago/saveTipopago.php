@@ -15,18 +15,11 @@
     <body>
   
         <?php
-        //$roll = substr ("$rol", 0,1);
-        if($tipopagoCollectorObj->buscarTipopago($descripcion)){
-            $mensaje = "ERROR EL TIPO DE PAGO YA SE ENCUENTRA REGISTRADO";
-            print "<script>alert('$mensaje')</script>";
-            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_AddTipopago.php'>";
-        }
-        else{
-        $tipopagoCollectorObj->createTipopago($descripcion, $estado);
+        $estadoAux = substr ("$estado", 0,1);
+        $tipopagoCollectorObj->createTipopago($descripcion, $estadoAux);
         $mensaje = "EL TIPO DE PAGO SE CREO EXITOSAMENTE";
         print "<script>alert('$mensaje')</script>";
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readTipopago.php'>";
-        }
         ?>
   
     </body>

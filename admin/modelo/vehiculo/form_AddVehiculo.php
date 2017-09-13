@@ -47,8 +47,12 @@
                 <input type="text" class="form-control" name ="placa"  placeholder="Placa Vehiculo" required>
             </div>
             <div class="form-group">
-                <label for="username">Tipo</label>
-                <input type="text" class="form-control" name ="tipo"  placeholder="Auto - Camioneta - Moto" required>
+              <label for="level">Tipo</label>
+                <select class="form-control" name="tipo">
+                  <option>Camioneta</option>
+                  <option>Auto</option>
+                  <option>Moto</option>
+                </select>
             </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>
@@ -62,5 +66,5 @@
     </div>
   </div>
 </body>
-<?php include_once('../reservas/modal_clientes.php');?>
+<?php include_once('../modals/modal_clientes.php');?>
 </html>

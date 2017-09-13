@@ -32,6 +32,7 @@
                 <th>ID-CLIENTE</th>
                 <th>ID-VEHICULO</th>
                 <th>ID-PARQUEO</th>
+                <th>ID-ESTACIONAMIENTO</th>
                 <th>F-INICIO</th>
                 <th>F-FIN</th>
                 <th>O-LAT</th>
@@ -46,6 +47,7 @@
             echo "<td>" . $c->get_id_cliente() . "</td>";   
             echo "<td>" . $c->get_id_vehiculo() . "</td>"; 
             echo "<td>" . $c->get_id_parqueo() . "</td>";
+            echo "<td>" . $c->get_id_estacionamiento() . "</td>";
             echo "<td>" . $c->get_fecha_inicio() . "</td>";         
             echo "<td>" . $c->get_fecha_fin() . "</td>";   
             echo "<td>" . $c->get_origen_latitud() . "</td>"; 
