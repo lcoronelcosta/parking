@@ -32,8 +32,9 @@
         </thead>  
          
                      
-        <?php      
-           foreach ($vehiculoCollectorObj->showVehiculos() as $c){
+        <?php  
+           $id_cliente = ?> <script> $('#id_c').val(); </script> <?php ;   
+           foreach ($vehiculoCollectorObj->showVehiculosByCliente($id_cliente) as $c){
             echo "<tr>";
             echo "<td>" . $c->get_id_vehiculo() . "</td>";         
             echo "<td>" . $c->get_descripcion() . "</td>";   

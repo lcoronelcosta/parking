@@ -17,7 +17,7 @@
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Agregar Reservas</span>
+          <span>Agregar Facturas</span>
        </strong>
       </div>
       <div class="panel-body">
@@ -52,17 +52,17 @@
            <div class="form-group">
                 <label for="password">TIPO PAGO <a class="btn btn-info" data-toggle="modal" data-target="#myModalPago"><i class="glyphicon glyphicon-search"></i></a></label>
                 
-                <div class="col-md-5">
+                <div class="col-md-4">
                     <input readonly type="text" class="form-control" required name="id_pago" id="id_pago" placeholder="ID">
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-4">
                     <input readonly type="text" class="form-control" name="d_pago" id="d_pago" placeholder="NOMBRE">
                 </div>
                 
             </div>    
             <div class="form-group">
                 <label for="username">DESCUENTO</label>
-                <input type="number" pattern="(\d{3})([\.])(\d{2})" class="form-control" name="desc" placeholder="Descuento" required autofocus>
+                <input type="text" class="form-control" name="desc" placeholder="Descuento" required autofocus>
             </div>    
                 
             <div class="form-group">

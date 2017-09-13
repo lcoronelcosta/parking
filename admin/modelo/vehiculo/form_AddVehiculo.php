@@ -24,6 +24,20 @@
       <div class="panel-body">
         <div class="col-md-6 col-md-offset-3">
           <form method="post" action="saveVehiculo.php">
+             <div class="form-group">
+                <label for="password">CLIENTE <a class="btn btn-info" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-search"></i></a></label>
+                
+                <div class="col-md-3">
+                    <input readonly type="text" class="form-control" required name="id_c" id="id_c" placeholder="ID">
+                </div>
+                <div class="col-md-3">
+                    <input readonly type="text" class="form-control" name="n_c" id="n_c" placeholder="NOMBRE">
+                </div>
+                <div class="col-md-3">
+                    <input readonly type="text" class="form-control" name="a_c" id="a_c" placeholder="APELLIDO">
+                </div>
+                
+            </div>    
             <div class="form-group">
                 <label for="username">Descripcion</label>
                 <input type="text" class="form-control" name="descripcion" placeholder="Marca Modelo Vehiculo" required autofocus>
@@ -35,10 +49,6 @@
             <div class="form-group">
                 <label for="username">Tipo</label>
                 <input type="text" class="form-control" name ="tipo"  placeholder="Auto - Camioneta - Moto" required>
-            </div>
-            <div class="form-group">
-                <label for="username">Cliente</label>
-                <input type="text" class="form-control" name ="id_cliente"  placeholder="Id Cliente" required>
             </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>
@@ -52,4 +62,5 @@
     </div>
   </div>
 </body>
+<?php include_once('../reservas/modal_clientes.php');?>
 </html>

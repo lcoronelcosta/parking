@@ -2,7 +2,7 @@
 
     class Factura
     {
-        private $iid_factura;
+        private $id_factura;
         private $id_reserva;
         private $descuento;
         private $total_multa;
@@ -10,7 +10,7 @@
         private $id_pago;
         private $estado;
 
-        function __construct($iid_factura, $id_reserva, $descuento, $total_multa, $total_pagar, $id_pago, $estado) {
+        function __construct($id_factura, $id_reserva, $descuento, $total_multa, $total_pagar, $id_pago, $estado) {
            $this->id_factura = $id_factura;
            $this->id_reserva = $id_reserva;
            $this->descuento = $descuento;
