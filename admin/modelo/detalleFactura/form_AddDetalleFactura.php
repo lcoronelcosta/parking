@@ -37,9 +37,19 @@
                 <input type="text" class="form-control" name ="hora_facturacion"  placeholder="hora facturacion" required>
             </div>
             <div class="form-group">
-                <label for="username">Id Factura</label>
-                <input type="text" class="form-control" name ="id_factura"  placeholder="id factura" required>
-            </div>
+                <label for="password">Factura <a class="btn btn-info" data-toggle="modal" data-target="#myModalDetalleFactura"><i class="glyphicon glyphicon-search"></i></a></label>
+                
+                <div class="col-md-3">
+                    <input readonly type="text" class="form-control" required name="id_f" id="id_f" placeholder="ID">
+                </div>
+                <div class="col-md-3">
+                    <input readonly type="text" class="form-control" name="id_r" id="id_r" placeholder="ID RESERVA">
+                </div>
+                <div class="col-md-3">
+                    <input readonly type="text" class="form-control" name="n_c" id="n_c" placeholder="NOMBRE">
+                </div>
+                
+            </div> 
 
               <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>
@@ -53,4 +63,5 @@
     </div>
   </div>
 </body>
+<?php include_once('../modals/modal_detalleFactura.php');?>
 </html>
