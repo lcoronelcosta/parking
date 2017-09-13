@@ -32,6 +32,7 @@
                 <th>ID</th>   
                 <th>TIEMPO</th>
                 <th>TOTAL</th>
+                <th>HORA-FACTURACION</th>
                 <th>ID-FACTURA</th>
             </tr>
         </thead>
@@ -40,9 +41,10 @@
             echo "<tr>";
             echo "<td>" . $c->get_id_detalle_facura() . "</td>";         
             echo "<td>" . $c->get_tiempo() . "</td>";   
-            echo "<td>" . $c->get_total() . "</td>"; 
+            echo "<td>" . $c->get_total() . "</td>";
+            echo "<td>" . $c->get_hora_facturacion() . "</td>"; 
             echo "<td>" . $c->get_id_factura() . "</td>";    
-            echo "<td><a href='form_EditDetalleFactura.php?id_detalle_facura=". $c->get_id_detalle_facura() ." & tiempo=". $c->get_tiempo() ." & total=". $c->get_total() ." & id_factura=". $c->get_id_factura() . "' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
+            echo "<td><a href='form_EditDetalleFactura.php?id_detalle_facura=". $c->get_id_detalle_facura() ." & tiempo=". $c->get_tiempo() ." & total=". $c->get_total() ." & hora_facturacion=". $c->get_hora_facturacion() ." & id_factura=". $c->get_id_factura() . "' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
                </a> <a href='deleteDetalleFactura.php?ID=". $c->get_id_detalle_facura() ."' class='btn btn-xs btn-danger' data-toggle='tooltip' title='Eliminar'><i class='glyphicon glyphicon-remove'></i>
                 </a></td>"; 
             echo "</tr>"; 

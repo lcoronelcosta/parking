@@ -4,6 +4,7 @@
     include_once("DetalleFactura.php");
 	$tiempo = $_POST['tiempo'];
 	$total = $_POST['total'];
+        $hora_facturacion = $_POST['hora_facturacion'];
     $id_factura = $_POST['id_factura'];
     $detalleFacturaCollectorObj = new DetalleFacturaCollector();
 ?>
@@ -17,13 +18,13 @@
   
         <?php
         //$roll = substr ("$rol", 0,1);
-        if($detalleFacturaCollectorObj->buscarDetalleFactura($tiempo)){
+        if($detalleFacturaCollectorObj->buscarDetalleFactura($id_factura)){
             $mensaje = "ERROR DETALLE FACTURA YA SE ENCUENTRA REGISTRADO";
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_AddDetalleFactura.php'>";
         }
         else{
-        $detalleFacturaCollectorObj->createDetalleFactura($tiempo, $total, $id_factura);
+        $detalleFacturaCollectorObj->createDetalleFactura($tiempo, $total, $hora_facturacion, $id_factura);
         $mensaje = "DETALLE FACTURA SE CREO EXITOSAMENTE";
         print "<script>alert('$mensaje')</script>";
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readDetalleFactura.php'>";
