@@ -19,9 +19,7 @@
         navigator.geolocation.getCurrentPosition( fn_ok, fn_error );
         var divMapa = document.getElementById('mapa');
         
-        function fn_error(){
-            divMapa.innerHTML = 'ERROR SOLICITUD';    
-        }
+
         function fn_ok( res ){
             var lat = res.coords.latitude;
             var lon = res.coords.longitude;
@@ -35,6 +33,11 @@
 				center: glatLon
             }
             
+
+        function fn_error(){
+            divMapa.innerHTML = 'ERROR SOLICITUD';    
+        }
+
 			var gMapa = new google.maps.Map(divMapa, objConfig);
             
             var objConfigMarker = {
