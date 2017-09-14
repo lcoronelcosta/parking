@@ -18,6 +18,10 @@
         
         navigator.geolocation.getCurrentPosition( fn_ok, fn_error );
         var divMapa = document.getElementById('mapa');
+
+        function fn_error(){
+            divMapa.innerHTML = 'ERROR SOLICITUD';    
+        }
         
 
         function fn_ok( res ){
@@ -32,11 +36,6 @@
 				zoom: 14,
 				center: glatLon
             }
-            
-
-        function fn_error(){
-            divMapa.innerHTML = 'ERROR SOLICITUD';    
-        }
 
 			var gMapa = new google.maps.Map(divMapa, objConfig);
             
