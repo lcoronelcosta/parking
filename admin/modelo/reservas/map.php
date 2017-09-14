@@ -7,7 +7,7 @@
 <head>
 <meta charset="utf-8" />
 <title>Test Google Maps</title>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTm6DHbbI85EpL52coi-2yu4b-oHXyDgQ"></script>    
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTm6DHbbI85EpL52coi-2yu4b-oHXyDgQ&callback=initMap"></script>    
 </head>
 <body>
     <h1>MAPA</h1>
