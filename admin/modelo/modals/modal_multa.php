@@ -27,7 +27,7 @@
             </tr>
         </thead>
         <?php
-            $con = 1;
+            $con = 1000;
             foreach ($multaCollectorObj->showMultas() as $c){
             echo "<tr>";
             echo "<td>" . $c->get_id_multa() . "</td>";         

@@ -11,7 +11,7 @@
     $id_cliente = $_GET['id_cliente'];
 
     $clienteCollectorObj = new ClienteCollector();
-        $clienteObj = $clienteCollectorObj->showCliente($id_cliente);
+    $clienteObj = $clienteCollectorObj->showCliente($id_cliente);
 
 ?>
 
@@ -65,22 +65,13 @@
             <div class="form-group">
               <label for="level">Tipo</label>
                 <select class="form-control" name="tipo">
-                  <?php 
-                    if ($tipo == 'A'){
-                        echo "<option >Auto</option>";
-                        echo "<option>Moto</option>";
-                        echo "<option>Camioneta</option>";
-                    }
+                  <?php
                     if ($tipo == 'M'){
-                        echo "<option>Moto</option>";
                         echo "<option >Auto</option>";
+                        echo "<option>Moto</option>";
                         echo "<option>Camioneta</option>";
                     }
-                    else {
-                        echo "<option>Camioneta</option>";
-                        echo "<option>Moto</option>";
-                        echo "<option >Auto</option>";
-                    }
+                    
 		           ?>
                 </select>
             </div>
