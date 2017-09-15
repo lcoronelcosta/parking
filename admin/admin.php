@@ -33,7 +33,7 @@
 
 </head>
 <body>
-    <?php include_once('header.php'); ?> 
+    <?php require('header.php');?>
     <!--start-home-->
 		<div class="banner two" id="home">
 		<div class="header-bottom">
