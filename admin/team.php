@@ -4,7 +4,7 @@
 <!DOCTYPE HTML>
 <html lang="es">
 <head>
-<title>Parking - Smart | About </title>
+<title>Parking - Smart | Nosotros </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Parking" />
@@ -52,10 +52,10 @@
 								<li><a data-hover="Acerca" href="about.php">Acerca</a></li>
 								<li><a data-hover="Servicios" href="services.php">Servicios</a></li>
 								<li><a data-hover="Nosotros" href="team.php">Nosotros</a></li>
-							    <li><a data-hover="Reservacion" href="reservation.php">Reservacion</a></li>
+							    	<li><a data-hover="Reservacion" href="reservation.php">Reservacion</a></li>
 							    <li><a data-hover="Galeria" href="galeria.php">Galeria</a></li>
 								<li><a data-hover="Contacto" href="contact.php">Contacto</a></li>
-                                <li><a data-hover="Login" href="../admin/login.php">Login</a></li>  
+								<li><a data-hover="Login" href="login.php">Login</a></li>
 
 								</ul>
 							</nav>
@@ -73,46 +73,68 @@
 		 <div class="down"></div>
 	</div>
 
- <!--/contact-->
-	 <div class="section-contact" id="contact">
-	    <div class="container">
-           <div class="contact-main">
-				    <div class="col-md-6 col-md-offset-3 contact-grid wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".3s">
-					<h3 class="tittle wow bounceIn"  data-wow-duration=".8s" data-wow-delay=".2s">Ingreso</h3>
-						<div class="arrows-three"><img src="../images/border.png" alt="border"></div>
-						    <form id="filldetails"  method="POST" action="validarUsuario.php">
-					  <div class="field name-box">
-							<input type="text" id="name" placeholder="Usuario" name="usuario" required=""/>
-							<label for="name">Usuario</label>
-							<span class="ss-icon">check</span>
-					  </div>
-					  
-					  <div class="field email-box">
-							<input type="text" id="email" placeholder="Password" name="clave" required=""/>
-							<label for="password">Password</label>
-							<span class="ss-icon">check</span>
-					  </div>
-                                
-                      <div class="send wow shake"  data-wow-duration="1s" data-wow-delay=".3s">
-				            <input type="submit" value="Enviar" >
-				      </div>
-					 
-			  </form>
+<!-- //service-type-grid -->
+ <!--start-services-->
+	<div class="team-section" id="team">
+	 	  <div class="container">
+		  <h3 class="tittle">Nosotros</h3>
+		  <div class="arrows-serve"><img src="../images/border.png" alt="border"></div>
+	 		<div class="box2">
+	 		   <div class="col-md-3 s-1 wow slideInLeft" data-wow-duration="1s" data-wow-delay=".3s">
+			   <a href="#">
+	 		   	<div class="view view-fifth">
+                    <img src="../images/chef1.jpg" alt="Diseñador">
+                    <div class="mask">
+                        <h4>Group - Smart</h4>
+                        <p>Nuestra forma de trabajo siempre está en busca de nuevos conceptos de expresión, permitiéndonos crear soluciones atractivas y funcionales al servicio de su marca.</p>
+                         <p class="p2">Licenciado en Diseño Web y Multimedia</p>
+                     </div>
+                   
+				    </div>
+				  </a>
+			<h3>Carlos Mite</h3>
+				</div>
+		<div class="col-md-3 col-md-offset-1 s-2 wow slideInLeft" data-wow-duration="1s" data-wow-delay=".3s">
+		<a href="#">
+	 		   	<div class="view view-fifth">
+                      <img src="../images/chef2.jpg" alt="Diseñador">
+                       <div class="mask">
+                        <h4>Group - Smart</h4>
+                        <p>Nuestra forma de trabajo siempre está en busca de nuevos conceptos de expresión, permitiéndonos crear soluciones atractivas y funcionales al servicio de su marca.</p>
+                         <p class="p2">Licenciada en Sistemas de Información</p>
+                     </div>
+               
+				    </div>
+				  </a>
+				<h3>Fabiola Zuñiga</h3>
+				</div>
+			  <div class="col-md-3 col-md-offset-1 s-3 wow slideInRight" data-wow-duration="1s" data-wow-delay=".3s">
+			  <a href="#">
+	 		   	<div class="view view-fifth">
+                     <img src="../images/chef3.jpg" alt="Diseñador">
+                    <div class="mask">
+                        <h4>Group - Smart</h4>
+                        <p>Nuestra forma de trabajo siempre está en busca de nuevos conceptos de expresión, permitiéndonos crear soluciones atractivas y funcionales al servicio de su marca.</p>
+                         <p class="p2">Licenciado en Sistemas de Información</p>
+                     </div>
+                  
+				    </div>
+				  </a>
+					<h3>Luis Coronel</h3>
+				</div>
+				<div class="clearfix"></div>
+		     </div>
+	 	    </div>
+	 	</div>
+<!--end-team-->
 
-					   </div>
-					
-						<div class="clearfix"> </div>
-			      </div>
-			 </div>
-		</div>
-		<!--//contact-->
 
 <!--footer-->
 		<div class="footer text-center">
 						<div class="container">
 							<!--logo2-->
 								   <div class="logo2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-									  <a href="../index.php"><h2>P<span>arking Smart</span></h2></a>
+									  <a href="../index.html"><h2>P<span>arking Smart</span></h2></a>
 									  <p>seguro confiable</p>
 								   </div>
 					<!--//logo2-->

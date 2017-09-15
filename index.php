@@ -49,13 +49,13 @@
 							<span class="menu"> </span>
 							<nav class="link-effect-4" id="link-effect-4">
                               <ul>
-								 <li class="active"><a data-hover="Home" href="index.html">Home</a></li>
-								<li><a data-hover="Acerca" href="pages/about.html">Acerca</a></li>
-								<li><a data-hover="Servicios" href="pages/services.html">Servicios</a></li>
-								<li><a data-hover="Nosotros" href="pages/team.html">Nosotros</a></li>
-							    <li><a data-hover="Reservacion" href="pages/reservation.html">Reservacion</a></li>
-							    <li><a data-hover="Galeria" href="pages/galeria.html">Galeria</a></li>
-								<li><a data-hover="Contacto" href="pages/contact.html">Contacto</a></li>
+								 <li class="active"><a data-hover="Home" href="index.php">Home</a></li>
+								<li><a data-hover="Acerca" href="admin/about.php">Acerca</a></li>
+								<li><a data-hover="Servicios" href="admin/services.php">Servicios</a></li>
+								<li><a data-hover="Nosotros" href="admin/team.php">Nosotros</a></li>
+							    <li><a data-hover="Reservacion" href="admin/reservation.php">Reservacion</a></li>
+							    <li><a data-hover="Galeria" href="admin/galeria.php">Galeria</a></li>
+								<li><a data-hover="Contacto" href="admin/contact.php">Contacto</a></li>
                                 <li><a data-hover="Login" href="admin/login.php">Login</a></li>
 
 								</ul>
@@ -605,7 +605,7 @@
 						<div class="container">
 							<!--logo2-->
 								   <div class="logo2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-									  <a href="index.html"><h2>P<span>arking Smart</span></h2></a>
+									  <a href="index.php"><h2>P<span>arking Smart</span></h2></a>
 									  <p>seguro confiable</p>
 								   </div>
 					<!--//logo2-->
@@ -616,7 +616,7 @@
 										 
 									</ul>
 									
-									<p class="copy-right wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".3s"> 2017 Parking Smart. All rights reserved | Design by <a href="index.html">Parking Smart</a></p>
+									<p class="copy-right wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".3s"> 2017 Parking Smart. All rights reserved | Design by <a href="index.php">Parking Smart</a></p>
 
 					 </div>
 	     </div>

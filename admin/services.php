@@ -4,7 +4,7 @@
 <!DOCTYPE HTML>
 <html lang="es">
 <head>
-<title>Parking - Smart | About </title>
+<title>Parking - Smart | Servicios </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Parking" />
@@ -52,10 +52,10 @@
 								<li><a data-hover="Acerca" href="about.php">Acerca</a></li>
 								<li><a data-hover="Servicios" href="services.php">Servicios</a></li>
 								<li><a data-hover="Nosotros" href="team.php">Nosotros</a></li>
-							    <li><a data-hover="Reservacion" href="reservation.php">Reservacion</a></li>
+							    	<li><a data-hover="Reservacion" href="reservation.php">Reservacion</a></li>
 							    <li><a data-hover="Galeria" href="galeria.php">Galeria</a></li>
 								<li><a data-hover="Contacto" href="contact.php">Contacto</a></li>
-                                <li><a data-hover="Login" href="../admin/login.php">Login</a></li>  
+								<li><a data-hover="Login" href="login.php">Login</a></li>
 
 								</ul>
 							</nav>
@@ -73,39 +73,46 @@
 		 <div class="down"></div>
 	</div>
 
- <!--/contact-->
-	 <div class="section-contact" id="contact">
-	    <div class="container">
-           <div class="contact-main">
-				    <div class="col-md-6 col-md-offset-3 contact-grid wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".3s">
-					<h3 class="tittle wow bounceIn"  data-wow-duration=".8s" data-wow-delay=".2s">Ingreso</h3>
-						<div class="arrows-three"><img src="../images/border.png" alt="border"></div>
-						    <form id="filldetails"  method="POST" action="validarUsuario.php">
-					  <div class="field name-box">
-							<input type="text" id="name" placeholder="Usuario" name="usuario" required=""/>
-							<label for="name">Usuario</label>
-							<span class="ss-icon">check</span>
-					  </div>
-					  
-					  <div class="field email-box">
-							<input type="text" id="email" placeholder="Password" name="clave" required=""/>
-							<label for="password">Password</label>
-							<span class="ss-icon">check</span>
-					  </div>
-                                
-                      <div class="send wow shake"  data-wow-duration="1s" data-wow-delay=".3s">
-				            <input type="submit" value="Enviar" >
-				      </div>
-					 
-			  </form>
+<!-- service-type-grid -->
+	<div class="service" id="services">
+		<div class="container">
+		    <h3 class="tittle">Servicios</h3>
+			<div class="arrows-serve"><img src="../images/border.png" alt="border"></div>
+				<div class="inst-grids">
+					<div class="col-md-3 services-gd text-center wow slideInLeft"  data-wow-duration="1s" data-wow-delay=".3s">
+						<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
+							<a href="#" class="hi-icon"><img src="../images/serve1.png" alt=" " /></a>
+						</div>
+						<h4>Ambulantes de Parqueo</h4>
+						 <p>Olvídate de los "cuida carros" que dicen cuidar tu auto.</p>
+					</div>
+					<div class="col-md-3 services-gd text-center wow slideInDown"  data-wow-duration="1s" data-wow-delay=".2s">
+						<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
+							<a href="#" class="hi-icon"><img src="../images/serve2.png" alt=" " /></a>
+						</div>
+						<h4>Seguridad en Parqueo</h4>
+						 <p>Busca estacionamiento en parqueaderos públicos y privados. </p>
+					</div>
+					<div class="col-md-3 services-gd text-center wow slideInUp"  data-wow-duration="1s" data-wow-delay=".2s">
+						<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
+							<a href="#" class="hi-icon"><img src="../images/serve3.png" alt=" " /></a>
+						</div>
+						<h4>Pagos Seguros</h4>
+						 <p>Gestiona tu monedero y administra tus tarjetas. </p>
+					</div>
+					<div class="col-md-3 services-gd text-center wow slideInRight"  data-wow-duration="1s" data-wow-delay=".3s">
+						<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
+							<a href="#" class="hi-icon"><img src="../images/serve4.png" alt=" " /></a>
+						</div>
+						<h4>Comprobantes de Pagos</h4>
+						 <p>Facturas unificadas. </p>
+					</div>
+					<div class="clearfix"> </div>		
+				</div>
 
-					   </div>
-					
-						<div class="clearfix"> </div>
-			      </div>
-			 </div>
 		</div>
-		<!--//contact-->
+	</div>
+<!-- //service-type-grid -->
 
 <!--footer-->
 		<div class="footer text-center">

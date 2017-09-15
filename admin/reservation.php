@@ -4,7 +4,7 @@
 <!DOCTYPE HTML>
 <html lang="es">
 <head>
-<title>Parking - Smart | About </title>
+<title>Parking - Smart | Reservacion </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Parking" />
@@ -52,10 +52,10 @@
 								<li><a data-hover="Acerca" href="about.php">Acerca</a></li>
 								<li><a data-hover="Servicios" href="services.php">Servicios</a></li>
 								<li><a data-hover="Nosotros" href="team.php">Nosotros</a></li>
-							    <li><a data-hover="Reservacion" href="reservation.php">Reservacion</a></li>
+							    	<li><a data-hover="Reservacion" href="reservation.php">Reservacion</a></li>
 							    <li><a data-hover="Galeria" href="galeria.php">Galeria</a></li>
 								<li><a data-hover="Contacto" href="contact.php">Contacto</a></li>
-                                <li><a data-hover="Login" href="../admin/login.php">Login</a></li>  
+								<li><a data-hover="Login" href="login.php">Login</a></li>
 
 								</ul>
 							</nav>
@@ -72,40 +72,46 @@
 
 		 <div class="down"></div>
 	</div>
-
- <!--/contact-->
-	 <div class="section-contact" id="contact">
-	    <div class="container">
-           <div class="contact-main">
-				    <div class="col-md-6 col-md-offset-3 contact-grid wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".3s">
-					<h3 class="tittle wow bounceIn"  data-wow-duration=".8s" data-wow-delay=".2s">Ingreso</h3>
-						<div class="arrows-three"><img src="../images/border.png" alt="border"></div>
-						    <form id="filldetails"  method="POST" action="validarUsuario.php">
-					  <div class="field name-box">
-							<input type="text" id="name" placeholder="Usuario" name="usuario" required=""/>
-							<label for="name">Usuario</label>
-							<span class="ss-icon">check</span>
-					  </div>
-					  
-					  <div class="field email-box">
-							<input type="text" id="email" placeholder="Password" name="clave" required=""/>
-							<label for="password">Password</label>
-							<span class="ss-icon">check</span>
-					  </div>
-                                
-                      <div class="send wow shake"  data-wow-duration="1s" data-wow-delay=".3s">
-				            <input type="submit" value="Enviar" >
-				      </div>
-					 
-			  </form>
-
-					   </div>
-					
+<div class="separador"></div>
+<!--reservation-->
+	<div class="reservation" id="reservation">
+		<div class="container">
+		<div class="reservation-info">
+		  <h3 class="tittle reserve">Reserva tu parking</h3>
+			 <div class="arrows-reserve"><img src="../images/border.png" alt="border"></div>
+				<div class="book-reservation wow slideInUp" data-wow-duration="1s" data-wow-delay=".5s">
+					<form>
+					 <div class="col-md-4 form-left">
+						<label><i class="glyphicon glyphicon-calendar"></i> Date :</label>
+						<input type="text">
+						</div>
+						<div class="col-md-4 form-left">
+							<label><i class="glyphicon glyphicon-user"></i> Local :</label>
+							<select class="form-control">
+								<option>Malecon 2000</option>
+								<option>9 de Octubre</option>
+								<option>Centro</option>
+								<option>Rumichaca</option>
+								<option>Mas</option>
+							</select>
+						</div>
+						<div class="col-md-4 form-right">
+							<label><i class="glyphicon glyphicon-time"></i> Tiempo :</label>
+							<input type="text">
+						</div>
 						<div class="clearfix"> </div>
-			      </div>
-			 </div>
+						<div class="make wow shake" data-wow-duration="1s" data-wow-delay=".5s">
+						  <input type="submit" value="Haz una reservación">
+						</div>
+					</form>
+
+				</div>
+				<div class="clearfix"> </div>
+			</div>
 		</div>
-		<!--//contact-->
+	</div>	
+	<!--//reservation-->
+<div class="separador"></div>
 
 <!--footer-->
 		<div class="footer text-center">
@@ -126,6 +132,7 @@
 
 					 </div>
 	     </div>
+	
 		<!--start-smooth-scrolling-->
 <script type="text/javascript" src="../js/completo8.js"></script>
 								<!--end-smooth-scrolling-->
