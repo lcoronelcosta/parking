@@ -9,15 +9,13 @@
         private $total_pagar;
         private $id_pago;
         private $estado;
+        private $fecha;
 
-        function __construct($id_factura, $id_reserva, $descuento, $total_multa, $total_pagar, $id_pago, $estado) {
+        function __construct($id_factura, $id_reserva, $estado, $fecha) {
            $this->id_factura = $id_factura;
            $this->id_reserva = $id_reserva;
-           $this->descuento = $descuento;
-           $this->total_multa = $total_multa;
-           $this->total_pagar = $total_pagar;
-           $this->id_pago = $id_pago;
            $this->estado = $estado;    
+           $this->fecha = $fecha;
          }
         
         function set_id_factura($id_factura){
@@ -67,6 +65,13 @@
          } 
          function get_estado(){
            return $this->estado;
+         } 
+
+          function set_fecha($fecha){
+           $this->fecha = $fecha;
+         } 
+         function get_fecha(){
+           return $this->fecha;
          } 
     }
 ?>

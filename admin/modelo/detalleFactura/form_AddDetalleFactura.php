@@ -32,10 +32,7 @@
                 <label for="username">Total</label>
                 <input type="text" class="form-control" name ="total"  placeholder="total" required>
             </div>
-            <div class="form-group">
-                <label for="username">Hora Facturacion</label>
-                <input type="text" class="form-control" name ="hora_facturacion"  placeholder="hora facturacion" required>
-            </div>
+          
             <div class="form-group">
                 <label for="password">Factura <a class="btn btn-info" data-toggle="modal" data-target="#myModalDetalleFactura"><i class="glyphicon glyphicon-search"></i></a></label>
                 

@@ -55,5 +55,10 @@
                 }
                 return 0;          
             }
+
+            function calcularTotal($id_reserva){
+                $row = self::$db->getRows("SELECT sum(valor) as total FROM multa_x_reserva  WHERE id_reserva='$id_reserva'");
+                return $row[0]{'total'};  
+            }
     }
 ?>

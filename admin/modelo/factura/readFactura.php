@@ -31,7 +31,7 @@
                 <th>ID</th>   
                 <th>ID-RESERVA</th>
                 <th>ID-PAGO</th>
-                <th>DESCUENTO</th>
+                <th>FECHA</th>
                 <th>T-MULTA</th>
                 <th>T_PAGAR</th>
                 <th>ESTADO</th>
@@ -39,17 +39,17 @@
             </tr>
         </thead>
         <?php
-            foreach ($facturaCollectorObj->showFactura() as $c){
+            foreach ($facturaCollectorObj->showsFactura() as $c){
             echo "<tr>";
             echo "<td>" . $c->get_id_factura() . "</td>";         
-            echo "<td>" . $c->get_id_reserva() . "</td>";   
-            echo "<td>" . $c->get_descuento() . "</td>"; 
+            echo "<td>" . $c->get_id_reserva() . "</td>";  
+            echo "<td>" . $c->get_id_pago() . "</td>";
+            echo "<td>" . $c->get_fecha() . "</td>";
             echo "<td>" . $c->get_total_multa() . "</td>";
-            echo "<td>" . $c->get_total_pagar() . "</td>";         
-            echo "<td>" . $c->get_id_pago() . "</td>";   
+            echo "<td>" . $c->get_total_pagar() . "</td>";
             echo "<td>" . $c->get_estado() . "</td>";    
-            echo "<td><a href='#' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
-                </a> <a href='#' class='btn btn-xs btn-danger' data-toggle='tooltip' title='Eliminar'><i class='glyphicon glyphicon-remove'></i>
+            echo "<td><a href='form_EditFactura?ID=". $c->get_id_factura() ."' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
+                </a> <a href='deleteFactura?ID=". $c->get_id_factura() ."' class='btn btn-xs btn-danger' data-toggle='tooltip' title='Eliminar'><i class='glyphicon glyphicon-remove'></i>
                 </a></td>"; 
             echo "</tr>"; 
             }

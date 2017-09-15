@@ -9,7 +9,7 @@
                 $rows = self::$db->getRows("SELECT * FROM detalle_factura");
                 $arrayDetalleFactura= array();        
                 foreach ($rows as $c){
-                    $aux = new DetalleFactura($c{'id_detalle_facura'},$c{'tiempo'},$c{'total'},$c{'hora_facturacion'},$c{'id_factura'});
+                    $aux = new DetalleFactura($c{'id_detalle_facura'},$c{'tiempo'},$c{'total'},$c{'id_factura'});
                     array_push($arrayDetalleFactura, $aux);
                 }
                 return $arrayDetalleFactura;        
@@ -17,18 +17,18 @@
         
         function showDetalleFactura($id_detalle_facura) {
                 $row = self::$db->getRows("SELECT * FROM detalle_factura WHERE id_detalle_facura='$id_detalle_facura'");
-                $aux = new DetalleFactura($row[0]{'id_detalle_facura'},$row[0]{'tiempo'},$row[0]{'total'},$row[0]{'hora_facturacion'},$row[0]{'id_factura'});
+                $aux = new DetalleFactura($row[0]{'id_detalle_facura'},$row[0]{'tiempo'},$row[0]{'total'},$row[0]{'id_factura'});
                 return $aux;        
         }
         
         
-        function createDetalleFactura($tiempo,$total,$id_factura,$hora_facturacion){
-                $rows = self::$db->insertRow("INSERT INTO detalle_factura (tiempo, total, id_factura, hora_facturacion) VALUES ('$tiempo', '$total', '$id_factura', '$hora_facturacion')",null);
+        function createDetalleFactura($tiempo,$total,$id_factura){
+                $rows = self::$db->insertRow("INSERT INTO detalle_factura (tiempo, total, id_factura) VALUES ('$tiempo', '$total', '$id_factura')",null);
         
         }
         
-        function updateDetalleFactura($id_detalle_facura, $tiempo, $total, $id_factura, $hora_facturacion) {
-                $rows = self::$db->updateRow("UPDATE detalle_factura SET tiempo='$tiempo', total='$total', id_factura='$id_factura' , hora_facturacion='$hora_facturacion' WHERE id_detalle_facura='$id_detalle_facura'",null);
+        function updateDetalleFactura($id_detalle_facura, $tiempo, $total, $id_factura) {
+                $rows = self::$db->updateRow("UPDATE detalle_factura SET tiempo='$tiempo', total='$total', id_factura='$id_factura'  WHERE id_detalle_facura='$id_detalle_facura'",null);
 
         }
         

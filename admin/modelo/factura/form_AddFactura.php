@@ -22,14 +22,14 @@
       </div>
       <div class="panel-body">
         <div class="col-md-8 col-md-offset-2">
-          <form method="post" action="saveReserva.php">
+          <form method="post" action="saveFactura.php">
             <div class="box-body">  
 
             <div class="form-group">
                 <label for="password">RESERVAS <a class="btn btn-info" data-toggle="modal" data-target="#myModalReserva"><i class="glyphicon glyphicon-search"></i></a></label>
                 
                 <div class="col-md-3">
-                    <input readonly type="text" class="form-control" required name="id_r" id="id_r" placeholder="ID">
+                    <input readonly type="text" class="form-control" required name="id_reserva" id="id_r" placeholder="ID">
                 </div>
                 <div class="col-md-3">
                     <input readonly type="text" class="form-control" name="n_c" id="n_c" placeholder="NOMBRE CLIENTE">
@@ -50,29 +50,32 @@
                 </div>
             </div>
            <div class="form-group">
-                <label for="password">TIPO PAGO <a class="btn btn-info" data-toggle="modal" data-target="#myModalPago"><i class="glyphicon glyphicon-search"></i></a></label>
+                <label for="password">TIPO PAGO <a class="btn btn-info" data-toggle="modal" data-target="#myModalPagos"><i class="glyphicon glyphicon-search"></i></a></label>
                 
                 <div class="col-md-4">
-                    <input readonly type="text" class="form-control" required name="id_pago" id="id_pago" placeholder="ID">
+                    <input readonly type="text" class="form-control" required name="id_pago" id="id_p" placeholder="ID">
                 </div>
                 <div class="col-md-4">
-                    <input readonly type="text" class="form-control" name="d_pago" id="d_pago" placeholder="NOMBRE">
+                    <input readonly type="text" class="form-control" name="d_pago" id="n_p" placeholder="NOMBRE">
                 </div>
                 
-            </div>    
-            <div class="form-group">
-                <label for="username">DESCUENTO</label>
-                <input type="text" class="form-control" name="desc" placeholder="Descuento" required autofocus>
-            </div>    
+            </div>  
                 
             <div class="form-group">
                 <label for="username">TOTAL MULTA</label>
-                <input type="text" class="form-control" name="total_multa" required autofocus readonly>
+                <input type="text" class="form-control" name="total_multa" id="total" required autofocus readonly>
             </div>
             <div class="form-group">
                 <label for="username">TOTAL PAGAR</label>
                 <input type="text" class="form-control" name="total_pagar" required autofocus readonly>
-            </div>    
+            </div> 
+            <div class="form-group">
+              <label for="level">Estado</label>
+                <select class="form-control" name="estado">
+                  <option>Activo</option>
+                  <option>Inactivo</option>
+                </select>
+            </div>   
               
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>
@@ -86,6 +89,7 @@
 
     </div>
   </div>
-<?php include_once('modal_reserva.php');?>
+<?php include_once('../modals/modal_reserva.php');?>
+<?php include_once('../modals/modal_pago.php');?>
    </body>
 </html>

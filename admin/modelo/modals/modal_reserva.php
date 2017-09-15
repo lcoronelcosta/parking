@@ -2,10 +2,14 @@
     include_once("../reservas/ReservaCollector.php");
     include_once("../cliente/ClienteCollector.php");
     include_once("../vehiculo/VehiculoCollector.php");
+    include_once("../multaReserva/MultaReservaCollector.php");
+
 
     $vehiculoCollectorObj = new VehiculoCollector();
     $clienteCollectorObj = new ClienteCollector();
     $reservaCollectorObj = new ReservaCollector();
+    $multaReservaCollectorObj = new MultaReservaCollector();
+
 ?>
 <html>
     <head>
@@ -52,7 +56,8 @@
                 </a></td>"; 
             echo "</tr>"; 
             $clienteObj =  $clienteCollectorObj->showCliente($c->get_id_cliente());  
-            $vehiculoObj = $vehiculoCollectorObj->showVehiculo($c->get_id_vehiculo());      
+            $vehiculoObj = $vehiculoCollectorObj->showVehiculo($c->get_id_vehiculo()); 
+            $total = $multaReservaCollectorObj->calcularTotal($c->get_id_reserva());     
         ?>
             <script>
                 $("#<?php echo "".$con.""; ?>").click(function(){
@@ -60,7 +65,8 @@
                     document.getElementById('n_c').value = '<?php echo "".$clienteObj->get_nombre().""; ?>';
                     document.getElementById('a_c').value = '<?php echo "".$clienteObj->get_apellido().""; ?>';
                     document.getElementById('d_v').value = '<?php echo "".$vehiculoObj->get_descripcion().""; ?>';
-                    document.getElementById('p_v').value = '<?php echo "".$vehiculoObj->get_placa().""; ?>';
+                    document.getElementById('total').value = '<?php echo "$total"; ?>';
+
                 });
             </script>        
                     

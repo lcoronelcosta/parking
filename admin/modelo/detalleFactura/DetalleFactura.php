@@ -6,15 +6,13 @@
         private $tiempo;
         private $total;
         private $id_factura;
-        private $hora_facturacion;
 
 
-        function __construct($id_detalle_facura, $tiempo, $total, $id_factura, $hora_facturacion) {
+        function __construct($id_detalle_facura, $tiempo, $total, $id_factura) {
            $this->id_detalle_facura = $id_detalle_facura;
            $this->tiempo = $tiempo;
            $this->total = $total;
            $this->id_factura = $id_factura;
-           $this->hora_facturacion = $hora_facturacion;
          }
         
         function set_id_detalle_facura($id_detalle_facura){
@@ -43,13 +41,6 @@
          } 
          function get_id_factura(){
            return $this->id_factura;
-         }
-
-         function set_hora_facturacion($hora_facturacion){
-           $this->hora_facturacion = $hora_facturacion;
-         } 
-         function get_hora_facturacion(){
-           return $this->hora_facturacion;
          }
     }
 ?>

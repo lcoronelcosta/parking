@@ -14,6 +14,12 @@
                 }
                 return $arrayTipopago;        
         }
+
+        function showTipopagoU($id_pago) {
+                $rows = self::$db->getRows("SELECT * FROM tipo_pago WHERE id_pago=$id_pago");
+                $aux = new Tipopago($rows[0]{'id_pago'},$rows[0]{'descripcion'},$rows[0]{'estado'});
+                return $aux;        
+        }
         
         function createTipopago($descripcion,$estado){
                 $rows = self::$db->insertRow("INSERT INTO tipo_pago (descripcion, estado) VALUES ('$descripcion', '$estado')",null);
