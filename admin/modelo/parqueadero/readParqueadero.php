@@ -7,7 +7,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Vehiculo</title>
+	<title>Parqueadero</title>
     <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link href='https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css' rel='stylesheet' type='text/css'>
 </head>

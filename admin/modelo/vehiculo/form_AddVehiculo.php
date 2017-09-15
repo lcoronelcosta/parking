@@ -18,7 +18,7 @@
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Agregar Vehiculo</span>
+          <span>AGREGAR VEHICULO</span>
        </strong>
       </div>
       <div class="panel-body">
