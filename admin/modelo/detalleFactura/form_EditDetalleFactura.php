@@ -5,6 +5,7 @@
     $id_detalle_facura = $_GET['id_detalle_facura'];
     $tiempo = $_GET['tiempo'];
     $total = $_GET['total'];
+    $id_factura = $_GET['id_factura'];
 ?>
 
 <html>
