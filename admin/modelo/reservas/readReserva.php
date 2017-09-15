@@ -11,7 +11,8 @@
     <link href='https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-     
+    
+  <?php include_once('../../header.php'); ?> 
   <div class="row">    
   <div class="col-md-12">
     <div class="panel panel-default">

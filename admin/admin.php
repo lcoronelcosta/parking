@@ -33,6 +33,7 @@
 
 </head>
 <body>
+    <?php require('header.php');?>
     <!--start-home-->
 		<div class="banner two" id="home">
 		<div class="header-bottom">
