@@ -64,7 +64,7 @@
             $diferencia_horas=intval($segundos/3600);
 
             $total = $diferencia_horas * 2;
-            $total_pagar = intval($total_multa) + $total;
+            $total_pagar = $total_multa + $total;
 
             $this->updateFacturaTotal($ID, $total_pagar);
         }
