@@ -7,7 +7,7 @@ class UsuarioCollector extends collector
 {
   
   function validarUsuario($usuario,$clave){
-      $rows = self::$db->getRows("SELECT * FROM usuario WHERE usuario='$usuario' AND password='$clave'");               
+      $rows = self::$db->getRows("SELECT * FROM usuario WHERE usuario='$usuario' AND password = '$clave'");               
     foreach ($rows as $c){
       $aux = new usuario($c{'id_usuario'},$c{'usuario'},$c{'password'},$c{'rol'});
       return 1;
