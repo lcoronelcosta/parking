@@ -4,7 +4,7 @@
 <!DOCTYPE HTML>
 <html lang="es">
 <head>
-<title>Parking - Smart | About </title>
+<title>Parking - Smart | Nosotros </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Parking" />
@@ -33,8 +33,7 @@
 
 </head>
 <body>
-    
-    <!--start-home-->
+<!--start-home-->
 		<div class="banner two" id="home">
 		<div class="header-bottom">
 		     <div class="container">
@@ -42,7 +41,7 @@
 			      <!--logo-->
 			       <div class="logo">
                       <a href="../index.php"><h1>P<span>arking Smart</span></h1></a>
-					  <p>seguro confiable</p>  
+					  <p>seguro confiable</p>
 				   </div>
 					<!--//logo-->
 					<div class="top-menu">
@@ -53,70 +52,89 @@
 								<li><a data-hover="Acerca" href="about.php">Acerca</a></li>
 								<li><a data-hover="Servicios" href="services.php">Servicios</a></li>
 								<li><a data-hover="Nosotros" href="team.php">Nosotros</a></li>
-							    <li><a data-hover="Reservacion" href="reservation.php">Reservacion</a></li>
+							    	<li><a data-hover="Reservacion" href="reservation.php">Reservacion</a></li>
 							    <li><a data-hover="Galeria" href="galeria.php">Galeria</a></li>
 								<li><a data-hover="Contacto" href="contact.php">Contacto</a></li>
-                                <li><a href="../index.php">Salir</a></li>
+								<li><a data-hover="Login" href="login.php">Login</a></li>
+
 								</ul>
 							</nav>
 							</div>
 							<!-- script-for-menu -->
-    <script type="text/javascript" src="../js/completo4.js"></script>
+<script type="text/javascript" src="../js/completo4.js"></script>
 								<!-- script-for-menu -->
 
 				 <div class="clearfix"></div>
-	 <script type="text/javascript" src="../js/completo5.js"></script>
+<script type="text/javascript" src="../js/completo5.js"></script>
 			 </div>
 		</div>
 	</div>
 
 		 <div class="down"></div>
 	</div>
-    
-    <?php include_once('header.php'); ?>     
-    <?php
-    if(1){
-        echo "<div class='service' id='services'>
-                <div class='container'>
-                    <h3 class='tittle'>Tablas</h3>
-                    <div class='arrows-serve'><img src='../images/border.png' alt='border'></div>
-                        <div class='inst-grids'>
-                            <h3 class='tittle'>Zuñiga</h3>
-                            <a href='modelo/vehiculo/readVehiculo.php'><input type='button' value='VEHICULO'></a>
-                            <a href='modelo/parqueadero/readParqueadero.php'><input type='button' value='PARQUEADERO'></a>
-                            <a href='modelo/propietario/readPropietario.php'><input type='button' value='PROPIETARIO'></a>
-                            <a href='modelo/tipopago/readTipopago.php'><input type='button' value='TIPO PAGO'></a>
-                        </div>
-                        <div class='inst-grids'>
-                            <h3 class='tittle'>Mite</h3>
-                            <a href='modelo/multa/readMulta.php'><input type='button' value='MULTA'></a>
-                            <a href='modelo/multaReserva/readMultaReserva.php'><input type='button' value='MULTA x RESERVAS'></a>
-                            <a href='modelo/estacionamiento/readEstacionamiento.php'><input type='button' value='ESTACIONAMIENTO'></a>
-                            <a href='modelo/detalleFactura/readDetalleFactura.php'><input type='button' value='DETALLE FACTURA'></a>
-                        </div>
-                        <div>
-                            <h3 class='tittle'>Coronel</h3>
-                            <a href='modelo/usuario/readUsuario.php'><input type='button' value='USUARIOS'></a>
-                            <a href='modelo/cliente/readCliente.php'><input type='button' value='CLIENTE'></a>
-                             <a href='modelo/reservas/readReserva.php'><input type='button' value='RESERVAS'></a>
-                            <a href='modelo/factura/readFactura.php'><input type='button' value='FACTURAS'></a>
-                        </div>
-                </div>
-            </div> ";
-    }
-    else{
-        echo "<h1>SUS PEDIDOS</h1>
-        <a href='modelo/pedido/readPedido.php'><button>PEDIDOS</button></a>";
-    }
-    ?>
-	
 
-    <!--footer-->
+<!-- //service-type-grid -->
+ <!--start-services-->
+	<div class="team-section" id="team">
+	 	  <div class="container">
+		  <h3 class="tittle">Nosotros</h3>
+		  <div class="arrows-serve"><img src="../images/border.png" alt="border"></div>
+	 		<div class="box2">
+	 		   <div class="col-md-3 s-1 wow slideInLeft" data-wow-duration="1s" data-wow-delay=".3s">
+			   <a href="#">
+	 		   	<div class="view view-fifth">
+                    <img src="../images/chef1.jpg" alt="Diseñador">
+                    <div class="mask">
+                        <h4>Group - Smart</h4>
+                        <p>Nuestra forma de trabajo siempre está en busca de nuevos conceptos de expresión, permitiéndonos crear soluciones atractivas y funcionales al servicio de su marca.</p>
+                         <p class="p2">Licenciado en Diseño Web y Multimedia</p>
+                     </div>
+                   
+				    </div>
+				  </a>
+			<h3>Carlos Mite</h3>
+				</div>
+		<div class="col-md-3 col-md-offset-1 s-2 wow slideInLeft" data-wow-duration="1s" data-wow-delay=".3s">
+		<a href="#">
+	 		   	<div class="view view-fifth">
+                      <img src="../images/chef2.jpg" alt="Diseñador">
+                       <div class="mask">
+                        <h4>Group - Smart</h4>
+                        <p>Nuestra forma de trabajo siempre está en busca de nuevos conceptos de expresión, permitiéndonos crear soluciones atractivas y funcionales al servicio de su marca.</p>
+                         <p class="p2">Licenciada en Sistemas de Información</p>
+                     </div>
+               
+				    </div>
+				  </a>
+				<h3>Fabiola Zuñiga</h3>
+				</div>
+			  <div class="col-md-3 col-md-offset-1 s-3 wow slideInRight" data-wow-duration="1s" data-wow-delay=".3s">
+			  <a href="#">
+	 		   	<div class="view view-fifth">
+                     <img src="../images/chef3.jpg" alt="Diseñador">
+                    <div class="mask">
+                        <h4>Group - Smart</h4>
+                        <p>Nuestra forma de trabajo siempre está en busca de nuevos conceptos de expresión, permitiéndonos crear soluciones atractivas y funcionales al servicio de su marca.</p>
+                         <p class="p2">Licenciado en Sistemas de Información</p>
+                     </div>
+                  
+				    </div>
+				  </a>
+					<h3>Luis Coronel</h3>
+				</div>
+				<div class="clearfix"></div>
+		     </div>
+	 	    </div>
+	 	</div>
+<!--end-team-->
+
+
+<!--footer-->
 		<div class="footer text-center">
 						<div class="container">
 							<!--logo2-->
 								   <div class="logo2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-									  <a href="../index.php"><h2>P<span>arking Smart</span></h2></a>
+									  <a href="../index.html"><h2>P<span>arking Smart</span></h2></a>
 									  <p>seguro confiable</p>
 								   </div>
 					<!--//logo2-->
@@ -124,19 +142,16 @@
 										<li><a href="https://twitter.com/?lang=es" class="tw" target="_blank"></a></li>
 										<li><a href="https://www.facebook.com/" class="fb" target="_blank"> </a></li>
 										<li><a href="https://plus.google.com/collections/featured?hl=es" class="in" target="_blank"> </a></li>
-										
+										 
 									</ul>
 									<p class="copy-right wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".3s"> 2017 Parking Smart. All rights reserved | Design by <a href="../index.php">Parking Smart</a></p>
 
 					 </div>
 	     </div>
 		<!--start-smooth-scrolling-->
-	 <script type="text/javascript" src="../js/completo8.js"></script>
+<script type="text/javascript" src="../js/completo8.js"></script>
 								<!--end-smooth-scrolling-->
 		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-<!--- //footer --->
-<!-- for bootstrap working -->
-		<script src="../js/bootstrap.js"> </script>
-<!-- //for bootstrap working -->
+
 </body>
 </html>
