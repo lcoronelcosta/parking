@@ -11,7 +11,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Borrar Cliente</title>
+        <title>Delete Cliente</title>
     </head>
     <body>
         <?php

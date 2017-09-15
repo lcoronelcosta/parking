@@ -12,7 +12,7 @@ $tipopagoCollectorObj = new TipopagoCollector();
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Login</title>
+        <title>Update TipoPago</title>
         <link href="../estilo.css" rel="stylesheet">
     	
     

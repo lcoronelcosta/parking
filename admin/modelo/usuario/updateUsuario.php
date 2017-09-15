@@ -13,7 +13,7 @@ $usuarioCollectorObj = new UsuarioCollector();
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Login</title>
+        <title>Update Usuario</title>
         <link href="../estilo.css" rel="stylesheet">
     	
     

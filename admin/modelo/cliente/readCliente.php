@@ -20,10 +20,10 @@
       <div class="panel-heading clearfix">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Clientes</span>
+          <span>CLIENTE</span>
        </strong>
          <a href="../../admin.php" class="btn btn-danger pull-right">ATRAS</a> 
-         <a href="form_AddCliente.php" class="btn btn-info">AGREGAR Cliente</a>
+         <a href="form_AddCliente.php" class="btn btn-info">AGREGAR CLIENTE</a>
       </div>
      <div class="panel-body">
     <table id="example" class="table table-striped table-bordered" cellspacing="0" width="80%">
