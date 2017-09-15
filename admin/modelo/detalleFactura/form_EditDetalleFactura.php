@@ -4,8 +4,7 @@
     $detalleFacturaCollectorObj = new DetalleFacturaCollector();
     $id_detalle_facura = $_GET['id_detalle_facura'];
     $tiempo = $_GET['tiempo'];
-    $total = $_GET['toal'];
-    $hora_facturacion = $_GET['hora_facturacion'];
+    $total = $_GET['total'];
 ?>
 
 <html>
