@@ -116,7 +116,7 @@
 						<div class="container">
 							<!--logo2-->
 								   <div class="logo2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-									  <a href="../index.html"><h2>P<span>arking Smart</span></h2></a>
+									  <a href="../index.php"><h2>P<span>arking Smart</span></h2></a>
 									  <p>seguro confiable</p>
 								   </div>
 					<!--//logo2-->
@@ -126,7 +126,7 @@
 										<li><a href="https://plus.google.com/collections/featured?hl=es" class="in" target="_blank"> </a></li>
 										
 									</ul>
-									<p class="copy-right wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".3s"> 2017 Parking Smart. All rights reserved | Design by <a href="../index.html">Parking Smart</a></p>
+									<p class="copy-right wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".3s"> 2017 Parking Smart. All rights reserved | Design by <a href="../index.php">Parking Smart</a></p>
 
 					 </div>
 	     </div>
