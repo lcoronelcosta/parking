@@ -76,13 +76,13 @@
             function generarDetalles($id_reserva){
 
                 $rowFactura = self::$db->getRows("SELECT * FROM factura ORDER BY id_factura DESC limit 1",null);
-            $factura = array_pop($rowFactura);
-            $ID = $factura{'id_factura'};
-            $detalleCollectorObj = new DetalleFacturaCollector();
-            foreach ($this->showMultaReservaPorIdReserva($id_reserva) as $c){
-                $detalleCollectorObj->createDetalleFactura("2017-01-01 01:01:01.404852-05",$c->get_valor(), $ID);
-            }
-            
+                $factura = array_pop($rowFactura);
+                $ID = $factura{'id_factura'};
+                $detalleCollectorObj = new DetalleFacturaCollector();
+                foreach ($this->showMultaReservaPorIdReserva($id_reserva) as $c){
+                    $detalleCollectorObj->createDetalleFactura("2017-01-01 01:01:01.404852-05",$c->get_valor(), $ID);
+
+                }
 
             }
     }

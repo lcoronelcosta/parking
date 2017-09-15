@@ -2,6 +2,10 @@
     session_start();
     include_once("ReservaCollector.php");
     include_once("Reserva.php");
+
+    include_once("../multaReserva/MultaReservaCollector.php");
+    include_once("../multaReserva/MultaReserva.php");
+
 	$id_cliente = $_POST['id_c'];
     $id_vehiculo = $_POST['id_v'];
     $id_parqueo = $_POST['id_p'];
@@ -10,7 +14,10 @@
     $o_latitud = $_POST['origen_la'];
     $o_longitud = $_POST['origen_lo'];
     $id_estacionamiento = $_POST['id_e'];
+
     $reservaCollectorObj = new ReservaCollector();
+    $multaReservaCollectorObj = new MultaReservaCollector();
+
 ?>
 
 <!DOCTYPE html>
