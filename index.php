@@ -144,7 +144,7 @@
 						  <div class="arrows-two wow slideInDown"  data-wow-duration="1s" data-wow-delay=".5s"><img src="images/border.png" alt="border"/></div>
 						  <p class="wow slideInUp"  data-wow-duration="1s" data-wow-delay=".3s">Encuentra tu plaza de estacionamiento en parqueaderos públicos y privados. ¡Olvídate de dar vueltas para estacionar! </p>
 						  <div class="start wow flipInX"  data-wow-duration="1s" data-wow-delay=".3s">
-						     <a href="pages/reservation.html" class="hvr-bounce-to-bottom">Empezar</a>
+						     <a href="admin/reservation.php" class="hvr-bounce-to-bottom">Empezar</a>
 						  </div>
 
 					</div>
@@ -158,7 +158,7 @@
 						 <div class="arrows-two wow slideInDown"  data-wow-duration="1s" data-wow-delay=".5s"><img src="images/border.png" alt="border"/></div>
 						  <p class="wow slideInUp"  data-wow-duration="1s" data-wow-delay=".3s">Para entrar al parqueadero sólo te hace falta tu móvil con la app Parking-Smart instalada y dependiendo de las instalaciones, tendrás que usar una de las diferentes formas de acceso</p>
 						 <div class="start wow flipInX"  data-wow-duration="1s" data-wow-delay=".3s">
-						     <a href="pages/single.html" class="hvr-bounce-to-bottom">Leer mas</a>
+						     <a href="admin/single.php" class="hvr-bounce-to-bottom">Leer mas</a>
 						  </div>
 
 					</div>
