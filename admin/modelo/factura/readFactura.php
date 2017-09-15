@@ -48,8 +48,8 @@
             echo "<td>" . $c->get_total_multa() . "</td>";
             echo "<td>" . $c->get_total_pagar() . "</td>";
             echo "<td>" . $c->get_estado() . "</td>";    
-            echo "<td><a href='form_EditFactura?ID=". $c->get_id_factura() ."' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
-                </a> <a href='deleteFactura?ID=". $c->get_id_factura() ."' class='btn btn-xs btn-danger' data-toggle='tooltip' title='Eliminar'><i class='glyphicon glyphicon-remove'></i>
+            echo "<td><a href='form_EditFactura.php?ID=". $c->get_id_factura() ."' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
+                </a> <a href='deleteFactura.php?ID=". $c->get_id_factura() ."' class='btn btn-xs btn-danger' data-toggle='tooltip' title='Eliminar'><i class='glyphicon glyphicon-remove'></i>
                 </a></td>"; 
             echo "</tr>"; 
             }

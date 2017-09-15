@@ -17,13 +17,13 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div class="modal fade bs-example-modal-lg" id="myModalDetalleFactura" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+        <div class="modal fade bs-example-modal-lg" id="myModalFactura" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h2 class="modal-title">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <strong>DETALLE FACTURA</strong>
+                    <strong>FACTURAS</strong>
                  </h2>
             </div>
             <div class="modal-body alert-success">
@@ -33,25 +33,24 @@
                 <th>ID</th>   
                 <th>ID-RESERVA</th>
                 <th>ID-PAGO</th>
-                <th>DESCUENTO</th>
+                <th>FECHA</th>
                 <th>T-MULTA</th>
-                <th>F_PAGAR</th>
+                <th>T_PAGAR</th>
                 <th>ESTADO</th>
                 <th>OPERACIONES</th>
             </tr>
         </thead>
         <?php
             $con = 1;        
-            foreach ($reservaCollectorObj->showReservas() as $c){
+            foreach ($facturaCollectorObj->showsFactura() as $c){
             echo "<tr>";
             echo "<td>" . $c->get_id_factura() . "</td>";         
-            echo "<td>" . $c->get_id_reserva() . "</td>";   
-            echo "<td>" . $c->get_descuento() . "</td>"; 
-            echo "<td>" . $c->get_id_parqueo() . "</td>";
-            echo "<td>" . $c->get_total_multa() . "</td>";         
-            echo "<td>" . $c->get_total_pagar() . "</td>";   
-            echo "<td>" . $c->get_estado() . "</td>"; 
-            echo "<td>" . $c->get_id_pago() . "</td>"; 
+            echo "<td>" . $c->get_id_reserva() . "</td>";  
+            echo "<td>" . $c->get_id_pago() . "</td>";
+            echo "<td>" . $c->get_fecha() . "</td>";
+            echo "<td>" . $c->get_total_multa() . "</td>";
+            echo "<td>" . $c->get_total_pagar() . "</td>";
+            echo "<td>" . $c->get_estado() . "</td>";
             echo "<td><a data-dismiss='modal' id='$con'><i class='glyphicon glyphicon-ok'></i>
                 </a></td>"; 
             echo "</tr>"; 

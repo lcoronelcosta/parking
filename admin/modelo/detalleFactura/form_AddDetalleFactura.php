@@ -34,7 +34,7 @@
             </div>
           
             <div class="form-group">
-                <label for="password">Factura <a class="btn btn-info" data-toggle="modal" data-target="#myModalDetalleFactura"><i class="glyphicon glyphicon-search"></i></a></label>
+                <label for="password">Factura <a class="btn btn-info" data-toggle="modal" data-target="#myModalFactura"><i class="glyphicon glyphicon-search"></i></a></label>
                 
                 <div class="col-md-3">
                     <input readonly type="text" class="form-control" required name="id_f" id="id_f" placeholder="ID">

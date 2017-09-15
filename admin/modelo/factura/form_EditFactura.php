@@ -1,7 +1,7 @@
 <?php
     session_start();
     include_once("FacturaCollector.php");
-    include_once("../reservas/reservaCollector.php");
+    include_once("../reservas/ReservaCollector.php");
     include_once("../vehiculo/VehiculoCollector.php");
     include_once("../cliente/ClienteCollector.php");
     include_once("../tipopago/TipopagoCollector.php");

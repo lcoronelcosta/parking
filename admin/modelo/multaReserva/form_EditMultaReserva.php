@@ -34,7 +34,7 @@
                 <input type="text" class="form-control" readonly name="id_multa_x_factura" required value=<?php echo "$id_multa_x_factura"; ?>>
             </div>  
            <div class="form-group">
-                 <label for="password">RESERVAS <a class="btn btn-info" data-toggle="modal" data-target="#myModalReservas" ><i class="glyphicon glyphicon-search"></i></a></label>
+                 <label for="password">RESERVAS <a class="btn btn-info" data-toggle="modal" data-target="#myModalReserva" ><i class="glyphicon glyphicon-search"></i></a></label>
                 
                 <div class="col-md-9">
                     <input readonly type="text" class="form-control" required name="id_reserva" id="id_reserva" placeholder="ID" value=<?php echo "$id_reserva"; ?>>
@@ -65,6 +65,6 @@
     </div>
   </div>
 </body>
-<?php include_once('modal_reserva.php');?>
-<?php include_once('modal_multa.php');?>
+<?php include_once('../modals/modal_reserva.php');?>
+<?php include_once('../modals/modal_multa.php');?>
 </html>
