@@ -27,7 +27,7 @@
         
         }
         
-        function updateDetalleFactura($id_detalle_facura, $tiempo, $total, $id_factura) {
+        function updateDetalleFactura($id_detalle_factura, $tiempo, $total, $id_factura) {
                 $rows = self::$db->updateRow("UPDATE detalle_factura SET tiempo='$tiempo', total='$total', id_factura='$id_factura'  WHERE id_detalle_facura='$id_detalle_facura'",null);
 
         }
