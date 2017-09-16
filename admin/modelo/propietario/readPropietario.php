@@ -13,8 +13,7 @@
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    
-  <?php include_once('../../header.php'); ?> 
+  <?php require('../header.php');?>
   <div class="row">    
   <div class="col-md-12">
     <div class="panel panel-default">
