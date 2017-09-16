@@ -33,11 +33,11 @@
             </div>  
             <div class="form-group">
                 <label for="username">DESCRIPCION</label>
-                <input type="text" class="form-control" name="multaModificado" required value=<?php echo "$descipcion"; ?>>
+                <input type="text" class="form-control" name="multaModificado" required value="<?php echo "$descipcion"; ?>">
             </div>
             <div class="form-group">
                 <label for="username">VALOR</label>
-                <input type="text" class="form-control" name="valor" required value=<?php echo "$valor"; ?>>
+                <input type="text" class="form-control" name="valor" required value="<?php echo "$valor"; ?>">
             </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>

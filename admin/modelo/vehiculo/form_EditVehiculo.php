@@ -37,41 +37,50 @@
           <form method="post" action="updateVehiculo.php?descripcion=<?php $descripcion?>">
             <div class="form-group">
                 <label for="username">ID</label>
-                <input type="text" class="form-control" readonly name="id_vehiculo" value=<?php echo "$id_vehiculo"; ?> required>
+                <input type="text" class="form-control" readonly name="id_vehiculo" value="<?php echo "$id_vehiculo"; ?>" required>
             </div>  
             <div class="form-group">
-                <label for="password">CLIENTE <a class="btn btn-info" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-search"></i></a></label>
+                <label>CLIENTE <a class="btn btn-info" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-search"></i></a></label>
                 
                 <div class="col-md-3">
-                    <input readonly type="text" class="form-control" required name="id_c" id="id_c" placeholder="ID" value=<?php echo $clienteObj->get_id_cliente(); ?>>
+                    <input readonly type="text" class="form-control" required name="id_c" id="id_c" value="<?php echo $clienteObj->get_id_cliente(); ?>">
                 </div>
                 <div class="col-md-3">
-                    <input readonly type="text" class="form-control" required name="n_c" id="n_c" placeholder="NOMBRE" value=<?php echo $clienteObj->get_nombre(); ?>>
+                    <input readonly type="text" class="form-control" required name="n_c" id="n_c" value="<?php echo $clienteObj->get_nombre(); ?>">
                 </div>
                 <div class="col-md-3">
-                    <input readonly type="text" class="form-control" required name="a_c" id="a_c" placeholder="APELLIDO" value=<?php echo $clienteObj->get_apellido(); ?>>
+                    <input readonly type="text" class="form-control" required name="a_c" id="a_c" value="<?php echo $clienteObj->get_apellido(); ?>">
                 </div>
                 
             </div>    
             <div class="form-group">
-                <label for="username">Descripcion</label>
-                <input type="text" class="form-control" name="vehiculoModificado" required value=<?php echo "$descripcion"; ?>>
+                <label>Descripcion</label>
+                <input type="text" class="form-control" name="vehiculoModificado" required value="<?php echo $descripcion; ?>">
             </div>
             <div class="form-group">
                 <label for="username">Placa</label>
-                <input type="text" class="form-control" name="placa" required value=<?php echo "$placa"; ?>>
+                <input type="text" class="form-control" name="placa" required value="<?php echo $placa; ?>">
             </div>
             <div class="form-group">
-              <label for="level">Tipo</label>
+              <label for="level">Rol de usuario</label>
                 <select class="form-control" name="tipo">
                   <?php
-                    if ($tipo == 'M'){
-                        echo "<option >Auto</option>";
+                    if ($tipo == 'M') {
                         echo "<option>Moto</option>";
+                        echo "<option>Auto</option>";
                         echo "<option>Camioneta</option>";
                     }
-                    
-		           ?>
+                    elseif ($tipo == 'C') {
+                        echo "<option>Camioneta</option>";
+                        echo "<option>Moto</option>";
+                        echo "<option>Auto</option>";
+                    }
+                    else{
+                        echo "<option>Auto</option>";
+                        echo "<option>Moto</option>";
+                        echo "<option>Auto</option>";
+                    }
+                  ?>
                 </select>
             </div>
             <div class="form-group clearfix">

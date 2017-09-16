@@ -32,19 +32,19 @@
             </div>  
             <div class="form-group">
                 <label for="username">Nombre</label>
-                <input type="text" class="form-control" name="nombreModificado" required value=<?php echo $propietarioObj->get_nombre(); ?>>
+                <input type="text" class="form-control" name="nombreModificado" required value="<?php echo $propietarioObj->get_nombre(); ?>">
             </div>
             <div class="form-group">
                 <label for="username">Apellido</label>
-                <input type="text" class="form-control" name ="apellido" required  value=<?php echo $propietarioObj->get_apellido(); ?>>
+                <input type="text" class="form-control" name ="apellido" required  value="<?php echo $propietarioObj->get_apellido(); ?>">
             </div>
             <div class="form-group">
                 <label for="username">RUC</label>
-                <input type="text" class="form-control" name ="ruc" required  value=<?php echo $propietarioObj->get_ruc(); ?>>
+                <input type="text" class="form-control" name ="ruc" required  value="<?php echo $propietarioObj->get_ruc(); ?>">
             </div>
             <div class="form-group">
                 <label for="username">NUMERO CUENTA</label>
-                <input type="text" class="form-control" name ="numerocuenta" required  value=<?php echo $propietarioObj->get_numerocuenta(); ?>>
+                <input type="text" class="form-control" name ="numerocuenta" required  value="<?php echo $propietarioObj->get_numerocuenta(); ?>">
             </div>
              <div class="form-group">
               <label for="level">Rol de usuario</label>

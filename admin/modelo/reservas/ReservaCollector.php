@@ -34,5 +34,12 @@
         function deleteReserva($id_reserva) {
                 $rows = self::$db->deleteRow("DELETE FROM reserva WHERE id_reserva=$id_reserva",null);
         }
+
+        function calcularCosto($id_reserva){
+            $row = self::$db->getRows("SELECT  FROM reserva WHERE id_reserva='$id_reserva'");
+                $aux = new Reserva($row[0]{'id_reserva'},$row[0]{'id_cliente'},$row[0]{'id_vehiculo'},$row[0]{'id_parqueo'},$row[0]{'id_estacionamiento'}, $row[0]{'fecha_inicio'},$row[0]{'fecha_fin'},$row[0]{'origen_latitude'},$row[0]{'origen_longitud'});
+                return $aux;  
+
+        }
     }
 ?>

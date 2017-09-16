@@ -31,15 +31,15 @@
           <form method="post" action="updateEstacionamiento.php?numero="<?php $numero?>"">
             <div class="form-group">
                 <label for="username">ID</label>
-                <input type="text" class="form-control" name="id_estacionamiento" required value=<?php echo "$id_estacionamiento"; ?>>
+                <input type="text" class="form-control" name="id_estacionamiento" required value="<?php echo $id_estacionamiento; ?>">
             </div>
             <div class="form-group">
                 <label for="username">PARQUEADERO</label>
-                <input type="text" class="form-control" name="id_parqueadero" required value=<?php echo "$id_parqueadero"; ?>>
+                <input type="text" class="form-control" name="id_parqueadero" required value="<?php echo $id_parqueadero; ?>">
             </div>    
             <div class="form-group">
                 <label for="username">NUMERO</label>
-                <input type="text" class="form-control" name="numeroModificado" required value=<?php echo "$numero"; ?>>
+                <input type="text" class="form-control" name="numeroModificado" required value="<?php echo $numero; ?>">
             </div>
              <div class="form-group">
               <label for="level">Estado</label>

@@ -30,19 +30,19 @@
           <form method="post" action="updateDetalleFactura.php?tiempo=<?php $tiempo?>">
             <div class="form-group">
                 <label for="username">ID</label>
-                <input type="text" class="form-control" name="id_detalle_facura" required value=<?php echo "$id_detalle_facura"; ?>>
+                <input type="text" class="form-control" name="id_detalle_facura" required value="<?php echo "$id_detalle_facura"; ?>">
             </div>  
             <div class="form-group">
                 <label for="username">TIEMPO</label>
-                <input type="text" readonly class="form-control" name="tiempo" required value=<?php echo "$tiempo"; ?>>
+                <input type="text" readonly class="form-control" name="tiempo" required value="<?php echo "$tiempo"; ?>">
             </div>
             <div class="form-group">
                 <label for="username">TOTAL</label>
-                <input type="text" class="form-control" name ="total" required  value=<?php echo "$total"; ?>>
+                <input type="text" class="form-control" name ="total" required  value="<?php echo "$total"; ?>">
             </div>
             <div class="form-group">
                 <label for="username">ID-FACTURA</label>
-                <input type="text" class="form-control" name ="id_factura" required  value=<?php echo "$id_factura"; ?>>
+                <input type="text" class="form-control" name ="id_factura" required  value="<?php echo "$id_factura"; ?>">
             </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>

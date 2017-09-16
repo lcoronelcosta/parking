@@ -33,7 +33,7 @@
             </div>  
             <div class="form-group">
                 <label for="username">Descripcion</label>
-                <input type="text" class="form-control" name="tipopagoModificado" required value=<?php echo "$descripcion"; ?>>
+                <input type="text" class="form-control" name="tipopagoModificado" required value="<?php echo $descripcion; ?>">
             </div>
              <div class="form-group">
               <label for="level">Rol de usuario</label>

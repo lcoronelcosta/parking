@@ -58,10 +58,10 @@
                     <input readonly type="text" class="form-control" required name="id_reserva" id="id_r" value=<?php echo $reservaObj->get_id_reserva(); ?>>
                 </div>
                 <div class="col-md-3">
-                    <input readonly type="text" class="form-control" name="n_c" id="n_c" value=<?php echo $clienteObj->get_nombre(); ?>>
+                    <input readonly type="text" class="form-control" name="n_c" id="n_c" value="<?php echo $clienteObj->get_nombre(); ?>">
                 </div>
                 <div class="col-md-3">
-                    <input readonly type="text" class="form-control" name="a_c" id="a_c" value=<?php echo $clienteObj->get_nombre(); ?>>
+                    <input readonly type="text" class="form-control" name="a_c" id="a_c" value="<?php echo $clienteObj->get_nombre(); ?>">
                 </div>
                 
             </div>    
@@ -69,20 +69,20 @@
             <div class="form-group">
                 <label for="username">VEHICULO</label>
                 <div class="col-md-5">
-                    <input readonly type="text" class="form-control" name="d_v" id="d_v" value=<?php echo $vehiculoObj->get_descripcion(); ?>>
+                    <input readonly type="text" class="form-control" name="d_v" id="d_v" value="<?php echo $vehiculoObj->get_descripcion(); ?>">
                 </div>
                 <div class="col-md-5">
-                    <input readonly type="text" class="form-control" name="p_v" id="p_v" value=<?php echo $vehiculoObj->get_placa(); ?>>
+                    <input readonly type="text" class="form-control" name="p_v" id="p_v" value="<?php echo $vehiculoObj->get_placa(); ?>">
                 </div>
             </div>
            <div class="form-group">
                 <label for="password">TIPO PAGO <a class="btn btn-info" data-toggle="modal" data-target="#myModalPagos"><i class="glyphicon glyphicon-search"></i></a></label>
                 
                 <div class="col-md-4">
-                    <input readonly type="text" class="form-control" required name="id_pago" id="id_p" value=<?php echo $pagoObj->get_id_pago(); ?>>
+                    <input readonly type="text" class="form-control" required name="id_pago" id="id_p" value="<?php echo $pagoObj->get_id_pago(); ?>">
                 </div>
                 <div class="col-md-4">
-                    <input readonly type="text" class="form-control" name="d_pago" id="n_p" value=<?php echo $pagoObj->get_descripcion(); ?>>
+                    <input readonly type="text" class="form-control" name="d_pago" id="n_p" value="<?php echo $pagoObj->get_descripcion(); ?>">
                 </div>
                 
             </div>  
@@ -97,7 +97,7 @@
             </div> 
             <div class="form-group">
                 <label for="username">FECHA</label>
-                <input type="text" class="form-control" name="fecha" required autofocus readonly value=<?php echo $facturaObj->get_fecha(); ?>>
+                <input type="datetime-local" class="form-control" name="fecha" required autofocus readonly value="<?php echo $facturaObj->get_fecha(); ?>">
 
             </div> 
             <div class="form-group">

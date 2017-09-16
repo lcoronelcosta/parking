@@ -29,19 +29,19 @@
           <form method="post" action="updateCliente.php?usuario=<?php $usuario?>">
             <div class="form-group">
                 <label for="username">ID</label>
-                <input type="text" class="form-control" name="id_cliente" readonly='readonly' required value=<?php echo $cliente->get_id_cliente(); ?>>
+                <input type="text" class="form-control" name="id_cliente" readonly='readonly' required value="<?php echo $cliente->get_id_cliente(); ?>">
             </div>  
             <div class="form-group">
                 <label for="username">Usuario</label>
-                <input type="text" class="form-control" name="id_usuario" readonly='readonly' required value=<?php echo $cliente->get_id_usuario(); ?>>
+                <input type="text" class="form-control" name="id_usuario" readonly='readonly' required value="<?php echo $cliente->get_id_usuario(); ?>">
             </div>
             <div class="form-group">
                 <label for="username">Nombre</label>
-                <input type="text" class="form-control" name ="nombre" required  value=<?php echo $cliente->get_nombre(); ?>>
+                <input type="text" class="form-control" name ="nombre" required  value="<?php echo $cliente->get_nombre(); ?>">
             </div>
             <div class="form-group">
                 <label for="username">Apellido</label>
-                <input type="text" class="form-control" name ="apellido" required  value=<?php echo $cliente->get_apellido(); ?>>
+                <input type="text" class="form-control" name ="apellido" required  value="<?php echo $cliente->get_apellido(); ?>">
             </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>

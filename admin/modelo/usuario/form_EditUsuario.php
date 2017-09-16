@@ -34,11 +34,11 @@
             </div>  
             <div class="form-group">
                 <label for="username">Usuario</label>
-                <input type="text" class="form-control" name="usuarioModificado" required value=<?php echo "$usuario"; ?>>
+                <input type="text" class="form-control" name="usuarioModificado" required value="<?php echo $usuario; ?>">
             </div>
             <div class="form-group">
                 <label for="password">Contraseña</label>
-                <input type="password" class="form-control" name ="clave" required  value=<?php echo "$clave"; ?>>
+                <input type="password" class="form-control" name ="clave" required  value="<?php echo $clave; ?>">
             </div>
             <div class="form-group">
               <label for="level">Rol de usuario</label>

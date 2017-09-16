@@ -47,28 +47,28 @@
                     <input readonly type="text" class="form-control" required name="id_pr" id="id_pr" placeholder="ID" value=<?php echo $propietarioObj->get_id_propietario(); ?>>
                 </div>
                 <div class="col-md-3">
-                    <input readonly type="text" class="form-control" name="n_pr" id="n_pr" value=<?php echo $propietarioObj->get_nombre(); ?>>
+                    <input readonly type="text" class="form-control" name="n_pr" id="n_pr" value="<?php echo $propietarioObj->get_nombre(); ?>">
                 </div>
                 <div class="col-md-3">
-                    <input readonly type="text" class="form-control" name="a_pr" id="a_pr" value=<?php echo $propietarioObj->get_apellido(); ?>>
+                    <input readonly type="text" class="form-control" name="a_pr" id="a_pr" value="<?php echo $propietarioObj->get_apellido(); ?>">
                 </div>
                 
             </div>  
             <div class="form-group">
                 <label for="username">Descripcion</label>
-                <input type="text" class="form-control" name="parqueaderoModificado" required value=<?php echo "$nombre"; ?>>
+                <input type="text" class="form-control" name="parqueaderoModificado" required value="<?php echo $nombre; ?>">
             </div>
             <div class="form-group">
                 <label for="username">Direccion</label>
-                <input type="text" class="form-control" name="direccion" required value=<?php echo "$direccion"; ?>>
+                <input type="text" class="form-control" name="direccion" required value="<?php echo $direccion; ?>">
             </div>
             <div class="form-group">
                 <label for="username">Latitud</label>
-                <input type="text" class="form-control" name="latitud" required value=<?php echo "$latitud"; ?>>
+                <input type="text" class="form-control" name="latitud" required value="<?php echo $latitud; ?>">
             </div>
             <div class="form-group">
                 <label for="username">Longitud</label>
-                <input type="text" class="form-control" name="longitud" required value=<?php echo "$longitud"; ?>>
+                <input type="text" class="form-control" name="longitud" required value="<?php echo $longitud; ?>">
             </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>

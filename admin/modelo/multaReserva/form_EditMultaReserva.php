@@ -30,7 +30,7 @@
           <form method="post" action="updateMultaReserva.php?valor=<?php $valor?>">
            <div class="form-group">
                 <label for="username">ID</label>
-                <input type="text" class="form-control" readonly name="id_multa_x_factura" required value=<?php echo "$id_multa_x_factura"; ?>>
+                <input type="text" class="form-control" readonly name="id_multa_x_factura" required value="<?php echo "$id_multa_x_factura"; ?>">
             </div>  
            <div class="form-group">
                  <label for="password">RESERVAS <a class="btn btn-info" data-toggle="modal" data-target="#myModalReserva" ><i class="glyphicon glyphicon-search"></i></a></label>
@@ -49,7 +49,7 @@
           
             <div class="form-group">
                 <label for="username">Valor</label>
-                <input type="text" class="form-control" readonly name ="valor"  id="valor" placeholder="valor" required value=<?php echo "$valor"; ?>>
+                <input type="text" class="form-control" readonly name ="valor"  id="valor" placeholder="valor" required value="<?php echo "$valor"; ?>">
             </div>
 
               <div class="form-group clearfix">
