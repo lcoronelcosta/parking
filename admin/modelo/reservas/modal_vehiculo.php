@@ -1,4 +1,4 @@
-<?php 
+<?php
     include_once("../vehiculo/VehiculoCollector.php");
     $vehiculoCollectorObj = new VehiculoCollector();
 ?>
@@ -32,29 +32,27 @@
         </thead>  
          
                      
-        <?php  
-           $id_cliente = 12;   
-           foreach ($vehiculoCollectorObj->showVehiculosByCliente(12) as $c){
+        <?php
+           foreach ($vehiculoCollectorObj->showVehiculos() as $c){
             echo "<tr>";
             echo "<td>" . $c->get_id_vehiculo() . "</td>";         
             echo "<td>" . $c->get_descripcion() . "</td>";   
             echo "<td>" . $c->get_placa() . "</td>"; 
             echo "<td>" . $c->get_tipo() . "</td>"; 
             echo "<td>" . $c->get_id_cliente() . "</td>";     
-            echo "<td><a data-dismiss='modal' id=". $c->get_placa() . "><i class='glyphicon glyphicon-ok'></i>
+            echo "<td><a data-dismiss='modal' id=". $c->get_id_vehiculo() . "><i class='glyphicon glyphicon-ok'></i>
                 </a></td>"; 
             echo "</tr>";    
         ?>
             <script>    
-                $("#<?php echo "".$c->get_placa().""; ?>").click(function(){
+                $("#<?php echo "".$c->get_id_vehiculo().""; ?>").click(function(){
                     document.getElementById('id_v').value = '<?php echo "".$c->get_id_vehiculo().""; ?>';
                     document.getElementById('d_v').value = '<?php echo "".$c->get_descripcion().""; ?>';
                     document.getElementById('p_v').value = '<?php echo "".$c->get_placa().""; ?>';
-                    $('#buscar_vehiculo').attr('disabled', false);
                 });
             </script>        
                     
-        <?php    
+        <?php
             $con++;    
             }
         ?>

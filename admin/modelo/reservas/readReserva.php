@@ -38,6 +38,7 @@
                 <th>F-FIN</th>
                 <th>O-LAT</th>
                 <th>O-LON</th>
+                <th>FACTURADA</th>
                 <th>OPERACIONES</th>
             </tr>
         </thead>
@@ -52,7 +53,8 @@
             echo "<td>" . $c->get_fecha_inicio() . "</td>";         
             echo "<td>" . $c->get_fecha_fin() . "</td>";   
             echo "<td>" . $c->get_origen_latitud() . "</td>"; 
-            echo "<td>" . $c->get_origen_longitud() . "</td>";     
+            echo "<td>" . $c->get_origen_longitud() . "</td>";
+            echo "<td>" . $c->get_facturada() . "</td>";     
             echo "<td><a href='form_EditReserva.php?id_reserva=". $c->get_id_reserva() ."' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
                 </a> <a href='deleteReserva.php?ID=". $c->get_id_reserva() ."' class='btn btn-xs btn-danger' data-toggle='tooltip' title='Eliminar'><i class='glyphicon glyphicon-remove'></i>
                 </a></td>"; 

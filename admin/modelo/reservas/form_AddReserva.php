@@ -97,7 +97,14 @@
                 <div class="col-md-4">
                     <input readonly type="text" class="form-control" name="e_n" id="e_n" placeholder="NUMERO">
                 </div>
-            </div>     
+            </div> 
+            <div class="form-group">
+              <label for="level">Facturada</label>
+                <select class="form-control" name="facturada">
+                  <option>NO</option>
+                  <option>SI</option>
+                </select>
+            </div>    
               
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>
@@ -112,7 +119,7 @@
     </div>
   </div>
 <?php include_once('../modals/modal_clientes.php');?>
-<?php include_once('../modals/modal_vehiculo.php');?>   
+<?php include_once('modal_vehiculo.php');?>   
 <?php include_once('../modals/modal_estacionamiento.php');?>       
 <?php include_once('map.php');?>
    </body>

@@ -120,7 +120,23 @@
                 <div class="col-md-4">
                     <input readonly type="text" class="form-control" name="e_n" id="e_n" value="<?php echo $estacionamientoObj->get_numero(); ?>">
                 </div>
-            </div>         
+            </div> 
+             <div class="form-group">
+              <label for="level">Facturada</label>
+                <select class="form-control" name="facturada">
+                  <?php 
+                    if ($reservaObj->get_facturada() == 'S'){
+                        echo "<option >SI</option>";
+                        echo "<option>NO</option>";
+                    }
+                    else{
+                        echo "<option>NO</option>";
+                        echo "<option >SI</option>";
+                    }
+                    
+                  ?>    
+                </select>
+            </div>        
               
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>

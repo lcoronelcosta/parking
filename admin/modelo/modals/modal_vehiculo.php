@@ -2,6 +2,7 @@
     include_once("../vehiculo/VehiculoCollector.php");
     $vehiculoCollectorObj = new VehiculoCollector();
 ?>
+
 <html>
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -29,11 +30,10 @@
                 <th>CLIENTE</th>
                 <th>OPERACIONES</th>
             </tr>
-        </thead>  
-         
-                     
-        <?php   
-           foreach ($vehiculoCollectorObj->showVehiculos() as $c){
+        </thead>
+
+        <?php
+            foreach ($vehiculoCollectorObj->showVehiculos() as $c){
             echo "<tr>";
             echo "<td>" . $c->get_id_vehiculo() . "</td>";         
             echo "<td>" . $c->get_descripcion() . "</td>";   

@@ -11,9 +11,9 @@
         private $fecha_fin;
         private $origen_latitud;
         private $origen_longitud;
-        private $estado;
+        private $facturada;
         
-        function __construct($id_reserva, $id_cliente, $id_vehiculo, $id_parqueo, $id_estacionamiento, $fecha_inicio, $fecha_fin, $origen_latitud, $origen_longitud) {
+        function __construct($id_reserva, $id_cliente, $id_vehiculo, $id_parqueo, $id_estacionamiento, $fecha_inicio, $fecha_fin, $origen_latitud, $origen_longitud,$facturada) {
            
            $this->id_reserva = $id_reserva;
            $this->id_cliente = $id_cliente;
@@ -23,7 +23,8 @@
            $this->fecha_inicio = $fecha_inicio;
            $this->fecha_fin = $fecha_fin;
            $this->origen_latitud = $origen_latitud;
-           $this->origen_longitud = $origen_longitud;      
+           $this->origen_longitud = $origen_longitud; 
+          $this->facturada = $facturada;      
             
          }
 
@@ -90,11 +91,11 @@
            return $this->origen_longitud;
          }
         
-         function set_estado($estado){
-           $this->estado = $estado;
+         function set_facturada($facturada){
+           $this->facturada = $facturada;
          } 
-         function get_estado(){
-           return $this->estado;
+         function get_facturada(){
+           return $this->facturada;
          }
     }
 ?>

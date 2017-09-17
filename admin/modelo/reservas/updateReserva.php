@@ -10,6 +10,7 @@ $fecha_fin = $_POST['fecha_fin'];
 $origen_la = $_POST['origen_la'];
 $origen_lo = $_POST['origen_lo'];
 $id_estacionamiento = $_POST['id_e'];
+$facturada = $_POST['facturada'];
 $reservaCollectorObj = new ReservaCollector();
 ?>
 
@@ -21,8 +22,8 @@ $reservaCollectorObj = new ReservaCollector();
     </head>
     <body>
         <?php
-       
-            $reservaCollectorObj->updateReserva($id_reserva, $id_cliente, $id_vehiculo, $id_parqueo, $id_estacionamiento, $fecha_inicio, $fecha_fin, $origen_la, $origen_lo);
+            $facAux = substr ("$facturada", 0,1);
+            $reservaCollectorObj->updateReserva($id_reserva, $id_cliente, $id_vehiculo, $id_parqueo, $id_estacionamiento, $fecha_inicio, $fecha_fin, $origen_la, $origen_lo, $facAux);
             $mensaje = "LA RESERVA SE MODIFICO EXITOSAMENTE";
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readReserva.php'>";
