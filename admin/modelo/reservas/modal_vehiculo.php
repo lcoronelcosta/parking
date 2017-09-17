@@ -33,8 +33,8 @@
          
                      
         <?php  
-           $id_cliente = ?> <script> $('#id_c').val(); </script> <?php ;   
-           foreach ($vehiculoCollectorObj->showVehiculosByCliente($id_cliente) as $c){
+           $id_cliente = 12;   
+           foreach ($vehiculoCollectorObj->showVehiculosByCliente(12) as $c){
             echo "<tr>";
             echo "<td>" . $c->get_id_vehiculo() . "</td>";         
             echo "<td>" . $c->get_descripcion() . "</td>";   

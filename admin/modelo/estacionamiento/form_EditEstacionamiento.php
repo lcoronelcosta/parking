@@ -1,11 +1,15 @@
 <?php
     session_start();
     include_once("EstacionamientoCollector.php");
+    include_once("../parqueadero/ParqueaderoCollector.php");
     $estacionamientoCollectorObj = new EstacionamientoCollector();
+    $parqueaderoCollectorObj = new ParqueaderoCollector();
     $id_estacionamiento = $_GET['id_estacionamiento'];
     $id_parqueadero = $_GET['id_parqueadero'];
     $numero = $_GET['numero'];
     $estado = $_GET['estado'];
+    $parqueaderoObj = $parqueaderoCollectorObj->showParqueadero($id_parqueadero);
+
 ?>
 
 <html>
@@ -31,12 +35,19 @@
           <form method="post" action="updateEstacionamiento.php?numero="<?php $numero?>"">
             <div class="form-group">
                 <label for="username">ID</label>
-                <input type="text" class="form-control" name="id_estacionamiento" required value="<?php echo $id_estacionamiento; ?>">
+                <input type="text" class="form-control" readonly name="id_estacionamiento" required value="<?php echo $id_estacionamiento; ?>">
             </div>
             <div class="form-group">
-                <label for="username">PARQUEADERO</label>
-                <input type="text" class="form-control" name="id_parqueadero" required value="<?php echo $id_parqueadero; ?>">
-            </div>    
+                <label for="password">PARQUEADERO <a class="btn btn-info" data-toggle="modal" data-target="#myModalParqueos"><i class="glyphicon glyphicon-search"></i></a></label>
+                
+                <div class="col-md-4">
+                    <input readonly type="text" class="form-control" required name="id_parqueadero" id="id_parqueo" value="<?php echo $id_parqueadero; ?>">
+                </div>
+                <div class="col-md-4">
+                    <input readonly type="text" class="form-control" name="nombre_parqueo" id="nombre_parqueo" value="<?php echo $parqueaderoObj->get_nombre(); ?>">
+                </div>
+                
+            </div>   
             <div class="form-group">
                 <label for="username">NUMERO</label>
                 <input type="text" class="form-control" name="numeroModificado" required value="<?php echo $numero; ?>">
@@ -69,4 +80,5 @@
     </div>
   </div>
 </body>
+<?php include_once('../modals/modal_parqueos.php');?>
 </html>

@@ -15,10 +15,10 @@
     <body>
   
         <?php
-        $multaCollectorObj->createMulta($descipcion, $valor);
-        $mensaje = "LA MULTA SE CREO EXITOSAMENTE";
-        print "<script>alert('$mensaje')</script>";
-        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readMulta.php'>";
+            $multaCollectorObj->createMulta($descipcion, $valor);
+            $mensaje = "LA MULTA SE CREO EXITOSAMENTE";
+            print "<script>alert('$mensaje')</script>";
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readMulta.php'>";
         ?>
   
     </body>

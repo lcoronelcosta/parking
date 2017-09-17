@@ -21,26 +21,24 @@ $estacionamientoCollectorObj = new EstacionamientoCollector();
     <body>
         <?php
         $estado2 = substr ("$estado", 0,1);
-        /*//$roll = substr ("$rol", 0,1);
+        //$roll = substr ("$rol", 0,1);
         if(trim($estacionamientoActual) == trim($estacionamientoModificado)){
             $estacionamientoCollectorObj->updateEstacionamiento($id_estacionamiento, $id_parqueadero, $estacionamientoModificado, $estado);
             $mensaje = "EL ESTACIONAMIENTO SE MODIFICO EXITOSAMENTE";
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readEstacionamiento.php'>";
         }
-        else{
-            if($estacionamientoCollectorObj->buscarEstacionamiento($id_parqueadero, $estacionamientoModificado)){
+        elseif($estacionamientoCollectorObj->buscarEstacionamiento($id_parqueadero, $estacionamientoModificado)){
             $mensaje = "ERROR EL ESTACIONAMIENTO YA SE ENCUENTRA REGISTRADO";
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_EditEstacionamiento.php?id_estacionamiento=$id_estacionamiento & id_parqueadero=$id_parqueadero & numero=$estacionamientoModificado & estado=$estado'>";
-            }
-            else{*/
-                 $estacionamientoCollectorObj->updateEstacionamiento($id_estacionamiento, $id_parqueadero, $estacionamientoModificado, $estado2);
+        }
+        else{
+            $estacionamientoCollectorObj->updateEstacionamiento($id_estacionamiento, $id_parqueadero, $estacionamientoModificado, $estado2);
             $mensaje = "EL ESTACIONAMIENTO SE MODIFICO EXITOSAMENTE";
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readEstacionamiento.php'>";
-           /* }
-        }*/
-        ?>
+        }
+  ?>
     </body>
 </html>

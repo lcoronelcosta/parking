@@ -7,8 +7,8 @@
     $id_vehiculo = $_GET['id_vehiculo'];
     $descripcion = $_GET['descripcion'];
     $placa = $_GET['placa'];
-    $tipo = $_GET['tipo'];
     $id_cliente = $_GET['id_cliente'];
+    $tipo = $_GET['tipo'];
 
     $clienteCollectorObj = new ClienteCollector();
     $clienteObj = $clienteCollectorObj->showCliente($id_cliente);
@@ -55,22 +55,22 @@
             </div>    
             <div class="form-group">
                 <label>Descripcion</label>
-                <input type="text" class="form-control" name="vehiculoModificado" required value="<?php echo $descripcion; ?>">
+                <input type="text" class="form-control" name="vehiculoModificado" required value="<?php echo $descripcion;?>">
             </div>
             <div class="form-group">
                 <label for="username">Placa</label>
-                <input type="text" class="form-control" name="placa" required value="<?php echo $placa; ?>">
+                <input type="text" class="form-control" name="placa" required value="<?php echo $placa;?>">
             </div>
             <div class="form-group">
-              <label for="level">Rol de usuario</label>
+              <label for="level">Tipo Vehiculo</label>
                 <select class="form-control" name="tipo">
                   <?php
-                    if ($tipo == 'M') {
+                    if ('$tipo' == 'M') {
                         echo "<option>Moto</option>";
                         echo "<option>Auto</option>";
                         echo "<option>Camioneta</option>";
                     }
-                    elseif ($tipo == 'C') {
+                    elseif ('$tipo' == 'C') {
                         echo "<option>Camioneta</option>";
                         echo "<option>Moto</option>";
                         echo "<option>Auto</option>";
