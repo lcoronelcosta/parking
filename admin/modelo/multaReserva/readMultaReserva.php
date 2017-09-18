@@ -33,6 +33,7 @@
                 <th>ID-MULTA</th>
                 <th>ID-RESERVA</th>
                 <th>VALOR</th>
+                <th>OPERACIONES</th>
             </tr>
         </thead>
         <?php

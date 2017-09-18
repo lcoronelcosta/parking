@@ -20,7 +20,7 @@
       <div class="panel-heading clearfix">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Detalle Factura</span>
+          <span>DETALLE FACTURA</span>
        </strong>
          <a href="../../admin.php" class="btn btn-danger pull-right">ATRAS</a> 
          <a href="form_AddDetalleFactura.php" class="btn btn-info">AGREGAR DETALLE FACTURA</a>
@@ -33,6 +33,7 @@
                 <th>ID-FACTURA</th>
                 <th>TIEMPO</th>
                 <th>TOTAL</th>
+                <th>OPERACIONES</th>
             </tr>
         </thead>
         <?php
