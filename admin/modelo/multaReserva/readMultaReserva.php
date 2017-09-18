@@ -20,7 +20,7 @@
       <div class="panel-heading clearfix">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Multa por Reserva</span>
+          <span>MULTA POR RESERVA</span>
        </strong>
          <a href="../../admin.php" class="btn btn-danger pull-right">ATRAS</a> 
          <a href="form_AddMultaReserva.php" class="btn btn-info">AGREGAR MULTA POR RESERVA</a>
