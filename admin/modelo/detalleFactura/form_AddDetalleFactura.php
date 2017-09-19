@@ -27,7 +27,7 @@
           <form method="post" action="saveDetalleFactura.php">
             <div class="form-group">
                 <label for="username">Tiempo</label>
-                <input type="text" class="form-control" name="tiempo" placeholder="tiempo" required autofocus>
+                <input type="time" class="form-control" name="tiempo" placeholder="tiempo" required autofocus>
             </div>
             <div class="form-group">
                 <label for="username">Total</label>
@@ -38,7 +38,7 @@
                 <label for="password">FACTURA <a class="btn btn-info" data-toggle="modal" data-target="#myModalFactura"><i class="glyphicon glyphicon-search"></i></a></label>
                 
                 <div class="col-md-3">
-                    <input readonly type="text" class="form-control" required name="id_f" id="id_f" placeholder="ID">
+                    <input readonly type="text" class="form-control" required name="id_factura" id="id_f" placeholder="ID">
                 </div>
                 <div class="col-md-3">
                     <input readonly type="text" class="form-control" name="id_r" id="id_r" placeholder="ID RESERVA">
