@@ -78,7 +78,7 @@
                     else{
                         echo "<option>Auto</option>";
                         echo "<option>Moto</option>";
-                        echo "<option>Auto</option>";
+                        echo "<option>Camioneta</option>";
                     }
                   ?>
                 </select>
