@@ -2,6 +2,7 @@
 
     include_once('Factura.php');
     include_once('FacturaCollector.php');
+    include_once('../detalleFactura/DetalleFacturaCollector.php');
     include_once('../Collector.php');
     include_once('../reservas/ReservaCollector.php');
     $reservaCollectorObj = new ReservaCollector();
@@ -25,7 +26,6 @@
                 $rows = self::$db->getRows("SELECT * FROM factura WHERE id_factura='$id_factura'");
                     $aux = new Factura($rows[0]{'id_factura'},$rows[0]{'id_reserva'},$rows[0]{'estado'},$rows[0]{'fecha'});
                     $aux->set_id_pago($rows[0]{'id_pago'});
-                    $aux->set_descuento($rows[0]{'descuento'});
                     $aux->set_total_multa($rows[0]{'total_multa'});
                     $aux->set_total_pagar($rows[0]{'total_pagar'});
                 return $aux;        
@@ -53,6 +53,7 @@
 
 
         function calcularTotal($id_reserva, $total_multa){
+            $detalleCollectorObj = new DetalleFacturaCollector();
             $row = self::$db->getRows("SELECT * FROM factura ORDER BY id_factura DESC limit 1",null);
             $factura = array_pop($row);
             $ID = $factura{'id_factura'};
@@ -64,9 +65,12 @@
             $diferencia_horas=intval($segundos/3600);
 
             $total = $diferencia_horas * 2;
-            $total_pagar = $total_multa + $total;
 
-            $this->updateFacturaTotal($ID, $total_pagar);
+            $detalleCollectorObj->createDetalleFactura("Valor por uso  $diferencia_horas Horas",$total, $ID);
+            $row = self::$db->getRows("SELECT sum(total) as total_pagar FROM detalle_factura WHERE id_factura='$ID'");
+
+
+            $this->updateFacturaTotal($ID, $row[0]{'total_pagar'});
         }
     }
 ?>

@@ -2,7 +2,7 @@
     session_start();
     include_once("DetalleFacturaCollector.php");
     $detalleFacturaCollectorObj = new DetalleFacturaCollector();
-    $id_detalle_facura = $_GET['id_detalle_facura'];
+    $id_detalle_factura = $_GET['id_detalle_factura'];
     $tiempo = $_GET['tiempo'];
     $total = $_GET['total'];
     $id_factura = $_GET['id_factura'];
@@ -30,7 +30,7 @@
           <form method="post" action="updateDetalleFactura.php?tiempo=<?php $tiempo?>">
             <div class="form-group">
                 <label for="username">ID</label>
-                <input type="text" class="form-control" name="id_detalle_facura" required value="<?php echo "$id_detalle_facura"; ?>">
+                <input type="text" class="form-control" name="id_detalle_facura" required value="<?php echo "$id_detalle_factura"; ?>">
             </div>  
             <div class="form-group">
                 <label for="username">TIEMPO</label>
