@@ -25,7 +25,6 @@
         }
         
         function createCliente($nombre, $apellido, $usuario, $clave, $rol) {
-            $rol = 'C';
             $UsuarioCollectorObj = new UsuarioCollector();
             $UsuarioCollectorObj->createUsuario($usuario, $clave, $rol);
             $row = self::$db->getRows("SELECT * FROM usuario ORDER BY id_usuario DESC limit 1",null);

@@ -6,13 +6,15 @@
         private $descripcion;
         private $placa;
         private $tipo;
+        private $id_cliente;
 
 
-         function __construct($id_vehiculo, $descripcion, $placa, $tipo) {
+         function __construct($id_vehiculo, $descripcion, $placa, $tipo,$id_cliente) {
            $this->id_vehiculo = $id_vehiculo;
            $this->descripcion = $descripcion;
            $this->placa = $placa;
            $this->tipo = $tipo;
+           $this->id_cliente = $id_cliente;
          }
 
          function set_id_vehiculo($id_vehiculo){
@@ -41,6 +43,13 @@
          } 
          function get_tipo(){
            return $this->tipo;
+         }
+
+         function set_id_cliente($id_cliente){
+           $this->id_cliente = $id_cliente;
+         } 
+         function get_id_cliente(){
+           return $this->id_cliente;
          }
     }
 ?>

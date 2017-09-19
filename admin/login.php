@@ -40,7 +40,7 @@
 			  <div class="fixed-header">
 			      <!--logo-->
 			       <div class="logo">
-                      <a href="../index.html"><h1>P<span>arking Smart</span></h1></a>
+                      <a href="../index.php"><h1>P<span>arking Smart</span></h1></a>
 					  <p>seguro confiable</p>
 				   </div>
 					<!--//logo-->
@@ -48,13 +48,13 @@
 							<span class="menu"> </span>
 							<nav class="link-effect-4" id="link-effect-4">
                               <ul>
-								 <li class="active"><a data-hover="Home" href="../index.html">Home</a></li>
-								<li><a data-hover="Acerca" href="about.html">Acerca</a></li>
-								<li><a data-hover="Servicios" href="services.html">Servicios</a></li>
-								<li><a data-hover="Nosotros" href="team.html">Nosotros</a></li>
-							    <li><a data-hover="Reservacion" href="reservation.html">Reservacion</a></li>
-							    <li><a data-hover="Galeria" href="galeria.html">Galeria</a></li>
-								<li><a data-hover="Contacto" href="contact.html">Contacto</a></li>
+								 <li class="active"><a data-hover="Home" href="../index.php">Home</a></li>
+								<li><a data-hover="Acerca" href="about.php">Acerca</a></li>
+								<li><a data-hover="Servicios" href="services.php">Servicios</a></li>
+								<li><a data-hover="Nosotros" href="team.php">Nosotros</a></li>
+							    <li><a data-hover="Reservacion" href="reservation.php">Reservacion</a></li>
+							    <li><a data-hover="Galeria" href="galeria.php">Galeria</a></li>
+								<li><a data-hover="Contacto" href="contact.php">Contacto</a></li>
                                 <li><a data-hover="Login" href="../admin/login.php">Login</a></li>  
 
 								</ul>
@@ -112,7 +112,7 @@
 						<div class="container">
 							<!--logo2-->
 								   <div class="logo2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-									  <a href="../index.html"><h2>P<span>arking Smart</span></h2></a>
+									  <a href="../index.php"><h2>P<span>arking Smart</span></h2></a>
 									  <p>seguro confiable</p>
 								   </div>
 					<!--//logo2-->
@@ -122,7 +122,7 @@
 										<li><a href="https://plus.google.com/collections/featured?hl=es" class="in" target="_blank"> </a></li>
 										 
 									</ul>
-									<p class="copy-right wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".3s"> 2017 Parking Smart. All rights reserved | Design by <a href="../index.html">Parking Smart</a></p>
+									<p class="copy-right wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".3s"> 2017 Parking Smart. All rights reserved | Design by <a href="../index.php">Parking Smart</a></p>
 
 					 </div>
 	     </div>

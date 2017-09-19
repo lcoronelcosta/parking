@@ -6,7 +6,7 @@ $parqueaderoModificado = $_POST['parqueaderoModificado'];
 $direccion = $_POST['direccion'];
 $latitud = $_POST['latitud'];
 $longitud = $_POST['longitud'];
-$parqueaderoActual = $_GET['nombre'];
+$id_propietario = $_POST['id_pr'];
 $parqueaderoCollectorObj = new ParqueaderoCollector();
 ?>
 
@@ -14,20 +14,17 @@ $parqueaderoCollectorObj = new ParqueaderoCollector();
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Login</title>
-        <link href="../estilo.css" rel="stylesheet">
-    	
-    
+        <title>Update Parqueadero</title>
     </head>
     <body>
         <?php
         //$roll = substr ("$rol", 0,1);
-        if(trim($parqueaderoActual) == trim($parqueaderoModificado)){
-            $parqueaderoCollectorObj->updateParqueadero($id_parqueadero, $parqueaderoModificado, $direccion, $latitud, $longitud);
+        //if(trim($parqueaderoActual) == trim($parqueaderoModificado)){
+            $parqueaderoCollectorObj->updateParqueadero($id_parqueadero, $id_propietario, $parqueaderoModificado, $direccion, $latitud, $longitud);
             $mensaje = "EL PARQUEADERO SE MODIFICO EXITOSAMENTE";
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readParqueadero.php'>";
-        }
+        /*}
         else{
             if($parqueaderoCollectorObj->buscarParqueadero($parqueaderoModificado)){
             $mensaje = "ERROR EL PARQUEADERO YA SE ENCUENTRA REGISTRADO";
@@ -40,7 +37,7 @@ $parqueaderoCollectorObj = new ParqueaderoCollector();
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readParqueadero.php'>";
             }
-        }
+        }*/
         ?>
     </body>
 </html>

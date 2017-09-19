@@ -10,17 +10,17 @@
 	<title>Clientes</title>
     <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link href='https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    
-  <?php include_once('../../header.php'); ?> 
+  <?php require('../header.php');?>  
   <div class="row">    
   <div class="col-md-12">
     <div class="panel panel-default">
       <div class="panel-heading clearfix">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>CLIENTES</span>
+          <span>CLIENTE</span>
        </strong>
          <a href="../../admin.php" class="btn btn-danger pull-right">ATRAS</a> 
          <a href="form_AddCliente.php" class="btn btn-info">AGREGAR CLIENTE</a>
@@ -43,8 +43,8 @@
             echo "<td>" . $c->get_id_usuario() . "</td>";   
             echo "<td>" . $c->get_nombre() . "</td>"; 
             echo "<td>" . $c->get_apellido() . "</td>";    
-            echo "<td><a href='form_EditCliente.php?id_cliente=". $c->get_id_cliente() ." & id_usuario=". $c->get_id_usuario() ." & nombre=". $c->get_nombre() ." & apellido=". $c->get_apellido() . "' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
-                </a> <a href='deleteCliente.php?ID=". $c->get_id_cliente() ." & ID_USER=". $c->get_id_usuario() ."' class='btn btn-xs btn-danger' data-toggle='tooltip' title='Eliminar'><i class='glyphicon glyphicon-remove'></i>
+            echo "<td><a href='form_EditCliente.php?id_cliente=". $c->get_id_cliente() ."' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
+                </a> <a href='deleteCliente.php?ID=". $c->get_id_cliente() ." &  ID_user=". $c->get_id_usuario() ."' class='btn btn-xs btn-danger' data-toggle='tooltip' title='Eliminar'><i class='glyphicon glyphicon-remove'></i>
                 </a></td>"; 
             echo "</tr>"; 
             }
@@ -56,7 +56,3 @@
 </div>
 </body>
 </html>
-<?php 
-
-    include_once("../../modal_exito.php");
-?>

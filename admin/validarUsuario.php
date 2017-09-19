@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('validar.php');
+include_once('validar.php');
 ?>
 <!DOCTYPE html>
 

@@ -5,6 +5,7 @@
 	$descripcion = $_POST['descripcion'];
 	$placa = $_POST['placa'];
     $tipo = $_POST['tipo'];
+    $id_cliente = $_POST['id_c'];
     $vehiculoCollectorObj = new VehiculoCollector();
 ?>
 
@@ -16,18 +17,11 @@
     <body>
   
         <?php
-        //$roll = substr ("$rol", 0,1);
-        if($vehiculoCollectorObj->buscarVehiculo($placa)){
-            $mensaje = "ERROR EL VEHICULO YA SE ENCUENTRA REGISTRADO";
-            print "<script>alert('$mensaje')</script>";
-            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=form_AddVehiculo.php'>";
-        }
-        else{
-        $vehiculoCollectorObj->createVehiculo($descripcion, $placa, $tipo);
+        $tipo2 = substr ("$tipo", 0,1);
+        $vehiculoCollectorObj->createVehiculo($descripcion, $placa, $tipo2, $id_cliente);
         $mensaje = "EL VEHICULO SE CREO EXITOSAMENTE";
         print "<script>alert('$mensaje')</script>";
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readVehiculo.php'>";
-        }
         ?>
   
     </body>

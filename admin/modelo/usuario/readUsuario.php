@@ -10,17 +10,17 @@
 	<title>Usuario</title>
     <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link href='https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css' rel='stylesheet' type='text/css'>
-    <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
 </head>
-<body>
-  <?php include_once('../../header.php'); ?>    
+<body> 
+  <?php require('../header.php');?>  
   <div class="row">    
   <div class="col-md-12">  
     <div class="panel panel-default">    
       <div class="panel-heading clearfix">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>USUARIOS</span>
+          <span>USUARIO</span>
        </strong>
          <a href="../../admin.php" class="btn btn-danger pull-right">ATRAS</a> 
          <a href="form_AddUsuario.php" class="btn btn-info">AGREGAR USUARIO</a>

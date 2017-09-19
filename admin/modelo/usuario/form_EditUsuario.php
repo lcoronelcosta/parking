@@ -12,12 +12,11 @@
 <head>
 	<meta charset="utf-8">
 	<title>Editar Usuario</title>
-    <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
     <link href='https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css' rel='stylesheet' type='text/css'>
-    <link href='../../modal.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-   <?php include_once('../../header.php'); ?> 
+   <?php require('../header.php');?>
    <div class="row ">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -31,15 +30,15 @@
           <form method="post" action="updateUsuario.php?usuario=<?php $usuario?>">
             <div class="form-group">
                 <label for="username">ID</label>
-                <input type="text" class="form-control" name="id_usuario" required value=<?php echo "$id_usuario"; ?>>
+                <input type="text" readonly class="form-control" name="id_usuario" required value=<?php echo "$id_usuario"; ?>>
             </div>  
             <div class="form-group">
                 <label for="username">Usuario</label>
-                <input type="text" class="form-control" name="usuarioModificado" required value=<?php echo "$usuario"; ?>>
+                <input type="text" class="form-control" name="usuarioModificado" required value="<?php echo $usuario; ?>">
             </div>
             <div class="form-group">
                 <label for="password">Contraseña</label>
-                <input type="password" class="form-control" name ="clave" required  value=<?php echo "$clave"; ?>>
+                <input type="password" class="form-control" name ="clave" required  value="<?php echo $clave; ?>">
             </div>
             <div class="form-group">
               <label for="level">Rol de usuario</label>
@@ -70,7 +69,3 @@
   </div>
 </body>
 </html>
-<?php 
-
-    include_once("../../modal_exito.php");
-?>

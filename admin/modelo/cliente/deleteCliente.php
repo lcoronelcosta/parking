@@ -2,7 +2,7 @@
     session_start();
     include_once("ClienteCollector.php");
     $id_cliente = $_GET['ID'];
-    $id_usuario = $_GET['ID_USER'];
+    $id_user = $_GET['ID_user'];
     $clienteCollectorObj = new ClienteCollector();
 ?>
 
@@ -15,7 +15,7 @@
     </head>
     <body>
         <?php
-        $clienteCollectorObj->deleteCliente($id_cliente, $id_usuario);
+        $clienteCollectorObj->deleteCliente($id_cliente, $id_user);
         $mensaje = "EL CLIENTE SE ELIMINO EXITOSAMENTE";
         print "<script>alert('$mensaje')</script>";
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readCliente.php'>";

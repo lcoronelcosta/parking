@@ -2,7 +2,6 @@
     session_start();
     include_once("PropietarioCollector.php");
     $id_propietario = $_GET['ID'];
-    $id_parqueo = $_GET['ID_USER'];
     $propietarioCollectorObj = new PropietarioCollector();
 ?>
 
@@ -15,7 +14,7 @@
     </head>
     <body>
         <?php
-        $propietarioCollectorObj->deletePropietario($id_propietario, $id_parqueo);
+        $propietarioCollectorObj->deletePropietario($id_propietario);
         $mensaje = "EL PROPIETARIO SE ELIMINO EXITOSAMENTE";
         print "<script>alert('$mensaje')</script>";
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readPropietario.php'>";

@@ -33,7 +33,7 @@
 
 </head>
 <body>
-    
+    <?php require('header.php');?>
     <!--start-home-->
 		<div class="banner two" id="home">
 		<div class="header-bottom">
@@ -41,7 +41,7 @@
 			  <div class="fixed-header">
 			      <!--logo-->
 			       <div class="logo">
-                      <a href="../index.html"><h1>P<span>arking Smart</span></h1></a>
+                      <a href="../index.php"><h1>P<span>arking Smart</span></h1></a>
 					  <p>seguro confiable</p>  
 				   </div>
 					<!--//logo-->
@@ -49,13 +49,13 @@
 							<span class="menu"> </span>
 							<nav class="link-effect-4" id="link-effect-4">
                               <ul>
-								 <li class="active"><a data-hover="Home" href="../index.html">Home</a></li>
-								<li><a data-hover="Acerca" href="about.html">Acerca</a></li>
-								<li><a data-hover="Servicios" href="services.html">Servicios</a></li>
-								<li><a data-hover="Nosotros" href="team.html">Nosotros</a></li>
-							    <li><a data-hover="Reservacion" href="reservation.html">Reservacion</a></li>
-							    <li><a data-hover="Galeria" href="galeria.html">Galeria</a></li>
-								<li><a data-hover="Contacto" href="contact.html">Contacto</a></li>
+								 <li class="active"><a data-hover="Home" href="../index.php">Home</a></li>
+								<li><a data-hover="Acerca" href="about.php">Acerca</a></li>
+								<li><a data-hover="Servicios" href="services.php">Servicios</a></li>
+								<li><a data-hover="Nosotros" href="team.php">Nosotros</a></li>
+							    <li><a data-hover="Reservacion" href="reservation.php">Reservacion</a></li>
+							    <li><a data-hover="Galeria" href="galeria.php">Galeria</a></li>
+								<li><a data-hover="Contacto" href="contact.php">Contacto</a></li>
                                 <li><a href="../index.php">Salir</a></li>
 								</ul>
 							</nav>
@@ -89,17 +89,17 @@
                         </div>
                         <div class='inst-grids'>
                             <h3 class='tittle'>Mite</h3>
-                            <a href='#'><input type='button' value='MULTA'></a>
-                            <a href='#'><input type='button' value='MULTA x RESERVAS'></a>
-                            <a href='#'><input type='button' value='ESTACIONAMIENTO'></a>
-                            <a href='#'><input type='button' value='DETALLE FACTURA'></a>
+                            <a href='modelo/multa/readMulta.php'><input type='button' value='MULTA'></a>
+                            <a href='modelo/multaReserva/readMultaReserva.php'><input type='button' value='MULTA x RESERVAS'></a>
+                            <a href='modelo/estacionamiento/readEstacionamiento.php'><input type='button' value='ESTACIONAMIENTO'></a>
+                            <a href='modelo/detalleFactura/readDetalleFactura.php'><input type='button' value='DETALLE FACTURA'></a>
                         </div>
                         <div>
                             <h3 class='tittle'>Coronel</h3>
                             <a href='modelo/usuario/readUsuario.php'><input type='button' value='USUARIOS'></a>
                             <a href='modelo/cliente/readCliente.php'><input type='button' value='CLIENTE'></a>
                              <a href='modelo/reservas/readReserva.php'><input type='button' value='RESERVAS'></a>
-                            <a href='#'><input type='button' value='FACTURAS'></a>
+                            <a href='modelo/factura/readFactura.php'><input type='button' value='FACTURAS'></a>
                         </div>
                 </div>
             </div> ";
@@ -116,7 +116,7 @@
 						<div class="container">
 							<!--logo2-->
 								   <div class="logo2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-									  <a href="../index.html"><h2>P<span>arking Smart</span></h2></a>
+									  <a href="../index.php"><h2>P<span>arking Smart</span></h2></a>
 									  <p>seguro confiable</p>
 								   </div>
 					<!--//logo2-->
@@ -126,7 +126,7 @@
 										<li><a href="https://plus.google.com/collections/featured?hl=es" class="in" target="_blank"> </a></li>
 										
 									</ul>
-									<p class="copy-right wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".3s"> 2017 Parking Smart. All rights reserved | Design by <a href="../index.html">Parking Smart</a></p>
+									<p class="copy-right wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".3s"> 2017 Parking Smart. All rights reserved | Design by <a href="../index.php">Parking Smart</a></p>
 
 					 </div>
 	     </div>

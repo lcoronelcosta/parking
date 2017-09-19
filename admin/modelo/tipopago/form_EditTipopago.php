@@ -11,12 +11,11 @@
 <head>
 	<meta charset="utf-8">
 	<title>Editar Tipo Pago</title>
-    <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
     <link href='https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css' rel='stylesheet' type='text/css'>
-    <link href='../../modal.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-   <?php include_once('../../header.php'); ?> 
+   <?php require('../header.php');?>
    <div class="row ">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -34,11 +33,31 @@
             </div>  
             <div class="form-group">
                 <label for="username">Descripcion</label>
+<<<<<<< HEAD:admin/modelo/tipopago/form_EditTipopago.php
                 <input type="text" class="form-control" name="descripcion" required value=<?php echo "$descripcion"; ?>>
             </div>
             <div class="form-group">
                 <label for="username">Estado</label>
                 <input type="text" class="form-control" name="estado" required value=<?php echo "$estado"; ?>>
+=======
+                <input type="text" class="form-control" name="tipopagoModificado" required value="<?php echo $descripcion; ?>">
+            </div>
+             <div class="form-group">
+              <label for="level">Rol de usuario</label>
+                <select class="form-control" name="estado">
+                  <?php 
+                    if ($estado == 'A'){
+                        echo "<option >Activo</option>";
+                        echo "<option>Inactivo</option>";
+                    }
+                    else{
+                        echo "<option>Inactivo</option>";
+                        echo "<option >Activo</option>";
+                    }
+                    
+                  ?>    
+                </select>
+>>>>>>> master:admin/modelo/tipopago/form_EditTipopago.php
             </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>
@@ -53,7 +72,3 @@
   </div>
 </body>
 </html>
-<?php 
-
-    include_once("../../modal_exito.php");
-?>

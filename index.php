@@ -49,13 +49,13 @@
 							<span class="menu"> </span>
 							<nav class="link-effect-4" id="link-effect-4">
                               <ul>
-								 <li class="active"><a data-hover="Home" href="index.html">Home</a></li>
-								<li><a data-hover="Acerca" href="pages/about.html">Acerca</a></li>
-								<li><a data-hover="Servicios" href="pages/services.html">Servicios</a></li>
-								<li><a data-hover="Nosotros" href="pages/team.html">Nosotros</a></li>
-							    <li><a data-hover="Reservacion" href="pages/reservation.html">Reservacion</a></li>
-							    <li><a data-hover="Galeria" href="pages/galeria.html">Galeria</a></li>
-								<li><a data-hover="Contacto" href="pages/contact.html">Contacto</a></li>
+								 <li class="active"><a data-hover="Home" href="index.php">Home</a></li>
+								<li><a data-hover="Acerca" href="admin/about.php">Acerca</a></li>
+								<li><a data-hover="Servicios" href="admin/services.php">Servicios</a></li>
+								<li><a data-hover="Nosotros" href="admin/team.php">Nosotros</a></li>
+							    <li><a data-hover="Reservacion" href="admin/reservation.php">Reservacion</a></li>
+							    <li><a data-hover="Galeria" href="admin/galeria.php">Galeria</a></li>
+								<li><a data-hover="Contacto" href="admin/contact.php">Contacto</a></li>
                                 <li><a data-hover="Login" href="admin/login.php">Login</a></li>
 
 								</ul>
@@ -144,7 +144,7 @@
 						  <div class="arrows-two wow slideInDown"  data-wow-duration="1s" data-wow-delay=".5s"><img src="images/border.png" alt="border"/></div>
 						  <p class="wow slideInUp"  data-wow-duration="1s" data-wow-delay=".3s">Encuentra tu plaza de estacionamiento en parqueaderos públicos y privados. ¡Olvídate de dar vueltas para estacionar! </p>
 						  <div class="start wow flipInX"  data-wow-duration="1s" data-wow-delay=".3s">
-						     <a href="pages/reservation.html" class="hvr-bounce-to-bottom">Empezar</a>
+						     <a href="admin/reservation.php" class="hvr-bounce-to-bottom">Empezar</a>
 						  </div>
 
 					</div>
@@ -158,7 +158,7 @@
 						 <div class="arrows-two wow slideInDown"  data-wow-duration="1s" data-wow-delay=".5s"><img src="images/border.png" alt="border"/></div>
 						  <p class="wow slideInUp"  data-wow-duration="1s" data-wow-delay=".3s">Para entrar al parqueadero sólo te hace falta tu móvil con la app Parking-Smart instalada y dependiendo de las instalaciones, tendrás que usar una de las diferentes formas de acceso</p>
 						 <div class="start wow flipInX"  data-wow-duration="1s" data-wow-delay=".3s">
-						     <a href="pages/single.html" class="hvr-bounce-to-bottom">Leer mas</a>
+						     <a href="admin/single.php" class="hvr-bounce-to-bottom">Leer mas</a>
 						  </div>
 
 					</div>
@@ -605,7 +605,7 @@
 						<div class="container">
 							<!--logo2-->
 								   <div class="logo2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-									  <a href="index.html"><h2>P<span>arking Smart</span></h2></a>
+									  <a href="index.php"><h2>P<span>arking Smart</span></h2></a>
 									  <p>seguro confiable</p>
 								   </div>
 					<!--//logo2-->
@@ -616,7 +616,7 @@
 										 
 									</ul>
 									
-									<p class="copy-right wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".3s"> 2017 Parking Smart. All rights reserved | Design by <a href="index.html">Parking Smart</a></p>
+									<p class="copy-right wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".3s"> 2017 Parking Smart. All rights reserved | Design by <a href="index.php">Parking Smart</a></p>
 
 					 </div>
 	     </div>

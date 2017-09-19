@@ -1,22 +1,23 @@
 <?php
     session_start();
+    include_once("PropietarioCollector.php");
+    $propietarioCollectorObj = new PropietarioCollector();
 ?>
-
 <html>
 <head>
 	<meta charset="utf-8">
 	<title>Propietario</title>
-    <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
     <link href='https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css' rel='stylesheet' type='text/css'>
-    <link href='../../modal.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
+   <?php require('../header.php');?>
    <div class="row ">
     <div class="panel panel-default">
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Agregar Propietario</span>
+          <span>AGREGAR PROPIETARIO</span>
        </strong>
       </div>
       <div class="panel-body">
@@ -39,9 +40,12 @@
                 <input type="text" class="form-control" name="numerocuenta" placeholder="Cuenta Propietario" required autofocus>
             </div> 
             <div class="form-group">
-                <label for="username">Estado</label>
-                <input type="text" class="form-control" name="estado" placeholder="Estado" required autofocus>
-            </div>  
+              <label for="level">Estado</label>
+                <select class="form-control" name="estado">
+                  <option>Activo</option>
+                  <option>Inactivo</option>
+                </select>
+            </div> 
             
             
             <div class="form-group clearfix">
@@ -57,7 +61,3 @@
   </div>
 </body>
 </html>
-<?php 
-
-    include_once("../../modal_exito.php");
-?>

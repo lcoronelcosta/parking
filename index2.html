@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Custom Map</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+  </head>
+  <body>
+    <div id="mapa" style="width: 700px; height: 500px">
+		--mapa
+	</div>
+	
+	<script type="text/javascript">
+		var divMap = document.getElementById('mapa');
+        navigator.geolocation.getCurrentPosition(fn_ok, fn_mal);
+        function fn_mal(){}
+        function fn_ok(res){
+            var lat = res.coord.latitude;
+            var lon = res.coord.longitude;
+            
+            var glatLong = new google.maps.LatLng (lat,lon);
+            var objConfig = {
+                zoom: 17,
+                center: glatLongs
+            }
+            
+            var gMapa = new google.maps._Map(divMapa[0], objConfig);
+            
+        }
+	</script>
+	
+  </body>
+</html>

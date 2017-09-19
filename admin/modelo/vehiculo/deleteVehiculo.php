@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Login</title>
+        <title>Delete Vehiculo</title>
     </head>
     <body>
         <?php

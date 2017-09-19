@@ -12,13 +12,14 @@ $tipopagoCollectorObj = new TipopagoCollector();
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Login</title>
+        <title>Update TipoPago</title>
         <link href="../estilo.css" rel="stylesheet">
     	
     
     </head>
     <body>
         <?php
+<<<<<<< HEAD
         //$roll = substr ("$rol", 0,1);
         if(trim($tipopagoActual) == trim($tipopagoModificado)){
             $tipopagoCollectorObj->updateTipopago($id_pago, $tipopagoModificado, $estado);
@@ -39,6 +40,13 @@ $tipopagoCollectorObj = new TipopagoCollector();
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readTipopago.php'>";
             }
         }
+=======
+            $estadoAux = substr ("$estado", 0,1);
+            $tipopagoCollectorObj->updateTipopago($id_pago, $tipopagoModificado, $estadoAux);
+            $mensaje = "EL TIPO DE PAGO SE MODIFICO EXITOSAMENTE";
+            print "<script>alert('$mensaje')</script>";
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readTipopago.php'>";
+>>>>>>> master
         ?>
     </body>
 </html>

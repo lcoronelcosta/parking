@@ -6,27 +6,25 @@
         private $id_cliente;
         private $id_vehiculo;
         private $id_parqueo;
+        private $id_estacionamiento;
         private $fecha_inicio;
         private $fecha_fin;
         private $origen_latitud;
         private $origen_longitud;
-        private $destino_latitud;
-        private $destino_longitud;
-        private $estado;
+        private $facturada;
         
-        function __construct($id_reserva, $id_cliente, $id_vehiculo, $id_parqueo, $fecha_inicio, $fecha_fin, $origen_latitud, $origen_longitud, $destino_latitud, $destino_longitud, $estado) {
+        function __construct($id_reserva, $id_cliente, $id_vehiculo, $id_parqueo, $id_estacionamiento, $fecha_inicio, $fecha_fin, $origen_latitud, $origen_longitud,$facturada) {
            
            $this->id_reserva = $id_reserva;
            $this->id_cliente = $id_cliente;
            $this->id_vehiculo = $id_vehiculo;
-           $this->id_parqueo = $id_parqueo;  
+           $this->id_parqueo = $id_parqueo; 
+           $this->id_estacionamiento = $id_estacionamiento; 
            $this->fecha_inicio = $fecha_inicio;
            $this->fecha_fin = $fecha_fin;
            $this->origen_latitud = $origen_latitud;
-           $this->origen_longitud = $origen_longitud;  
-           $this->destino_latitud = $destino_latitud;
-           $this->destino_longitud = $destino_longitud;
-           $this->estado = $estado;         
+           $this->origen_longitud = $origen_longitud; 
+          $this->facturada = $facturada;      
             
          }
 
@@ -57,6 +55,13 @@
          function get_id_parqueo(){
            return $this->id_parqueo;
          }
+
+         function set_id_estacionamiento($id_estacionamiento){
+           $this->id_estacionamiento = $id_estacionamiento;
+         } 
+         function get_id_estacionamiento(){
+           return $this->id_estacionamiento;
+         }
          
          function set_fecha_inicio($fecha_inicio){
            $this->fecha_inicio = $fecha_inicio;
@@ -86,25 +91,11 @@
            return $this->origen_longitud;
          }
         
-         function set_destino_latitud($destino_latitud){
-           $this->destino_latitud = $destino_latitud;
+         function set_facturada($facturada){
+           $this->facturada = $facturada;
          } 
-         function get_destino_latitud(){
-           return $this->destino_latitud;
-         }
-        
-         function set_destino_longitud($destino_longitud){
-           $this->destino_longitud = $destino_longitud;
-         } 
-         function get_destino_longitud(){
-           return $this->destino_longitud;
-         }
-        
-         function set_estado($estado){
-           $this->estado = $estado;
-         } 
-         function get_estado(){
-           return $this->estado;
+         function get_facturada(){
+           return $this->facturada;
          }
     }
 ?>

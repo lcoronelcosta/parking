@@ -9,14 +9,13 @@
 
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Editar Cliente</title>
+  <meta charset="utf-8">
+  <title>Editar Cliente</title>
     <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
     <link href='https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css' rel='stylesheet' type='text/css'>
-    <link href='../../modal.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-   <?php include_once('../../header.php'); ?> 
+   <?php require('../header.php');?>
    <div class="row ">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -30,19 +29,19 @@
           <form method="post" action="updateCliente.php?usuario=<?php $usuario?>">
             <div class="form-group">
                 <label for="username">ID</label>
-                <input type="text" class="form-control" name="id_cliente" readonly='readonly' required value=<?php echo $cliente->get_id_cliente(); ?>>
+                <input type="text" class="form-control" name="id_cliente" readonly='readonly' required value="<?php echo $cliente->get_id_cliente(); ?>">
             </div>  
             <div class="form-group">
                 <label for="username">Usuario</label>
-                <input type="text" class="form-control" name="id_usuario" readonly='readonly' required value=<?php echo $cliente->get_id_usuario(); ?>>
+                <input type="text" class="form-control" name="id_usuario" readonly='readonly' required value="<?php echo $cliente->get_id_usuario(); ?>">
             </div>
             <div class="form-group">
                 <label for="username">Nombre</label>
-                <input type="text" class="form-control" name ="nombre" required  value=<?php echo $cliente->get_nombre(); ?>>
+                <input type="text" class="form-control" name ="nombre" required  value="<?php echo $cliente->get_nombre(); ?>">
             </div>
             <div class="form-group">
                 <label for="username">Apellido</label>
-                <input type="text" class="form-control" name ="apellido" required  value=<?php echo $cliente->get_apellido(); ?>>
+                <input type="text" class="form-control" name ="apellido" required  value="<?php echo $cliente->get_apellido(); ?>">
             </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>
@@ -57,7 +56,3 @@
   </div>
 </body>
 </html>
-<?php 
-
-    include_once("../../modal_exito.php");
-?>
