@@ -4,6 +4,12 @@
     include_once("UsuarioCollector.php");
     $id_usuario = $_GET['ID'];
     $usuarioCollectorObj = new UsuarioCollector();
+    if (isset($_SESSION['mySesion'])){
+        echo "<p> Bienvenido:(".$_SESSION['mySesion'].")";
+    }
+  else{
+    echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=login.php'>";
+  }
 ?>
 
 
@@ -14,6 +20,7 @@
         <title>Delete Usuario</title>
     </head>
     <body>
+
     <?php require('../header.php');?>
         <?php
         $usuarioCollectorObj->deleteUsuario($id_usuario);
