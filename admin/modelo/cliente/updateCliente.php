@@ -14,6 +14,7 @@ $clienteCollectorObj = new ClienteCollector();
         <title>Update Cliente</title>
     </head>
     <body>
+    <?php require('../header.php');?>
         <?php
        
             $clienteCollectorObj->updateCliente($id_cliente,$nombre, $apellido);

@@ -15,6 +15,7 @@ $detalleFacturaCollectorObj = new DetalleFacturaCollector();
         <title>Update Detalle Factura</title>
     </head>
     <body>
+    <?php require('../header.php');?>
         <?php
        
             $detalleFacturaCollectorObj->updateDetalleFactura($id_detalle_facura,$tiempo,$total, $id_factura);

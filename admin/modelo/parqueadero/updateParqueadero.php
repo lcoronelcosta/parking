@@ -17,6 +17,7 @@ $parqueaderoCollectorObj = new ParqueaderoCollector();
         <title>Update Parqueadero</title>
     </head>
     <body>
+    <?php require('../header.php');?>
         <?php
         //$roll = substr ("$rol", 0,1);
         //if(trim($parqueaderoActual) == trim($parqueaderoModificado)){

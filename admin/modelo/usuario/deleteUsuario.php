@@ -13,6 +13,7 @@
         <title>Delete Usuario</title>
     </head>
     <body>
+    <?php require('../header.php');?>
         <?php
         $usuarioCollectorObj->deleteUsuario($id_usuario);
         $mensaje = "EL USUARIO SE ELIMINO EXITOSAMENTE";

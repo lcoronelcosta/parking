@@ -13,6 +13,7 @@
         <title>Delete Parqueadero</title>
     </head>
     <body>
+    <?php require('../header.php');?>
         <?php
         $parqueaderoCollectorObj->deleteParqueadero($id_parqueadero);
         $mensaje = "EL PARQUEADERO SE ELIMINO EXITOSAMENTE";

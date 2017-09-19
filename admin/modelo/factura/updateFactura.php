@@ -18,7 +18,7 @@
         <meta charset="utf-8">
     </head>
     <body>
-  
+  <?php require('../header.php');?>
         <?php
         $estadoAux = substr ("$estado", 0,1);
         $facturaCollectorObj->updateFactura($id_factura, $id_reserva, $id_pago, $total_multa, $total_pagar, $estadoAux);

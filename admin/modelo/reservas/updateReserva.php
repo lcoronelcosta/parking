@@ -21,6 +21,7 @@ $reservaCollectorObj = new ReservaCollector();
         <title>Update Reserva</title>
     </head>
     <body>
+    <?php require('../header.php');?>
         <?php
             $facAux = substr ("$facturada", 0,1);
             $reservaCollectorObj->updateReserva($id_reserva, $id_cliente, $id_vehiculo, $id_parqueo, $id_estacionamiento, $fecha_inicio, $fecha_fin, $origen_la, $origen_lo, $facAux);

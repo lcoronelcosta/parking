@@ -14,6 +14,7 @@
         <title>Delete Cliente</title>
     </head>
     <body>
+    <?php require('../header.php');?>
         <?php
         $clienteCollectorObj->deleteCliente($id_cliente, $id_user);
         $mensaje = "EL CLIENTE SE ELIMINO EXITOSAMENTE";

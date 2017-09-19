@@ -13,6 +13,7 @@
         <title>Delete Propietario</title>
     </head>
     <body>
+    <?php require('../header.php');?>
         <?php
         $propietarioCollectorObj->deletePropietario($id_propietario);
         $mensaje = "EL PROPIETARIO SE ELIMINO EXITOSAMENTE";

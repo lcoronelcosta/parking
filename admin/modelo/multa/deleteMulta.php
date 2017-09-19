@@ -13,6 +13,7 @@
         <title>Delete Multa</title>
     </head>
     <body>
+    <?php require('../header.php');?>
         <?php
         $multaCollectorObj->deleteMulta($id_multa);
         $mensaje = "LA MULTA SE ELIMINO EXITOSAMENTE";

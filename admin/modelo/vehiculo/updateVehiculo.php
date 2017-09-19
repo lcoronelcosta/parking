@@ -20,6 +20,7 @@ $vehiculoCollectorObj = new VehiculoCollector();
     
     </head>
     <body>
+    <?php require('../header.php');?>
         <?php
             $tipoAux = substr ("$tipo", 0,1);
             $vehiculoCollectorObj->updateVehiculo($id_vehiculo, $vehiculoModificado, $placa, $tipoAux, $id_cliente);

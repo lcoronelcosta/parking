@@ -13,6 +13,7 @@
         <title>Delete Estacionamiento</title>
     </head>
     <body>
+    <?php require('../header.php');?>
         <?php
         $estacionamientoCollectorObj->deleteEstacionamiento($id_estacionamiento);
         $mensaje = "ES ESTACIONAMIENTO SE ELIMINO EXITOSAMENTE";

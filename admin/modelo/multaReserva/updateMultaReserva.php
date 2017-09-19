@@ -15,6 +15,7 @@ $multaReservaCollectorObj = new MultaReservaCollector();
         <title>Update Multa por Reserva</title>
     </head>
     <body>
+    <?php require('../header.php');?>
         <?php
        
             $multaReservaCollectorObj->updateMultaReserva($id_multa_x_factura,$id_multa,$id_reserva, $valor);

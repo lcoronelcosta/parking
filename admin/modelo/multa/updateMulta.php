@@ -15,6 +15,7 @@ $multaCollectorObj = new MultaCollector();
         <title>Login</title>
     </head>
     <body>
+    <?php require('../header.php');?>
         <?php
             $multaCollectorObj->updateMulta($id_multa, $multaModificado, $valor);
             $mensaje = "LA MULTA SE MODIFICO EXITOSAMENTE";

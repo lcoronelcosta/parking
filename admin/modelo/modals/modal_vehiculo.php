@@ -1,4 +1,5 @@
-<?php 
+<?php
+    session_start();
     include_once("../vehiculo/VehiculoCollector.php");
     $vehiculoCollectorObj = new VehiculoCollector();
 ?>
@@ -10,6 +11,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
+    <?php require('../header.php');?>
         <div class="modal fade" id="myModalVehiculo" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog">
         <div class="modal-content">

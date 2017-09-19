@@ -13,6 +13,7 @@
         <title>Delete Vehiculo</title>
     </head>
     <body>
+    <?php require('../header.php');?>
         <?php
         $vehiculoCollectorObj->deleteVehiculo($id_vehiculo);
         $mensaje = "EL VEHICULO SE ELIMINO EXITOSAMENTE";

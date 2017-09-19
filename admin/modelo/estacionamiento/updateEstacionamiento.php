@@ -19,6 +19,7 @@ $estacionamientoCollectorObj = new EstacionamientoCollector();
     
     </head>
     <body>
+    <?php require('../header.php');?>
         <?php
         $estado2 = substr ("$estado", 0,1);
         //$roll = substr ("$rol", 0,1);

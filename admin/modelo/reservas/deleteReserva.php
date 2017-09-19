@@ -13,6 +13,7 @@
         <title>Delete Reserva</title>
     </head>
     <body>
+    <?php require('../header.php');?>
         <?php
         $reservaCollectorObj->deleteReserva($id_reserva);
         $mensaje = "LA RESERVA SE ELIMINO EXITOSAMENTE";

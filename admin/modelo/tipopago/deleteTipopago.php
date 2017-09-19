@@ -13,6 +13,7 @@
         <title>Delete TipoPago</title>
     </head>
     <body>
+    <?php require('../header.php');?>
         <?php
         $tipopagoCollectorObj->deleteTipopago($id_pago);
         $mensaje = "EL TIPO DE PAGO SE ELIMINO EXITOSAMENTE";

@@ -19,6 +19,7 @@ $propietarioCollectorObj = new PropietarioCollector();
     </head>
    
     <body>
+    <?php require('../header.php');?>
             <?php
                 $estadoAux = substr ("$estado", 0,1);
                 $propietarioCollectorObj->updatePropietario($id_propietario, $nombreModificado, $apellido, $ruc, $numerocuenta, $estadoAux);

@@ -13,6 +13,7 @@
         <title>Delete Factura</title>
     </head>
     <body>
+    <?php require('../header.php');?>
         <?php
         $facturaCollectorObj->deleteFactura($id_factura);
         $mensaje = "LA FACTURA SE ELIMINO EXITOSAMENTE";

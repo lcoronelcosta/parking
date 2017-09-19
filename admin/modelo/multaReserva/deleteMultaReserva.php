@@ -13,6 +13,7 @@
         <title>Login</title>
     </head>
     <body>
+    <?php require('../header.php');?>
         <?php
         $multaReservaCollectorObj->deleteMultaReserva($id_multa_x_factura);
         $mensaje = "LA MULTA POR RESERVA SE ELIMINO EXITOSAMENTE";

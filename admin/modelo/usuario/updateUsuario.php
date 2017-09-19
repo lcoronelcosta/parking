@@ -19,6 +19,7 @@ $usuarioCollectorObj = new UsuarioCollector();
     
     </head>
     <body>
+    <?php require('../header.php');?>
         <?php
         $rolAux = substr ("$rol", 0,1);
         //if(trim($usuarioActual) == trim($usuarioModificado)){
