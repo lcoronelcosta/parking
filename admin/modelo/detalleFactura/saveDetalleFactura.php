@@ -16,7 +16,7 @@
     <body>
   
         <?php
-
+        $tiempo = "Detalle extra " . $tiempo;
         $detalleFacturaCollectorObj->createDetalleFactura($tiempo, $total, $id_factura);
         $mensaje = "DETALLE FACTURA SE CREO EXITOSAMENTE";
         print "<script>alert('$mensaje')</script>";
