@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require('../header.php');
 ?>
 <!DOCTYPE HTML>
 <html lang="es">
