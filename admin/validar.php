@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 include_once('modelo/usuario/Usuario.php');
 include_once('modelo/Collector.php');
