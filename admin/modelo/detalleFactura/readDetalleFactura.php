@@ -20,7 +20,7 @@
       <div class="panel-heading clearfix">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Detalle Factura</span>
+          <span>DETALLE FACTURA</span>
        </strong>
          <a href="../../admin.php" class="btn btn-danger pull-right">ATRAS</a> 
          <a href="form_AddDetalleFactura.php" class="btn btn-info">AGREGAR DETALLE FACTURA</a>
@@ -33,17 +33,18 @@
                 <th>ID-FACTURA</th>
                 <th>TIEMPO</th>
                 <th>TOTAL</th>
+                <th>OPERACIONES</th>
             </tr>
         </thead>
         <?php
             foreach ($detalleFacturaCollectorObj->showDetalleFacturas() as $c){
             echo "<tr>";
-            echo "<td>" . $c->get_id_detalle_facura() . "</td>";    
+            echo "<td>" . $c->get_id_detalle_factura() . "</td>";    
             echo "<td>" . $c->get_id_factura() . "</td>";       
             echo "<td>" . $c->get_tiempo() . "</td>";   
             echo "<td>" . $c->get_total() . "</td>";  
-            echo "<td><a href='form_EditDetalleFactura.php?id_detalle_facura=". $c->get_id_detalle_facura() ." & tiempo=". $c->get_tiempo() ." & total=". $c->get_total() ." & id_factura=". $c->get_id_factura() . "' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
-               </a> <a href='deleteDetalleFactura.php?ID=". $c->get_id_detalle_facura() ."' class='btn btn-xs btn-danger' data-toggle='tooltip' title='Eliminar'><i class='glyphicon glyphicon-remove'></i>
+            echo "<td><a href='form_EditDetalleFactura.php?id_detalle_factura=". $c->get_id_detalle_factura() ." & tiempo=". $c->get_tiempo() ." & total=". $c->get_total() ." & id_factura=". $c->get_id_factura() . "' class='btn btn-xs btn-warning' data-toggle='tooltip' title='Editar'><i class='glyphicon glyphicon-pencil'></i>
+               </a> <a href='deleteDetalleFactura.php?ID=". $c->get_id_detalle_factura() ."' class='btn btn-xs btn-danger' data-toggle='tooltip' title='Eliminar'><i class='glyphicon glyphicon-remove'></i>
                 </a></td>"; 
             echo "</tr>"; 
             }

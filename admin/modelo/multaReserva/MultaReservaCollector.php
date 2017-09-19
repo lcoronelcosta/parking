@@ -80,8 +80,7 @@
                 $ID = $factura{'id_factura'};
                 $detalleCollectorObj = new DetalleFacturaCollector();
                 foreach ($this->showMultaReservaPorIdReserva($id_reserva) as $c){
-                    $detalleCollectorObj->createDetalleFactura("2017-01-01 01:01:01.404852-05",$c->get_valor(), $ID);
-
+                    $detalleCollectorObj->createDetalleFactura("Valor por multa",$c->get_valor(), $ID);
                 }
 
             }

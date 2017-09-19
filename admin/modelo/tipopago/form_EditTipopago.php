@@ -21,7 +21,7 @@
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Editar Tipo Pago</span>
+          <span>EDITAR TIPO PAGO</span>
        </strong>
       </div>
       <div class="panel-body">

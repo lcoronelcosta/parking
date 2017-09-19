@@ -29,7 +29,7 @@
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Editar Vehiculo</span>
+          <span>EDITAR VEHICULO</span>
        </strong>
       </div>
       <div class="panel-body">
@@ -65,12 +65,12 @@
               <label for="level">Tipo Vehiculo</label>
                 <select class="form-control" name="tipo">
                   <?php
-                    if ('$tipo' == 'M') {
+                    if ($tipo == 'M') {
                         echo "<option>Moto</option>";
                         echo "<option>Auto</option>";
                         echo "<option>Camioneta</option>";
                     }
-                    elseif ('$tipo' == 'C') {
+                    elseif ($tipo == 'C') {
                         echo "<option>Camioneta</option>";
                         echo "<option>Moto</option>";
                         echo "<option>Auto</option>";
