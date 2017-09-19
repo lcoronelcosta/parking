@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require('../header.php');
     include_once("PropietarioCollector.php");
     include_once("Propietario.php");
     $nombre = $_POST['nombre'];
@@ -17,6 +16,9 @@
         <meta charset="utf-8">
     </head>
     <body>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
   
         <?php
         $estadoAux = substr ("$estado", 0,1);
@@ -27,4 +29,12 @@
         ?>
   
     </body>
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?> 
 </html>

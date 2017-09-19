@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require('../header.php');
     include_once("ClienteCollector.php");
     include_once("Cliente.php");
     $nombre = $_POST['nombre'];
@@ -17,6 +16,9 @@
         <meta charset="utf-8">
     </head>
     <body>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
   
         <?php
         $roll = substr ("$rol", 0,1);
@@ -32,6 +34,13 @@
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readCliente.php'>";
         }
         ?>
-  
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>
     </body>
 </html>

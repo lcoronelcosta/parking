@@ -1,6 +1,5 @@
 <?php
 session_start();
-require('../header.php');
 include_once("MultaReservaCollector.php");
 $id_multa_x_factura = $_POST['id_multa_x_factura'];
 $id_multa = $_POST['id_multa']; 
@@ -16,7 +15,9 @@ $multaReservaCollectorObj = new MultaReservaCollector();
         <title>Update Multa por Reserva</title>
     </head>
     <body>
-    <?php require('../header.php');?>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
         <?php
        
             $multaReservaCollectorObj->updateMultaReserva($id_multa_x_factura,$id_multa,$id_reserva, $valor);
@@ -24,5 +25,13 @@ $multaReservaCollectorObj = new MultaReservaCollector();
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readMultaReserva.php'>";
         ?>
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?> 
     </body>
 </html>

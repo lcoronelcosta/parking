@@ -1,6 +1,5 @@
 <?php
 session_start();
-require('../header.php');
 include_once("DetalleFacturaCollector.php");
 $id_detalle_facura = $_POST['id_detalle_facura'];
 $tiempo = $_POST['tiempo']; 
@@ -16,7 +15,9 @@ $detalleFacturaCollectorObj = new DetalleFacturaCollector();
         <title>Update Detalle Factura</title>
     </head>
     <body>
-    <?php require('../header.php');?>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
         <?php
        
             $detalleFacturaCollectorObj->updateDetalleFactura($id_detalle_facura,$tiempo,$total, $id_factura);
@@ -24,5 +25,13 @@ $detalleFacturaCollectorObj = new DetalleFacturaCollector();
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readDetalleFactura.php'>";
         ?>
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>        
     </body>
 </html>

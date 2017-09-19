@@ -33,7 +33,9 @@
 
 </head>
 <body>
-    <?php require('header.php');?>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
     <!--start-home-->
 		<div class="banner two" id="home">
 		<div class="header-bottom">
@@ -138,5 +140,13 @@
 <!-- for bootstrap working -->
 		<script src="../js/bootstrap.js"> </script>
 <!-- //for bootstrap working -->
+<?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=login.php'>";
+    }
+    ?>
 </body>
 </html>

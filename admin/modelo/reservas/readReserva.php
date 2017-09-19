@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require('../header.php');
     include_once("ReservaCollector.php");
     $reservaCollectorObj = new ReservaCollector();
 ?>
@@ -14,7 +13,9 @@
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <?php require('../header.php');?>  
+  <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?> 
   <div class="row">    
   <div class="col-md-12">
     <div class="panel panel-default">
@@ -66,6 +67,14 @@
     </div>
     </div>
   </div>
-</div>  
+</div>
+<?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>  
 </body>
 </html>

@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require('../header.php');
     include_once("MultaCollector.php");
     $multaCollectorObj = new MultaCollector();
     $id_multa = $_GET['id_multa'];
@@ -16,7 +15,9 @@
     <link href='https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-   <?php require('../header.php');?>
+   <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
    <div class="row ">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -50,6 +51,14 @@
       </div>
 
     </div>
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>   
   </div>
 </body>
 </html>

@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require('../header.php');
     include_once("TipopagoCollector.php");
     include_once("Tipopago.php");
 	$descripcion = $_POST['descripcion'];
@@ -14,6 +13,9 @@
         <meta charset="utf-8">
     </head>
     <body>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
   
         <?php
         $estadoAux = substr ("$estado", 0,1);
@@ -22,6 +24,13 @@
         print "<script>alert('$mensaje')</script>";
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readTipopago.php'>";
         ?>
-  
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>
     </body>
 </html>

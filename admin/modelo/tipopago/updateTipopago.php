@@ -1,6 +1,5 @@
 <?php
 session_start();
-require('../header.php');
 include_once("TipopagoCollector.php");
 $id_pago = $_POST['id_pago'];
 $tipopagoModificado = $_POST['tipopagoModificado'];
@@ -14,12 +13,12 @@ $tipopagoCollectorObj = new TipopagoCollector();
     <head>
         <meta charset="utf-8">
         <title>Update TipoPago</title>
-        <link href="../estilo.css" rel="stylesheet">
-    	
     
     </head>
     <body>
-    <?php require('../header.php');?>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
         <?php
         if(trim($tipopagoActual) == trim($tipopagoModificado)){
             $tipopagoCollectorObj->updateTipopago($id_pago, $tipopagoModificado, $estado);
@@ -46,5 +45,13 @@ $tipopagoCollectorObj = new TipopagoCollector();
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readTipopago.php'>";
         ?>
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>
     </body>
 </html>

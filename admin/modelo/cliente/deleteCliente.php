@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require('../header.php');
     include_once("ClienteCollector.php");
     $id_cliente = $_GET['ID'];
     $id_user = $_GET['ID_user'];
@@ -15,7 +14,10 @@
         <title>Delete Cliente</title>
     </head>
     <body>
-    <?php require('../header.php');?>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
+
         <?php
         $clienteCollectorObj->deleteCliente($id_cliente, $id_user);
         $mensaje = "EL CLIENTE SE ELIMINO EXITOSAMENTE";
@@ -23,4 +25,14 @@
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readCliente.php'>";
         ?>
     </body>
+    }
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>
+
 </html>

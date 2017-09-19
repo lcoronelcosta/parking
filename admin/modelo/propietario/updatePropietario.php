@@ -1,6 +1,5 @@
 <?php
 session_start();
-require('../header.php');
 include_once("PropietarioCollector.php");
 $id_propietario = $_POST['id_propietario'];
 $nombreModificado = $_POST['nombreModificado']; 
@@ -20,7 +19,9 @@ $propietarioCollectorObj = new PropietarioCollector();
     </head>
    
     <body>
-    <?php require('../header.php');?>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
             <?php
                 $estadoAux = substr ("$estado", 0,1);
                 $propietarioCollectorObj->updatePropietario($id_propietario, $nombreModificado, $apellido, $ruc, $numerocuenta, $estadoAux);
@@ -29,5 +30,12 @@ $propietarioCollectorObj = new PropietarioCollector();
                 echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readPropietario.php'>";
             ?>
     </body>
-
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?> 
 </html>

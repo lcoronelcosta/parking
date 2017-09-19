@@ -1,6 +1,5 @@
 <?php
 session_start();
-require('../header.php');
 include_once("MultaCollector.php");
 $id_multa = $_POST['id_multa'];
 $multaModificado = $_POST['multaModificado']; 
@@ -16,12 +15,22 @@ $multaCollectorObj = new MultaCollector();
         <title>Login</title>
     </head>
     <body>
-    <?php require('../header.php');?>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
         <?php
             $multaCollectorObj->updateMulta($id_multa, $multaModificado, $valor);
             $mensaje = "LA MULTA SE MODIFICO EXITOSAMENTE";
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readMulta.php'>";
         ?>
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>       
     </body>
 </html>

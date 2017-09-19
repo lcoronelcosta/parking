@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require('../header.php');
     include_once("EstacionamientoCollector.php");
     $id_estacionamiento = $_GET['ID'];
     $estacionamientoCollectorObj = new EstacionamientoCollector();
@@ -14,12 +13,22 @@
         <title>Delete Estacionamiento</title>
     </head>
     <body>
-    <?php require('../header.php');?>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
         <?php
         $estacionamientoCollectorObj->deleteEstacionamiento($id_estacionamiento);
         $mensaje = "ES ESTACIONAMIENTO SE ELIMINO EXITOSAMENTE";
         print "<script>alert('$mensaje')</script>";
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readEstacionamiento.php'>";
         ?>
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>       
     </body>
 </html>

@@ -1,6 +1,5 @@
 <?php
 session_start();
-require('../header.php');
 include_once("ReservaCollector.php");
 $id_reserva = $_POST['id_reserva'];
 $id_cliente = $_POST['id_c'];
@@ -22,7 +21,9 @@ $reservaCollectorObj = new ReservaCollector();
         <title>Update Reserva</title>
     </head>
     <body>
-    <?php require('../header.php');?>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
         <?php
             $facAux = substr ("$facturada", 0,1);
             $reservaCollectorObj->updateReserva($id_reserva, $id_cliente, $id_vehiculo, $id_parqueo, $id_estacionamiento, $fecha_inicio, $fecha_fin, $origen_la, $origen_lo, $facAux);
@@ -31,4 +32,12 @@ $reservaCollectorObj = new ReservaCollector();
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readReserva.php'>";
         ?>
     </body>
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>
 </html>

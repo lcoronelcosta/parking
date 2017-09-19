@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require('../header.php');
     include_once("TipopagoCollector.php");
     $tipopagoCollectorObj = new TipopagoCollector();
     $id_pago = $_GET['id_pago'];
@@ -16,7 +15,9 @@
     <link href='https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-   <?php require('../header.php');?>
+   <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>p');?>
    <div class="row ">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -34,13 +35,11 @@
             </div>  
             <div class="form-group">
                 <label for="username">Descripcion</label>
-<<<<<<< HEAD:admin/modelo/tipopago/form_EditTipopago.php
                 <input type="text" class="form-control" name="descripcion" required value=<?php echo "$descripcion"; ?>>
             </div>
             <div class="form-group">
                 <label for="username">Estado</label>
                 <input type="text" class="form-control" name="estado" required value=<?php echo "$estado"; ?>>
-=======
                 <input type="text" class="form-control" name="tipopagoModificado" required value="<?php echo $descripcion; ?>">
             </div>
              <div class="form-group">
@@ -58,7 +57,6 @@
                     
                   ?>    
                 </select>
->>>>>>> master:admin/modelo/tipopago/form_EditTipopago.php
             </div>
             <div class="form-group clearfix">
               <button type="submit" class="btn btn-primary">Guardar</button>
@@ -71,5 +69,13 @@
 
     </div>
   </div>
+  <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>
 </body>
 </html>

@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require('../header.php');
     include_once("VehiculoCollector.php");
     include_once("Vehiculo.php");
 	$descripcion = $_POST['descripcion'];
@@ -16,7 +15,9 @@
         <meta charset="utf-8">
     </head>
     <body>
-  
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
         <?php
         $tipo2 = substr ("$tipo", 0,1);
         $vehiculoCollectorObj->createVehiculo($descripcion, $placa, $tipo2, $id_cliente);
@@ -26,4 +27,12 @@
         ?>
   
     </body>
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>
 </html>

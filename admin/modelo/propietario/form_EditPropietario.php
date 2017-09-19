@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require('../header.php');
     include_once("PropietarioCollector.php");
     include_once("Propietario.php");
     $propietarioCollectorObj = new PropietarioCollector();
@@ -16,6 +15,9 @@
     <link href='https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
+   <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
    <div class="row ">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -74,5 +76,13 @@
 
     </div>
   </div>
+  <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?> 
 </body>
 </html>

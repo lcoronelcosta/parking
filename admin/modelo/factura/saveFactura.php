@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require('../header.php');
     include_once("FacturaCollector.php");
     include_once("Factura.php");
     include_once("../multaReserva/MultaReservaCollector.php");
@@ -21,6 +20,9 @@
         <meta charset="utf-8">
     </head>
     <body>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
   
         <?php
 
@@ -34,6 +36,14 @@
 
 
         ?>
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>   
   
     </body>
 </html>

@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require('../header.php');
     include_once("FacturaCollector.php");
     include_once("Factura.php");
 	$id_factura = $_POST['id_factura'];
@@ -19,7 +18,9 @@
         <meta charset="utf-8">
     </head>
     <body>
-  <?php require('../header.php');?>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
         <?php
         $estadoAux = substr ("$estado", 0,1);
         $facturaCollectorObj->updateFactura($id_factura, $id_reserva, $id_pago, $total_multa, $total_pagar, $estadoAux);
@@ -27,6 +28,13 @@
         print "<script>alert('$mensaje')</script>";
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readFactura.php'>";
         ?>
-  
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>   
     </body>
 </html>

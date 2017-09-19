@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require('../header.php');
     include_once("ParqueaderoCollector.php");
     $id_parqueadero = $_GET['ID'];
     $parqueaderoCollectorObj = new ParqueaderoCollector();
@@ -14,12 +13,22 @@
         <title>Delete Parqueadero</title>
     </head>
     <body>
-    <?php require('../header.php');?>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>>
         <?php
         $parqueaderoCollectorObj->deleteParqueadero($id_parqueadero);
         $mensaje = "EL PARQUEADERO SE ELIMINO EXITOSAMENTE";
         print "<script>alert('$mensaje')</script>";
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readParqueadero.php'>";
         ?>
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?> 
     </body>
 </html>

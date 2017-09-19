@@ -1,6 +1,5 @@
 <?php
 session_start();
-require('../header.php');
 include_once("ClienteCollector.php");
 $id_cliente = $_POST['id_cliente'];
 $nombre = $_POST['nombre']; 
@@ -15,7 +14,10 @@ $clienteCollectorObj = new ClienteCollector();
         <title>Update Cliente</title>
     </head>
     <body>
-    <?php require('../header.php');?>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
+
         <?php
        
             $clienteCollectorObj->updateCliente($id_cliente,$nombre, $apellido);
@@ -23,5 +25,13 @@ $clienteCollectorObj = new ClienteCollector();
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readCliente.php'>";
         ?>
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>    
     </body>
 </html>

@@ -1,6 +1,5 @@
 <?php
 session_start();
-require('../header.php');
 include_once("VehiculoCollector.php");
 $id_vehiculo = $_POST['id_vehiculo'];
 $vehiculoModificado = $_POST['vehiculoModificado']; 
@@ -21,7 +20,9 @@ $vehiculoCollectorObj = new VehiculoCollector();
     
     </head>
     <body>
-    <?php require('../header.php');?>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
         <?php
             $tipoAux = substr ("$tipo", 0,1);
             $vehiculoCollectorObj->updateVehiculo($id_vehiculo, $vehiculoModificado, $placa, $tipoAux, $id_cliente);
@@ -29,5 +30,13 @@ $vehiculoCollectorObj = new VehiculoCollector();
             print "<script>alert('$mensaje')</script>";
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readVehiculo.php'>";
         ?>
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>    
     </body>
 </html>

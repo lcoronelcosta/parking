@@ -1,6 +1,4 @@
-<?php 
-    session_start();
-    require('../header.php');
+<?php
     include_once("../detalleFactura/DetalleFacturaCollector.php");
     include_once("../factura/FacturaCollector.php");
     include_once("../reservas/ReservaCollector.php");
@@ -19,7 +17,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-    <?php require('../header.php');?>
         <div class="modal fade bs-example-modal-lg" id="myModalFactura" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">

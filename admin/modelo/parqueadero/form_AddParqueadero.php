@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require('../header.php');
     include_once("ParqueaderoCollector.php");
     $parqueaderoCollectorObj = new ParqueaderoCollector();
 ?>
@@ -13,7 +12,9 @@
     <link href='https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-   <?php require('../header.php');?>
+   <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
    <div class="row ">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -66,6 +67,14 @@
 
     </div>
   </div>
+  <?php include_once('../modals/modal_propietario.php');?>
+  <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?> 
 </body>
-<?php include_once('../modals/modal_propietario.php');?>
 </html>

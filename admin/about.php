@@ -1,6 +1,5 @@
 <?php
 	session_start();
-	require('header.php');
 
 ?>
 <!DOCTYPE HTML>
@@ -32,6 +31,9 @@
 
 </head>
 <body>
+<?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
 <!--start-home-->
 		<div class="banner two" id="home">
 		<div class="header-bottom">
@@ -184,5 +186,13 @@
 								<!--end-smooth-scrolling-->
 		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
+<?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=login.php'>";
+    }
+    ?>
 </body>
 </html>

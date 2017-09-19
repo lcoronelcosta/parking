@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require('../header.php');
     include_once("MultaReservaCollector.php");
     include_once("MultaReserva.php");
 	$id_multa = $_POST['id_multa'];
@@ -15,6 +14,9 @@
         <meta charset="utf-8">
     </head>
     <body>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
   
         <?php
 
@@ -24,6 +26,13 @@
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readMultaReserva.php'>";
         
         ?>
-  
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?> 
     </body>
 </html>

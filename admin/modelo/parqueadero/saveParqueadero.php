@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require('../header.php');
     include_once("ParqueaderoCollector.php");
     include_once("Parqueadero.php");
 	$nombre = $_POST['nombre'];
@@ -17,6 +16,9 @@
         <meta charset="utf-8">
     </head>
     <body>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
   
         <?php
         if($parqueaderoCollectorObj->buscarParqueadero($nombre)){
@@ -31,6 +33,13 @@
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readParqueadero.php'>";
         }
         ?>
-  
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?> 
     </body>
 </html>

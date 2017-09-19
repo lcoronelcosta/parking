@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require('../header.php');
     include_once("MultaReservaCollector.php");
     $id_multa_x_factura = $_GET['ID'];
     $multaReservaCollectorObj = new MultaReservaCollector();
@@ -14,12 +13,22 @@
         <title>Login</title>
     </head>
     <body>
-    <?php require('../header.php');?>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>>
         <?php
         $multaReservaCollectorObj->deleteMultaReserva($id_multa_x_factura);
         $mensaje = "LA MULTA POR RESERVA SE ELIMINO EXITOSAMENTE";
         print "<script>alert('$mensaje')</script>";
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readMultaReserva.php'>";
         ?>
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?> 
     </body>
 </html>

@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require('../header.php');
     include_once("ReservaCollector.php");
     include_once("Reserva.php");
 
@@ -28,6 +27,9 @@
         <meta charset="utf-8">
     </head>
     <body>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
   
         <?php
         $reservaCollectorObj->createReserva($id_cliente, $id_vehiculo, $id_parqueo, $fecha_inicio, $fecha_fin, $o_latitud, $o_longitud, $id_estacionamiento, $facturada);
@@ -37,4 +39,12 @@
         ?>
   
     </body>
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>
 </html>

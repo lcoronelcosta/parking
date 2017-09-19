@@ -1,5 +1,4 @@
 <?php
-require('../header.php');
     include_once("../parqueadero/ParqueaderoCollector.php");
     $parqueaderoCollectorObj = new ParqueaderoCollector();
 ?>

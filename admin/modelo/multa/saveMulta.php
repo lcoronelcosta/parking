@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require('../header.php');
     include_once("MultaCollector.php");
     include_once("Multa.php");
 	$descipcion = $_POST['descipcion'];
@@ -14,7 +13,9 @@
         <meta charset="utf-8">
     </head>
     <body>
-  
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
         <?php
             $multaCollectorObj->createMulta($descipcion, $valor);
             $mensaje = "LA MULTA SE CREO EXITOSAMENTE";
@@ -23,4 +24,12 @@
         ?>
   
     </body>
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>   
 </html>

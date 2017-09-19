@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require('../header.php');
     include_once("UsuarioCollector.php");
     include_once("Usuario.php");
 	$usuario = $_POST['usuario'];
@@ -15,7 +14,9 @@
         <meta charset="utf-8">
     </head>
     <body>
-  
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
         <?php
         $roll = substr ("$rol", 0,1);
         if($UsuarioCollectorObj->buscarUsuario($usuario)){
@@ -30,6 +31,13 @@
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readUsuario.php'>";
         }
         ?>
-  
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>
     </body>
 </html>

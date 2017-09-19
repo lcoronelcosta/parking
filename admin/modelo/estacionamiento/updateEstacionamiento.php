@@ -1,6 +1,5 @@
 <?php
 session_start();
-require('../header.php');
 include_once("EstacionamientoCollector.php");
 $id_estacionamiento = $_POST['id_estacionamiento'];
 $id_parqueadero = $_POST['id_parqueadero'];
@@ -20,7 +19,9 @@ $estacionamientoCollectorObj = new EstacionamientoCollector();
     
     </head>
     <body>
-    <?php require('../header.php');?>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
         <?php
         $estado2 = substr ("$estado", 0,1);
         //$roll = substr ("$rol", 0,1);
@@ -42,5 +43,13 @@ $estacionamientoCollectorObj = new EstacionamientoCollector();
             echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readEstacionamiento.php'>";
         }
   ?>
+  <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>   
     </body>
 </html>

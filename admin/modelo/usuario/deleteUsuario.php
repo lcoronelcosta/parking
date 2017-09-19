@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require('../header.php');
     include_once("UsuarioCollector.php");
     $id_usuario = $_GET['ID'];
     $usuarioCollectorObj = new UsuarioCollector();
@@ -21,12 +20,22 @@
     </head>
     <body>
 
-    <?php require('../header.php');?>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
         <?php
         $usuarioCollectorObj->deleteUsuario($id_usuario);
         $mensaje = "EL USUARIO SE ELIMINO EXITOSAMENTE";
         print "<script>alert('$mensaje')</script>";
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readUsuario.php'>";
         ?>
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>
     </body>
 </html>

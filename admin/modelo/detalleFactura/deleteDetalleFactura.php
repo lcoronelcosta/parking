@@ -1,7 +1,5 @@
 <?php
     session_start();
-    require('../header.php');
-    require('../header.php');
     include_once("DetalleFacturaCollector.php");
     $id_detalle_facura = $_GET['ID'];
     $detalleFacturaCollectorObj = new DetalleFacturaCollector();
@@ -15,12 +13,22 @@
         <title>Delete Factura</title>
     </head>
     <body>
-    <?php require('../header.php');?>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
         <?php
         $detalleFacturaCollectorObj->deleteDetalleFactura($id_detalle_facura);
         $mensaje = "EL DETALLE FACTURA SE ELIMINO EXITOSAMENTE";
         print "<script>alert('$mensaje')</script>";
         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=readDetalleFactura.php'>";
         ?>
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>        
     </body>
 </html>

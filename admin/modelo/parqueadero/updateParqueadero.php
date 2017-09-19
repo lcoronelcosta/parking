@@ -1,6 +1,5 @@
 <?php
 session_start();
-require('../header.php');
 include_once("ParqueaderoCollector.php");
 $id_parqueadero = $_POST['id_parqueadero'];
 $parqueaderoModificado = $_POST['parqueaderoModificado']; 
@@ -18,7 +17,9 @@ $parqueaderoCollectorObj = new ParqueaderoCollector();
         <title>Update Parqueadero</title>
     </head>
     <body>
-    <?php require('../header.php');?>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
         <?php
         //$roll = substr ("$rol", 0,1);
         //if(trim($parqueaderoActual) == trim($parqueaderoModificado)){
@@ -41,5 +42,13 @@ $parqueaderoCollectorObj = new ParqueaderoCollector();
             }
         }*/
         ?>
+    <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>     
     </body>
 </html>

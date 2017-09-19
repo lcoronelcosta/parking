@@ -1,6 +1,5 @@
 <?php
 session_start();
-require('../header.php');
 include_once("UsuarioCollector.php");
 $id_usuario = $_POST['id_usuario'];
 $usuarioModificado = $_POST['usuarioModificado']; 
@@ -20,7 +19,9 @@ $usuarioCollectorObj = new UsuarioCollector();
     
     </head>
     <body>
-    <?php require('../header.php');?>
+    <?php 
+        if (isset($_SESSION['mySesion'])){
+    ?>
         <?php
         $rolAux = substr ("$rol", 0,1);
         //if(trim($usuarioActual) == trim($usuarioModificado)){
@@ -43,5 +44,13 @@ $usuarioCollectorObj = new UsuarioCollector();
             }
         }*/
         ?>
+        <?php
+        }
+    
+    else {
+       // echo "permiso denegado";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../login.php'>";
+    }
+    ?>
     </body>
 </html>
