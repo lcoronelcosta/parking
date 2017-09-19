@@ -18,7 +18,7 @@
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Agregar Multa por Reserva</span>
+          <span>AGREGAR MULTA POR RESERVA</span>
        </strong>
       </div>
       <div class="panel-body">
