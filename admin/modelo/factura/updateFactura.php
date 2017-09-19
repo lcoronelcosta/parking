@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require('../header.php');
     include_once("FacturaCollector.php");
     include_once("Factura.php");
 	$id_factura = $_POST['id_factura'];

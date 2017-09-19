@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require('../header.php');
     include_once("UsuarioCollector.php");
     include_once("Usuario.php");
 	$usuario = $_POST['usuario'];

@@ -1,5 +1,6 @@
 <?php
 session_start();
+require('../header.php');
 include_once("UsuarioCollector.php");
 $id_usuario = $_POST['id_usuario'];
 $usuarioModificado = $_POST['usuarioModificado']; 

@@ -1,4 +1,5 @@
 <?php
+require('../header.php');
     include_once("../vehiculo/VehiculoCollector.php");
     $vehiculoCollectorObj = new VehiculoCollector();
 ?>

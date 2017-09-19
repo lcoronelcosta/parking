@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require('../header.php');
     include_once("ReservaCollector.php");
     $id_reserva = $_GET['ID'];
     $reservaCollectorObj = new ReservaCollector();

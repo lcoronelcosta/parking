@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require('../header.php');
     include_once("ParqueaderoCollector.php");
     $parqueaderoCollectorObj = new ParqueaderoCollector();
     $id_parqueadero = $_GET['id_parqueadero'];

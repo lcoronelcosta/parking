@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require('../header.php');
     include_once("UsuarioCollector.php");
     $usuarioCollectorObj = new UsuarioCollector();
     $id_usuario = $_GET['id_usuario'];

@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require('../header.php');
     include_once("MultaReservaCollector.php");
     $multaReservaCollectorObj = new MultaReservaCollector();
     $id_multa_x_factura = $_GET['id_multa_x_factura'];

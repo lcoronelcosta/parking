@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require('../header.php');
     include_once("VehiculoCollector.php");
     $vehiculoCollectorObj = new VehiculoCollector();
 ?>

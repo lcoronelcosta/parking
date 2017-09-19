@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require('../header.php');
     include_once("PropietarioCollector.php");
     $id_propietario = $_GET['ID'];
     $propietarioCollectorObj = new PropietarioCollector();

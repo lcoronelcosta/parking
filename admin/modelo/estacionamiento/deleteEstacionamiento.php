@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require('../header.php');
     include_once("EstacionamientoCollector.php");
     $id_estacionamiento = $_GET['ID'];
     $estacionamientoCollectorObj = new EstacionamientoCollector();

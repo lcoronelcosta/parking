@@ -1,6 +1,6 @@
 <?php
     session_start();
-    php require('../header.php');
+    require('../header.php');
     include_once("VehiculoCollector.php");
     $id_vehiculo = $_GET['ID'];
     $vehiculoCollectorObj = new VehiculoCollector();

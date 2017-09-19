@@ -1,5 +1,6 @@
 <?php
 session_start();
+require('../header.php');
 include_once("VehiculoCollector.php");
 $id_vehiculo = $_POST['id_vehiculo'];
 $vehiculoModificado = $_POST['vehiculoModificado']; 

@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require('../header.php');
     include_once("ReservaCollector.php");
     include_once("Reserva.php");
 

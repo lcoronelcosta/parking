@@ -1,5 +1,6 @@
 <?php
 session_start();
+require('../header.php');
 include_once("EstacionamientoCollector.php");
 $id_estacionamiento = $_POST['id_estacionamiento'];
 $id_parqueadero = $_POST['id_parqueadero'];

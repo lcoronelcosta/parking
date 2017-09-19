@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require('../header.php');
     include_once("PropietarioCollector.php");
     include_once("Propietario.php");
     $propietarioCollectorObj = new PropietarioCollector();

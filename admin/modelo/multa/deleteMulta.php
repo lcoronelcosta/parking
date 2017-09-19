@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require('../header.php');
     include_once("MultaCollector.php");
     $id_multa = $_GET['ID'];
     $multaCollectorObj = new MultaCollector();

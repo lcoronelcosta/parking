@@ -1,5 +1,6 @@
 <?php
 session_start();
+require('../header.php');
 include_once("ReservaCollector.php");
 $id_reserva = $_POST['id_reserva'];
 $id_cliente = $_POST['id_c'];

@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require('../header.php');
     include_once("MultaReservaCollector.php");
     include_once("MultaReserva.php");
 	$id_multa = $_POST['id_multa'];

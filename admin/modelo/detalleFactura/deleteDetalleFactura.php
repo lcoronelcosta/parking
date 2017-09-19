@@ -1,5 +1,7 @@
 <?php
     session_start();
+    require('../header.php');
+    require('../header.php');
     include_once("DetalleFacturaCollector.php");
     $id_detalle_facura = $_GET['ID'];
     $detalleFacturaCollectorObj = new DetalleFacturaCollector();

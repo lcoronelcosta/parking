@@ -2,6 +2,7 @@
 
     include_once('DetalleFactura.php');
     include_once('../Collector.php');
+    
 
     class DetalleFacturaCollector extends Collector{
 

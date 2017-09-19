@@ -1,5 +1,6 @@
 <?php
-    session_start(); 
+    session_start();
+    require('../header.php'); 
     include_once("../tipopago/TipopagoCollector.php");
     $tipopagoCollectorObj = new TipopagoCollector();
 ?>

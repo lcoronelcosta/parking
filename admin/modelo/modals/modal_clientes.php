@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    require('../header.php');
     include_once("../cliente/ClienteCollector.php");
     $clienteCollectorObj = new ClienteCollector();
 ?>

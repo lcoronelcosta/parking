@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require('../header.php');
     include_once("MultaReservaCollector.php");
     $multaReservaCollectorObj = new MultaReservaCollector();
 ?>

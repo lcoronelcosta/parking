@@ -1,5 +1,6 @@
 <?php
 session_start();
+require('../header.php');
 include_once("DetalleFacturaCollector.php");
 $id_detalle_facura = $_POST['id_detalle_facura'];
 $tiempo = $_POST['tiempo']; 

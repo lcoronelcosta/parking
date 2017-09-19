@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require('../header.php');
     include_once("EstacionamientoCollector.php");
     include_once("../parqueadero/ParqueaderoCollector.php");
     $estacionamientoCollectorObj = new EstacionamientoCollector();

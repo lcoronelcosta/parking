@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require('../header.php');
     include_once("FacturaCollector.php");
     include_once("Factura.php");
     include_once("../multaReserva/MultaReservaCollector.php");

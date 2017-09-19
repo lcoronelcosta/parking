@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require('../header.php');
     include_once("TipopagoCollector.php");
     include_once("Tipopago.php");
 	$descripcion = $_POST['descripcion'];

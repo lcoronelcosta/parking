@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require('../header.php');
     include_once("ClienteCollector.php");
     $id_cliente = $_GET['ID'];
     $id_user = $_GET['ID_user'];
